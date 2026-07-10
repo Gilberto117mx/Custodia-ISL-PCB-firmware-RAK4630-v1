@@ -1,0 +1,11 @@
+# Arduino / RUI3 build artifacts
+build/
+*.hex
+*.elf
+*.map
+*.zip.tmp
+
+# Editor / OS cruft
+.DS_Store
+*~
+.vscode/
