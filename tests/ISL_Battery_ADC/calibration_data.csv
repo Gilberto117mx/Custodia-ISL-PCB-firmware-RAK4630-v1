@@ -1,0 +1,12 @@
+# ISL battery ADC calibration - analogRead(AR_INTERNAL) + one-time SAADC offset cal
+# Two bench sweeps (regulated supply on the battery input), median raw per point.
+# Fit: through-origin, Vbat_mV = raw * 1795 / 1000  (two-sweep best fit).
+supply_V,raw_sweep1,raw_sweep2,Vbat_mV_at_1795_sweep1,err_mV_sweep1,Vbat_mV_at_1795_sweep2,err_mV_sweep2
+3.7,2062,2052,3701,+1,3683,-17
+3.6,2012,2003,3612,+12,3595,-5
+3.5,1953,1944,3505,+5,3489,-11
+3.4,1894,1882,3400,+0,3378,-22
+3.3,1837,1847,3297,-3,3315,+15
+3.2,1788,1797,3210,+10,3225,+25
+# max|err| = 25 mV (<0.8%); RMS 13 mV. Run-to-run raw spread ~+/-10 counts (~+/-18 mV),
+# = the nRF internal-reference repeatability floor (inherent, not a scale error).

@@ -1,0 +1,1151 @@
+ISL Production v6 boot. Heartbeat, then init...
+Current Work Mode: LoRa P2P.
+[alive] 0 ms
+[alive] 500 ms
+[alive] 1000 ms
+[alive] 1500 ms
+[alive] 2000 ms
+[alive] 2500 ms
+[alive] 3000 ms
+========================================================
+ISL Board - PRODUCTION v6  (SV-gated GPS + backoff + fix re-sync + delivery guar                                                                             antee)
+========================================================
+[RTC] NOT GPS-synced (will seed from GNSS)  current: 2000-01-01 00:00:05
+[FLASH] Loaded: nextSeq=1 delivered=0 undelivered=0 buf=0 pend=0
+[TIME] boot GPS time-sync (up to 120 s, no fix needed)...
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+   ...0s  sats=0  timeValid=0 year=0
+[RTC] SET FROM GPS: 2026-07-14 17:37:20 UTC (unix~1784050640)
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[CFG] id=051  period=10 min (1Hz tick)  SV_MIN=4  no_sky_abort=25 s  fix_max=120                                                                              s  settle=5 s  ack=8 s  backoff=K999/360min  tx_gap=30 s  buffer=1  pend_slots=                                                                             5  WUR_wake=0  SIM_FIX=0  rtcSynced=1
+== COLLECT (cycle 1, up 8 s, noFixStreak=0) ==
+[BAT] 3922 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=9  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=1 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=1 buffer=1 pending=0
+[TX] seq=1 (no-fix): 051,1,0.000000,0.000000,3.92,1784050761,SV=9
++EVT:TXP2P DONE
++EVT:RXP2P:-18:12:41434B2C3035312C31
+[RX] ACK OK  RSSI=-18 dBm  SNR=12 dB
+[TX pass] done: delivered=1 lastSeq=1 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 2, up 730 s, noFixStreak=1) ==
+[BAT] 3929 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=9  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=2 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=2 buffer=1 pending=0
+[TX] seq=2 (no-fix): 051,2,0.000000,0.000000,3.92,1784051483,SV=9
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C32
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=2 lastSeq=2 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600103 ms
+== COLLECT (cycle 3, up 1451 s, noFixStreak=2) ==
+[BAT] 3927 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=9  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=3 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=3 buffer=1 pending=0
+[TX] seq=3 (no-fix): 051,3,0.000000,0.000000,3.92,1784052204,SV=9
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C33
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=3 lastSeq=3 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 4, up 2173 s, noFixStreak=3) ==
+[BAT] 3929 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=9  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=4 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=4 buffer=1 pending=0
+[TX] seq=4 (no-fix): 051,4,0.000000,0.000000,3.92,1784052926,SV=9
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C34
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=4 lastSeq=4 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 5, up 2895 s, noFixStreak=4) ==
+[BAT] 3929 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=10  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=5 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=5 buffer=1 pending=0
+[TX] seq=5 (no-fix): 051,5,0.000000,0.000000,3.92,1784053648,SV=10
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C35
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=5 lastSeq=5 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600103 ms
+== COLLECT (cycle 6, up 3617 s, noFixStreak=5) ==
+[BAT] 3929 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=11  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=6 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=6 buffer=1 pending=0
+[TX] seq=6 (no-fix): 051,6,0.000000,0.000000,3.92,1784054370,SV=11
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C36
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=6 lastSeq=6 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 7, up 4339 s, noFixStreak=6) ==
+[BAT] 3927 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=8  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=7 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=7 buffer=1 pending=0
+[TX] seq=7 (no-fix): 051,7,0.000000,0.000000,3.92,1784055092,SV=8
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C37
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=7 lastSeq=7 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600103 ms
+== COLLECT (cycle 8, up 5061 s, noFixStreak=7) ==
+[BAT] 3931 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=8  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=8 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=8 buffer=1 pending=0
+[TX] seq=8 (no-fix): 051,8,0.000000,0.000000,3.93,1784055813,SV=8
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C38
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=8 lastSeq=8 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 9, up 5783 s, noFixStreak=8) ==
+[BAT] 3931 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=9  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=9 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=9 buffer=1 pending=0
+[TX] seq=9 (no-fix): 051,9,0.000000,0.000000,3.93,1784056535,SV=9
++EVT:TXP2P DONE
++EVT:RXP2P:-19:14:41434B2C3035312C39
+[RX] ACK OK  RSSI=-19 dBm  SNR=14 dB
+[TX pass] done: delivered=9 lastSeq=9 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 10, up 6504 s, noFixStreak=9) ==
+[BAT] 3927 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=9  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=10 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=10 buffer=1 pending=0
+[TX] seq=10 (no-fix): 051,10,0.000000,0.000000,3.92,1784057257,SV=9
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3130
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=10 lastSeq=10 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 11, up 7226 s, noFixStreak=10) ==
+[BAT] 3929 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=10  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=11 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=11 buffer=1 pending=0
+[TX] seq=11 (no-fix): 051,11,0.000000,0.000000,3.92,1784057979,SV=10
++EVT:TXP2P DONE
++EVT:RXP2P:-19:12:41434B2C3035312C3131
+[RX] ACK OK  RSSI=-19 dBm  SNR=12 dB
+[TX pass] done: delivered=11 lastSeq=11 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 12, up 7948 s, noFixStreak=11) ==
+[BAT] 3929 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=10  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=12 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=12 buffer=1 pending=0
+[TX] seq=12 (no-fix): 051,12,0.000000,0.000000,3.92,1784058700,SV=10
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3132
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=12 lastSeq=12 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 13, up 8670 s, noFixStreak=12) ==
+[BAT] 3931 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=10  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=13 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=13 buffer=1 pending=0
+[TX] seq=13 (no-fix): 051,13,0.000000,0.000000,3.93,1784059422,SV=10
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3133
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=13 lastSeq=13 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 14, up 9392 s, noFixStreak=13) ==
+[BAT] 3932 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=10  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=14 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=14 buffer=1 pending=0
+[TX] seq=14 (no-fix): 051,14,0.000000,0.000000,3.93,1784060144,SV=10
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3134
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=14 lastSeq=14 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600103 ms
+== COLLECT (cycle 15, up 10114 s, noFixStreak=14) ==
+[BAT] 3931 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=10  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=15 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=15 buffer=1 pending=0
+[TX] seq=15 (no-fix): 051,15,0.000000,0.000000,3.93,1784060866,SV=10
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3135
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=15 lastSeq=15 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 16, up 10836 s, noFixStreak=15) ==
+[BAT] 3929 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=10  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=16 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=16 buffer=1 pending=0
+[TX] seq=16 (no-fix): 051,16,0.000000,0.000000,3.92,1784061587,SV=10
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3136
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=16 lastSeq=16 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600103 ms
+== COLLECT (cycle 17, up 11557 s, noFixStreak=16) ==
+[BAT] 3929 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=9  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=17 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=17 buffer=1 pending=0
+[TX] seq=17 (no-fix): 051,17,0.000000,0.000000,3.92,1784062309,SV=9
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3137
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=17 lastSeq=17 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 18, up 12279 s, noFixStreak=17) ==
+[BAT] 3927 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=9  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=18 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=18 buffer=1 pending=0
+[TX] seq=18 (no-fix): 051,18,0.000000,0.000000,3.92,1784063031,SV=9
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3138
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=18 lastSeq=18 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 19, up 13001 s, noFixStreak=18) ==
+[BAT] 3929 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=9  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=19 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=19 buffer=1 pending=0
+[TX] seq=19 (no-fix): 051,19,0.000000,0.000000,3.92,1784063753,SV=9
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3139
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=19 lastSeq=19 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600103 ms
+== COLLECT (cycle 20, up 13723 s, noFixStreak=19) ==
+[BAT] 3929 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=9  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=20 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=20 buffer=1 pending=0
+[TX] seq=20 (no-fix): 051,20,0.000000,0.000000,3.92,1784064474,SV=9
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3230
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=20 lastSeq=20 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 21, up 14445 s, noFixStreak=20) ==
+[BAT] 3929 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=9  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=21 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=21 buffer=1 pending=0
+[TX] seq=21 (no-fix): 051,21,0.000000,0.000000,3.92,1784065196,SV=9
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3231
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=21 lastSeq=21 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 22, up 15167 s, noFixStreak=21) ==
+[BAT] 3929 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=10  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=22 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=22 buffer=1 pending=0
+[TX] seq=22 (no-fix): 051,22,0.000000,0.000000,3.92,1784065918,SV=10
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3232
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=22 lastSeq=22 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600103 ms
+== COLLECT (cycle 23, up 15889 s, noFixStreak=22) ==
+[BAT] 3929 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=10  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=23 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=23 buffer=1 pending=0
+[TX] seq=23 (no-fix): 051,23,0.000000,0.000000,3.92,1784066640,SV=10
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3233
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=23 lastSeq=23 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600103 ms
+== COLLECT (cycle 24, up 16610 s, noFixStreak=23) ==
+[BAT] 3927 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=10  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=24 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=24 buffer=1 pending=0
+[TX] seq=24 (no-fix): 051,24,0.000000,0.000000,3.92,1784067362,SV=10
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3234
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=24 lastSeq=24 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 25, up 17332 s, noFixStreak=24) ==
+[BAT] 3927 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=11  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=25 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=25 buffer=1 pending=0
+[TX] seq=25 (no-fix): 051,25,0.000000,0.000000,3.92,1784068083,SV=11
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3235
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=25 lastSeq=25 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 26, up 18054 s, noFixStreak=25) ==
+[BAT] 3927 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=11  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=26 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=26 buffer=1 pending=0
+[TX] seq=26 (no-fix): 051,26,0.000000,0.000000,3.92,1784068805,SV=11
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3236
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=26 lastSeq=26 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600103 ms
+== COLLECT (cycle 27, up 18776 s, noFixStreak=26) ==
+[BAT] 3927 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=11  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=27 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=27 buffer=1 pending=0
+[TX] seq=27 (no-fix): 051,27,0.000000,0.000000,3.92,1784069527,SV=11
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3237
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=27 lastSeq=27 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600103 ms
+== COLLECT (cycle 28, up 19498 s, noFixStreak=27) ==
+[BAT] 3931 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=10  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=28 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=28 buffer=1 pending=0
+[TX] seq=28 (no-fix): 051,28,0.000000,0.000000,3.93,1784070249,SV=10
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3238
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=28 lastSeq=28 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 29, up 20220 s, noFixStreak=28) ==
+[BAT] 3929 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=11  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=29 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=29 buffer=1 pending=0
+[TX] seq=29 (no-fix): 051,29,0.000000,0.000000,3.92,1784070970,SV=11
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3239
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=29 lastSeq=29 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 30, up 20942 s, noFixStreak=29) ==
+[BAT] 3927 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=10  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=30 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=30 buffer=1 pending=0
+[TX] seq=30 (no-fix): 051,30,0.000000,0.000000,3.92,1784071692,SV=10
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3330
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=30 lastSeq=30 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 31, up 21663 s, noFixStreak=30) ==
+[BAT] 3927 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=11  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=31 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=31 buffer=1 pending=0
+[TX] seq=31 (no-fix): 051,31,0.000000,0.000000,3.92,1784072414,SV=11
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3331
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=31 lastSeq=31 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 32, up 22385 s, noFixStreak=31) ==
+[BAT] 3931 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=11  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=32 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=32 buffer=1 pending=0
+[TX] seq=32 (no-fix): 051,32,0.000000,0.000000,3.93,1784073136,SV=11
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3332
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=32 lastSeq=32 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600103 ms
+== COLLECT (cycle 33, up 23107 s, noFixStreak=32) ==
+[BAT] 3927 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[RTC] SET FROM GPS: 2026-07-15 00:03:35 UTC (unix~1784073815)
+[GPS] FIX in 78263 ms  used=4  IN-VIEW peak=11    lat=22556857 lon=113922229
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=33 (fix), buf=1/1  pend=0
+[TX pass] cycle=33 buffer=1 pending=0
+[TX] seq=33 (fix): 051,33,22.556857,113.922229,3.92,1784073815,SV=11
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3333
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=33 lastSeq=33 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 34, up 23787 s, noFixStreak=0) ==
+[BAT] 3929 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=11  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=34 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=34 buffer=1 pending=0
+[TX] seq=34 (no-fix): 051,34,0.000000,0.000000,3.92,1784074537,SV=11
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3334
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=34 lastSeq=34 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600103 ms
+== COLLECT (cycle 35, up 24509 s, noFixStreak=1) ==
+[BAT] 3929 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=11  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=35 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=35 buffer=1 pending=0
+[TX] seq=35 (no-fix): 051,35,0.000000,0.000000,3.92,1784075258,SV=11
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3335
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=35 lastSeq=35 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600103 ms
+== COLLECT (cycle 36, up 25231 s, noFixStreak=2) ==
+[BAT] 3932 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=10  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=36 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=36 buffer=1 pending=0
+[TX] seq=36 (no-fix): 051,36,0.000000,0.000000,3.93,1784075980,SV=10
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3336
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=36 lastSeq=36 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600103 ms
+== COLLECT (cycle 37, up 25953 s, noFixStreak=3) ==
+[BAT] 3931 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=11  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=37 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=37 buffer=1 pending=0
+[TX] seq=37 (no-fix): 051,37,0.000000,0.000000,3.93,1784076702,SV=11
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3337
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=37 lastSeq=37 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 38, up 26675 s, noFixStreak=4) ==
+[BAT] 3929 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=11  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=38 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=38 buffer=1 pending=0
+[TX] seq=38 (no-fix): 051,38,0.000000,0.000000,3.92,1784077424,SV=11
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3338
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=38 lastSeq=38 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 39, up 27397 s, noFixStreak=5) ==
+[BAT] 3929 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=11  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=39 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=39 buffer=1 pending=0
+[TX] seq=39 (no-fix): 051,39,0.000000,0.000000,3.92,1784078145,SV=11
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3339
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=39 lastSeq=39 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 40, up 28118 s, noFixStreak=6) ==
+[BAT] 3934 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=10  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=40 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=40 buffer=1 pending=0
+[TX] seq=40 (no-fix): 051,40,0.000000,0.000000,3.93,1784078867,SV=10
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3430
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=40 lastSeq=40 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 41, up 28840 s, noFixStreak=7) ==
+[BAT] 3932 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=11  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=41 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=41 buffer=1 pending=0
+[TX] seq=41 (no-fix): 051,41,0.000000,0.000000,3.93,1784079589,SV=11
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3431
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=41 lastSeq=41 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 42, up 29562 s, noFixStreak=8) ==
+[BAT] 3932 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=12  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=42 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=42 buffer=1 pending=0
+[TX] seq=42 (no-fix): 051,42,0.000000,0.000000,3.93,1784080311,SV=12
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3432
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=42 lastSeq=42 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600103 ms
+== COLLECT (cycle 43, up 30284 s, noFixStreak=9) ==
+[BAT] 3931 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=13  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=43 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=43 buffer=1 pending=0
+[TX] seq=43 (no-fix): 051,43,0.000000,0.000000,3.93,1784081033,SV=13
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3433
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=43 lastSeq=43 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 44, up 31006 s, noFixStreak=10) ==
+[BAT] 3934 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=12  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=44 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=44 buffer=1 pending=0
+[TX] seq=44 (no-fix): 051,44,0.000000,0.000000,3.93,1784081754,SV=12
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3434
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=44 lastSeq=44 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 45, up 31728 s, noFixStreak=11) ==
+[BAT] 3931 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=11  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=45 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=45 buffer=1 pending=0
+[TX] seq=45 (no-fix): 051,45,0.000000,0.000000,3.93,1784082476,SV=11
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3435
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=45 lastSeq=45 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 46, up 32450 s, noFixStreak=12) ==
+[BAT] 3929 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=11  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=46 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=46 buffer=1 pending=0
+[TX] seq=46 (no-fix): 051,46,0.000000,0.000000,3.92,1784083198,SV=11
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3436
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=46 lastSeq=46 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 47, up 33171 s, noFixStreak=13) ==
+[BAT] 3932 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=11  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=47 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=47 buffer=1 pending=0
+[TX] seq=47 (no-fix): 051,47,0.000000,0.000000,3.93,1784083920,SV=11
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3437
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=47 lastSeq=47 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600103 ms
+== COLLECT (cycle 48, up 33893 s, noFixStreak=14) ==
+[BAT] 3931 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=11  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=48 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=48 buffer=1 pending=0
+[TX] seq=48 (no-fix): 051,48,0.000000,0.000000,3.93,1784084641,SV=11
++EVT:TXP2P DONE
++EVT:RXP2P:-19:13:41434B2C3035312C3438
+[RX] ACK OK  RSSI=-19 dBm  SNR=13 dB
+[TX pass] done: delivered=48 lastSeq=48 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600103 ms
+== COLLECT (cycle 49, up 34615 s, noFixStreak=15) ==
+[BAT] 3932 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=11  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=49 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=49 buffer=1 pending=0
+[TX] seq=49 (no-fix): 051,49,0.000000,0.000000,3.93,1784085363,SV=11
++EVT:TXP2P DONE
++EVT:RXP2P:-24:13:41434B2C3035312C3439
+[RX] ACK OK  RSSI=-24 dBm  SNR=13 dB
+[TX pass] done: delivered=49 lastSeq=49 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 50, up 35337 s, noFixStreak=16) ==
+[BAT] 3932 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=11  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=50 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=50 buffer=1 pending=0
+[TX] seq=50 (no-fix): 051,50,0.000000,0.000000,3.93,1784086085,SV=11
++EVT:TXP2P DONE
++EVT:RXP2P:-21:13:41434B2C3035312C3530
+[RX] ACK OK  RSSI=-21 dBm  SNR=13 dB
+[TX pass] done: delivered=50 lastSeq=50 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600103 ms
+== COLLECT (cycle 51, up 36059 s, noFixStreak=17) ==
+[BAT] 3934 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=10  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=51 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=51 buffer=1 pending=0
+[TX] seq=51 (no-fix): 051,51,0.000000,0.000000,3.93,1784086807,SV=10
++EVT:TXP2P DONE
++EVT:RXP2P:-20:13:41434B2C3035312C3531
+[RX] ACK OK  RSSI=-20 dBm  SNR=13 dB
+[TX pass] done: delivered=51 lastSeq=51 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 52, up 36781 s, noFixStreak=18) ==
+[BAT] 3931 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=11  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=52 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=52 buffer=1 pending=0
+[TX] seq=52 (no-fix): 051,52,0.000000,0.000000,3.93,1784087528,SV=11
++EVT:TXP2P DONE
++EVT:RXP2P:-21:12:41434B2C3035312C3532
+[RX] ACK OK  RSSI=-21 dBm  SNR=12 dB
+[TX pass] done: delivered=52 lastSeq=52 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 53, up 37503 s, noFixStreak=19) ==
+[BAT] 3932 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=10  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=53 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=53 buffer=1 pending=0
+[TX] seq=53 (no-fix): 051,53,0.000000,0.000000,3.93,1784088250,SV=10
++EVT:TXP2P DONE
++EVT:RXP2P:-23:14:41434B2C3035312C3533
+[RX] ACK OK  RSSI=-23 dBm  SNR=14 dB
+[TX pass] done: delivered=53 lastSeq=53 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 54, up 38224 s, noFixStreak=20) ==
+[BAT] 3932 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=10  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=54 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=54 buffer=1 pending=0
+[TX] seq=54 (no-fix): 051,54,0.000000,0.000000,3.93,1784088972,SV=10
++EVT:TXP2P DONE
++EVT:RXP2P:-23:14:41434B2C3035312C3534
+[RX] ACK OK  RSSI=-23 dBm  SNR=14 dB
+[TX pass] done: delivered=54 lastSeq=54 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 55, up 38946 s, noFixStreak=21) ==
+[BAT] 3931 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=10  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=55 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=55 buffer=1 pending=0
+[TX] seq=55 (no-fix): 051,55,0.000000,0.000000,3.93,1784089694,SV=10
++EVT:TXP2P DONE
++EVT:RXP2P:-23:13:41434B2C3035312C3535
+[RX] ACK OK  RSSI=-23 dBm  SNR=13 dB
+[TX pass] done: delivered=55 lastSeq=55 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 56, up 39668 s, noFixStreak=22) ==
+[BAT] 3931 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=10  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=56 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=56 buffer=1 pending=0
+[TX] seq=56 (no-fix): 051,56,0.000000,0.000000,3.93,1784090415,SV=10
++EVT:TXP2P DONE
++EVT:RXP2P:-23:13:41434B2C3035312C3536
+[RX] ACK OK  RSSI=-23 dBm  SNR=13 dB
+[TX pass] done: delivered=56 lastSeq=56 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600103 ms
+== COLLECT (cycle 57, up 40390 s, noFixStreak=23) ==
+[BAT] 3929 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=10  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=57 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=57 buffer=1 pending=0
+[TX] seq=57 (no-fix): 051,57,0.000000,0.000000,3.92,1784091137,SV=10
++EVT:TXP2P DONE
++EVT:RXP2P:-23:13:41434B2C3035312C3537
+[RX] ACK OK  RSSI=-23 dBm  SNR=13 dB
+[TX pass] done: delivered=57 lastSeq=57 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600103 ms
+== COLLECT (cycle 58, up 41112 s, noFixStreak=24) ==
+[BAT] 3934 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[RTC] SET FROM GPS: 2026-07-15 05:03:48 UTC (unix~1784091828)
+[GPS] FIX in 88856 ms  used=5  IN-VIEW peak=9    lat=22556539 lon=113922007
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=58 (fix), buf=1/1  pend=0
+[TX pass] cycle=58 buffer=1 pending=0
+[TX] seq=58 (fix): 051,58,22.556539,113.922007,3.93,1784091828,SV=9
++EVT:TXP2P DONE
++EVT:RXP2P:-23:13:41434B2C3035312C3538
+[RX] ACK OK  RSSI=-23 dBm  SNR=13 dB
+[TX pass] done: delivered=58 lastSeq=58 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600103 ms
+== COLLECT (cycle 59, up 41803 s, noFixStreak=0) ==
+[BAT] 3931 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[RTC] SET FROM GPS: 2026-07-15 05:14:06 UTC (unix~1784092446)
+[GPS] FIX in 16223 ms  used=4  IN-VIEW peak=9    lat=22555864 lon=113922257
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=59 (fix), buf=1/1  pend=0
+[TX pass] cycle=59 buffer=1 pending=0
+[TX] seq=59 (fix): 051,59,22.555864,113.922257,3.93,1784092446,SV=9
++EVT:TXP2P DONE
++EVT:RXP2P:-23:13:41434B2C3035312C3539
+[RX] ACK OK  RSSI=-23 dBm  SNR=13 dB
+[TX pass] done: delivered=59 lastSeq=59 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600103 ms
+== COLLECT (cycle 60, up 42421 s, noFixStreak=0) ==
+[BAT] 3931 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[RTC] SET FROM GPS: 2026-07-15 05:24:50 UTC (unix~1784093090)
+[GPS] FIX in 42228 ms  used=4  IN-VIEW peak=9    lat=22556269 lon=113922154
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=60 (fix), buf=1/1  pend=0
+[TX pass] cycle=60 buffer=1 pending=0
+[TX] seq=60 (fix): 051,60,22.556269,113.922154,3.93,1784093090,SV=9
++EVT:TXP2P DONE
++EVT:RXP2P:-23:13:41434B2C3035312C3630
+[RX] ACK OK  RSSI=-23 dBm  SNR=13 dB
+[TX pass] done: delivered=60 lastSeq=60 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 61, up 43065 s, noFixStreak=0) ==
+[BAT] 3931 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[RTC] SET FROM GPS: 2026-07-15 05:35:18 UTC (unix~1784093718)
+[GPS] FIX in 26232 ms  used=4  IN-VIEW peak=9    lat=22555733 lon=113922182
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=61 (fix), buf=1/1  pend=0
+[TX pass] cycle=61 buffer=1 pending=0
+[TX] seq=61 (fix): 051,61,22.555733,113.922182,3.93,1784093718,SV=9
++EVT:TXP2P DONE
++EVT:RXP2P:-23:13:41434B2C3035312C3631
+[RX] ACK OK  RSSI=-23 dBm  SNR=13 dB
+[TX pass] done: delivered=61 lastSeq=61 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 62, up 43693 s, noFixStreak=0) ==
+[BAT] 3932 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[RTC] SET FROM GPS: 2026-07-15 05:45:45 UTC (unix~1784094345)
+[GPS] FIX in 25231 ms  used=4  IN-VIEW peak=8    lat=22555768 lon=113922016
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=62 (fix), buf=1/1  pend=0
+[TX pass] cycle=62 buffer=1 pending=0
+[TX] seq=62 (fix): 051,62,22.555768,113.922016,3.93,1784094345,SV=8
++EVT:TXP2P DONE
++EVT:RXP2P:-23:13:41434B2C3035312C3632
+[RX] ACK OK  RSSI=-23 dBm  SNR=13 dB
+[TX pass] done: delivered=62 lastSeq=62 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 63, up 44320 s, noFixStreak=0) ==
+[BAT] 3931 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[RTC] SET FROM GPS: 2026-07-15 05:56:48 UTC (unix~1784095008)
+[GPS] FIX in 61227 ms  used=4  IN-VIEW peak=8    lat=22555945 lon=113922074
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=63 (fix), buf=1/1  pend=0
+[TX pass] cycle=63 buffer=1 pending=0
+[TX] seq=63 (fix): 051,63,22.555945,113.922074,3.93,1784095008,SV=8
++EVT:TXP2P DONE
++EVT:RXP2P:-23:13:41434B2C3035312C3633
+[RX] ACK OK  RSSI=-23 dBm  SNR=13 dB
+[TX pass] done: delivered=63 lastSeq=63 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600103 ms
+== COLLECT (cycle 64, up 44983 s, noFixStreak=0) ==
+[BAT] 3929 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[RTC] SET FROM GPS: 2026-07-15 06:08:18 UTC (unix~1784095698)
+[GPS] FIX in 88229 ms  used=4  IN-VIEW peak=7    lat=22555837 lon=113922200
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=64 (fix), buf=1/1  pend=0
+[TX pass] cycle=64 buffer=1 pending=0
+[TX] seq=64 (fix): 051,64,22.555837,113.922200,3.92,1784095698,SV=7
++EVT:TXP2P DONE
++EVT:RXP2P:-23:13:41434B2C3035312C3634
+[RX] ACK OK  RSSI=-23 dBm  SNR=13 dB
+[TX pass] done: delivered=64 lastSeq=64 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 65, up 45673 s, noFixStreak=0) ==
+[BAT] 3929 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[RTC] SET FROM GPS: 2026-07-15 06:20:15 UTC (unix~1784096415)
+[GPS] FIX in 115229 ms  used=4  IN-VIEW peak=9    lat=22556768 lon=113921965
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=65 (fix), buf=1/1  pend=0
+[TX pass] cycle=65 buffer=1 pending=0
+[TX] seq=65 (fix): 051,65,22.556768,113.921965,3.92,1784096415,SV=9
++EVT:TXP2P DONE
++EVT:RXP2P:-23:13:41434B2C3035312C3635
+[RX] ACK OK  RSSI=-23 dBm  SNR=13 dB
+[TX pass] done: delivered=65 lastSeq=65 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 66, up 46390 s, noFixStreak=0) ==
+[BAT] 3931 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[RTC] SET FROM GPS: 2026-07-15 06:31:18 UTC (unix~1784097078)
+[GPS] FIX in 61229 ms  used=4  IN-VIEW peak=10    lat=22556166 lon=113922147
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=66 (fix), buf=1/1  pend=0
+[TX pass] cycle=66 buffer=1 pending=0
+[TX] seq=66 (fix): 051,66,22.556166,113.922147,3.93,1784097078,SV=10
++EVT:TXP2P DONE
++EVT:RXP2P:-23:14:41434B2C3035312C3636
+[RX] ACK OK  RSSI=-23 dBm  SNR=14 dB
+[TX pass] done: delivered=66 lastSeq=66 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600102 ms
+== COLLECT (cycle 67, up 47053 s, noFixStreak=0) ==
+[BAT] 3929 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=10  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=67 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=67 buffer=1 pending=0
+[TX] seq=67 (no-fix): 051,67,0.000000,0.000000,3.92,1784097800,SV=10
++EVT:TXP2P DONE
++EVT:RXP2P:-23:13:41434B2C3035312C3637
+[RX] ACK OK  RSSI=-23 dBm  SNR=13 dB
+[TX pass] done: delivered=67 lastSeq=67 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600103 ms
+== COLLECT (cycle 68, up 47775 s, noFixStreak=1) ==
+[BAT] 3932 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=11  (sky, no fix)  lat=0 lon=0
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=68 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=68 buffer=1 pending=0
+[TX] seq=68 (no-fix): 051,68,0.000000,0.000000,3.93,1784098521,SV=11
++EVT:TXP2P DONE
++EVT:RXP2P RECEIVE TIMEOUT
+[RX] not-ACK ("")
+[TX pass] done: delivered=67 lastSeq=67 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600103 ms
+== COLLECT (cycle 69, up 48497 s, noFixStreak=2) ==
+[BAT] 3931 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[RTC] SET FROM GPS: 2026-07-15 07:06:49 UTC (unix~1784099209)
+[GPS] FIX in 85698 ms  used=4  IN-VIEW peak=11    lat=22555979 lon=113922011
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=69 (fix), buf=1/1  pend=0
+[TX pass] cycle=69 buffer=1 pending=0
+[TX] seq=69 (fix): 051,69,22.555979,113.922011,3.93,1784099209,SV=11
++EVT:TXP2P DONE
++EVT:RXP2P:-23:13:41434B2C3035312C3639
+[RX] ACK OK  RSSI=-23 dBm  SNR=13 dB
+[TX pass] done: delivered=68 lastSeq=69 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~600103 ms
+== COLLECT (cycle 70, up 49185 s, noFixStreak=0) ==
+[BAT] 3932 mV
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[RTC] SET FROM GPS: 2026-07-15 07:18:33 UTC (unix~1784099913)
+[GPS] FIX in 102228 ms  used=4  IN-VIEW peak=11    lat=22556315 lon=113922088
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=70 (fix), buf=1/1  pend=0
+[TX pass] cycle=70 buffer=1 pending=0
+[TX] seq=70 (fix): 051,70,22.556315,113.922088,3.93,1784099913,SV=11
++EVT:TXP2P DONE
++EVT:RXP2P:-23:13:41434B2C3035312C3730
+[RX] ACK OK  RSSI=-23 dBm  SNR=13 dB
+[TX pass] done: delivered=69 lastSeq=70 pending=0 undelivered=0
+== IDLE deep-sleep 600 s ==
+[SLEEP] 600 s
+[RTC] timer: preset=600 s (1 Hz tick)

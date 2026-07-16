@@ -8,6 +8,8 @@
  *
  *   Serial (USB-C CDC, COM50) -> PC (115200)
  *   Wire -> I2C SDA=P0.13, SCL=P0.14  (RV-3028 @ 0x52, confirmed by test #0)
+ *   RTC ~INT (wake) -> P0.21  (schematic v2; was P1.03 in v1). This read-only test
+ *     does not use INT, but the deep-sleep/RTC-wake port must attach to P0.21.
  *
  * Open COM50, press reset, and report the LAST line you see.
  */

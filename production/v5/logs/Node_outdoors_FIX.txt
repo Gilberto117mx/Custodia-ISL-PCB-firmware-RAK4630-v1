@@ -1,0 +1,34 @@
+[alive] 2500 ms
+[alive] 3000 ms
+========================================================
+ISL Board - PRODUCTION v5  (GPS reception diag: SV in packet)
+========================================================
+[RTC] GPS-synced flag present  current: 2026-07-03 12:22:29
+[FLASH] Loaded: nextSeq=61 delivered=53 undelivered=7 buf=0 pend=0
+[CFG] id=051  period=5 min (1Hz tick)  fix_timeout=90 s  retry_wait=5 min  tx_retry=5 min  ack=8 s  settle=5 s  buffer=1  gnss_retries=2  tx_retries=2  WUR_wake=0  rtcSynced=1
+== COLLECT (cycle 1, up 8 s) ==
+[BAT] 3927 mV
+[GPS] attempt 1/2
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+[GPS] FIX in 6977 ms  used=14  IN-VIEW peak=19  lat=22528619 lon=113940480
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] added seq=61 (fix), buf=1/1
+== TX (attempt 1/2) ==
+[TX pass] cycle=1 pending=0 buffer=1
+[TX] seq=61: 051,61,22.528619,113.940480,3.92,1783081357,SV=19
++EVT:TXP2P DONE
++EVT:RXP2P RECEIVE TIMEOUT
+[RX] not-ACK ("")
+[TX] pending=1, sleeping 300 s before retry
+[SLEEP] 300 s
+[RTC] timer: preset=300 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~300002 ms
+= TX (attempt 2/2) ==
+[TX pass] cycle=1 pending=1 buffer=0
+[TX] seq=61: 051,61,22.528619,113.940480,3.92,1783081357,SV=19
++EVT:TXP2P DONE
++EVT:RXP2P:-35:12:41434B2C3035312C3631
+[RX] ACK OK  RSSI=-35 dBm  SNR=12 dB
+== IDLE deep-sleep 300 s ==
+[SLEEP] 300 s
+[RTC] timer: preset=300 s (1 Hz tick)

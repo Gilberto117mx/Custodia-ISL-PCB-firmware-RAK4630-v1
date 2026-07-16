@@ -1,0 +1,26 @@
+# ISL_GNSS_Serial0 - OUTDOOR raw NMEA capture (open sky, continuous power)
+# Proves the L76K + antenna are EXCELLENT: a full 3D fix with 12 sats used,
+# ~19 in view, SNR 33-42 dB-Hz, HDOP 2.0. Position ~22.5286 N, 113.9405 E.
+# This is why the production "no fix" was NOT hardware - it was the cold-start
+# vs short-power-cycled-window problem (see docs/GNSS_FieldStrategy.md).
+#
+# Key lines (talker GN = combined GPS+BeiDou; GSV per-constellation):
+
+$GNGGA,092459.000,2231.71474,N,11356.43086,E,1,12,2.0,32.2,M,-3.4,M,,*63
+#      time        lat         N  lon          E  ^  ^   ^   ^ altitude
+#                                                 |  |   |   HDOP 2.0 (great)
+#                                                 |  |   12 satellites USED
+#                                                 |  fix quality = 1 (VALID 3D FIX)
+$GNRMC,092459.000,A,2231.71474,N,11356.43086,E,0.00,0.00,140726,,,A,V*05
+#                  ^ status A = active/valid                  ^date 14/07/26
+$GNGSA,A,3,18,23,25,194,195,199,,,,,,,2.5,2.0,1.6,1*0C   # mode 3 = 3D, PDOP 2.5
+$GPGSV,2,1,08,10,72,342,22,18,13,181,17,23,66,131,37,25,53,121,39,0*65
+#            ^08 GPS in view          ^SNR 22   ^17     ^37       ^39 dB-Hz
+$GPGSV,2,2,08,32,37,324,21,194,30,127,26,195,32,166,33,199,60,149,33,0*57
+$BDGSV,2,1,07,01,,,37,06,72,092,33,14,35,095,42,21,15,108,17,0*4C
+#            ^07 BeiDou in view  ^37        ^33        ^42 dB-Hz
+$BDGSV,2,2,07,24,79,105,33,26,35,043,16,42,52,068,38,0*49
+
+# NMEA note for firmware: position sentences use the GN talker (GNRMC/GNGGA),
+# and RMC carries the NMEA-4.1 nav-status field (...,A,V). TinyGPSPlus handles
+# both GN and the extra field correctly (production got the fix in 6977 ms).

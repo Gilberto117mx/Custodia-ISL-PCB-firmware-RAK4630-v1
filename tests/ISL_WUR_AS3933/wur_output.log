@@ -1,0 +1,41 @@
+ISL Board (RAK_feather) - AS3933 Wake-Up Receiver bring-up capture
+Test: ISL_WUR_AS3933 (alive-first, bit-banged SPI)
+Result: PASS at SPI + config + RC-calibration level. Real wake event still pending
+        (needs an LF transmitter: 433 MHz carrier, 19 kHz OOK/Manchester, pattern 0x9669).
+Pins verified against schematic v2: CLK=P0.03 MOSI=P0.30 MISO=P0.29 CS=P0.26 WAKE=P1.04.
+
+--- serial output (USB-C CDC, 115200) ---
+ISL AS3933 WUR (test #4, alive-first). Heartbeat, then init...
+Current Work Mode: LoRaWAN.
+[alive] 0 ms
+[alive] 500 ms
+[alive] 1000 ms
+[alive] 1500 ms
+[alive] 2000 ms
+[alive] 2500 ms
+[alive] 3000 ms
+STEP: GPIO + interrupt setup ...
+STEP: PRESET + comms check ...
+  PRESET check: R5=0x69 R6=0x96 -> AS3933 OK
+STEP: write pattern-mode config ...
+STEP: RC-osc calibration (fRC ~ 33.25 kHz)...
+  R14=0xBC RC_CAL_OK=1 RC_CAL_KO=0 taps=60
+--- register dump R0..R8 ---
+  R0  = 0x02
+  R1  = 0x6A
+  R2  = 0x20
+  R3  = 0xBF
+  R4  = 0x00
+  R5  = 0x69
+  R6  = 0x96
+  R7  = 0xFF
+  R8  = 0xE0
+Ready. Waiting for a wake-up pattern on P1.04 ...
+
+--- interpretation ---
+* R5=0x69, R6=0x96 => SPI comms OK (fixed pattern registers read correctly).
+* R14: RC_CAL_OK=1, RC_CAL_KO=0, taps=60 => RC oscillator calibrated successfully.
+* R0..R8 read back == config written (02 6A 20 BF 00 69 96 FF E0) => pattern-mode
+  config (16-bit pattern 0x9669) accepted.
+* Next: trigger a real wake from reference/AS3933_wakeup/WuTx* and confirm the P1.04
+  rising-edge IRQ fires ">>> WAKE-UP ..." and R13 shows pattern-match.

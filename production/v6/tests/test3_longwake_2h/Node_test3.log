@@ -1,0 +1,36 @@
+[TX] seq=117 (fix): 051,117,22.528600,113.940480,3.92,1784156142,SV=12
++EVT:TXP2P DONE
++EVT:RXP2P:-41:12:41434B2C3035312C313137
+[RX] ACK OK  RSSI=-41 dBm  SNR=12 dB
+[TX pass] done: delivered=87 lastSeq=117 pending=0 undelivered=23
+== IDLE deep-sleep 7200 s ==
+[SLEEP] 7200 s
+[RTC] timer: preset=120 min (1/60 Hz tick)
+[WAKE] RTC P0.21 after ~7201602 ms
+== COLLECT (cycle 2, up 7244 s, noFixStreak=0) ==
+[BAT] 3922 mV
+[GPS] SIMULATED FIX  used=12  IN-VIEW=12  lat=22528600 lon=113940480  ts=1784163606
+[BUF] staged seq=119 (fix), buf=1/1  pend=0
+[TX pass] cycle=2 buffer=1 pending=0
+[TX] seq=119 (fix): 051,119,22.528600,113.940480,3.92,1784163606,SV=12
++EVT:TXP2P DONE
++EVT:RXP2P:-42:12:41434B2C3035312C313139
+[RX] ACK OK  RSSI=-42 dBm  SNR=12 dB
+[TX pass] done: delivered=88 lastSeq=119 pending=0 undelivered=23
+== IDLE deep-sleep 7200 s ==
+[SLEEP] 7200 s
+[RTC] timer: preset=120 min (1/60 Hz tick)
+[WAKE] RTC P0.21 after ~7201602 ms
+== COLLECT (cycle 3, up 14446 s, noFixStreak=0) ==
+[BAT] 3922 mV
+[GPS] SIMULATED FIX  used=12  IN-VIEW=12  lat=22528600 lon=113940480  ts=1784170807
+[BUF] staged seq=120 (fix), buf=1/1  pend=0
+[TX pass] cycle=3 buffer=1 pending=0
+[TX] seq=120 (fix): 051,120,22.528600,113.940480,3.92,1784170807,SV=12
++EVT:TXP2P DONE
++EVT:RXP2P:-47:12:41434B2C3035312C313230
+[RX] ACK OK  RSSI=-47 dBm  SNR=12 dB
+[TX pass] done: delivered=89 lastSeq=120 pending=0 undelivered=23
+== IDLE deep-sleep 7200 s ==
+[SLEEP] 7200 s
+[RTC] timer: preset=120 min (1/60 Hz tick)

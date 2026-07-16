@@ -1,0 +1,114 @@
+=== ReceiverWithACK v3 ===
+Initializing SX1262...
+[RADIO] Listening. 915 MHz | BW=250 | SF=7 | CR=5 | pre=8 | sync=0x12
+ACK reply delay: 50 ms
+---------------------------------------------------
+
+[PKT RECEIVED]  RSSI -56.00 dBm  SNR 12.50 dB
+  Raw : 051,85,22.528600,113.940480,3.91,1784104398,SV=12
+  Device ID : 051
+  Seq       : 85
+  Latitude  : 22.528600
+  Longitude : 113.940480
+  Voltage   : 3.91 V
+  Timestamp : 1784104398 (unix)
+  >> ACK sent (after 50 ms): ACK,051,85
+---------------------------------------------------
+
+[PKT RECEIVED]  RSSI -56.00 dBm  SNR 12.50 dB
+  Raw : 051,84,22.528600,113.940480,3.92,1784104269,SV=12
+  Device ID : 051
+  Seq       : 84
+  Latitude  : 22.528600
+  Longitude : 113.940480
+  Voltage   : 3.92 V
+  Timestamp : 1784104269 (unix)
+  >> ACK sent (after 50 ms): ACK,051,84
+---------------------------------------------------
+[PKT RECEIVED]  RSSI -57.00 dBm  SNR 12.25 dB
+  Raw : 051,83,22.528600,113.940480,3.92,1784104144,SV=12
+  Device ID : 051
+  Seq       : 83
+  Latitude  : 22.528600
+  Longitude : 113.940480
+  Voltage   : 3.92 V
+  Timestamp : 1784104144 (unix)
+  >> ACK sent (after 50 ms): ACK,051,83
+---------------------------------------------------
+
+[PKT RECEIVED]  RSSI -57.00 dBm  SNR 13.50 dB
+  Raw : 051,82,22.528600,113.940480,3.91,1784104015,SV=12
+  Device ID : 051
+  Seq       : 82
+  Latitude  : 22.528600
+  Longitude : 113.940480
+  Voltage   : 3.91 V
+  Timestamp : 1784104015 (unix)
+  >> ACK sent (after 50 ms): ACK,051,82
+---------------------------------------------------
+
+[PKT RECEIVED]  RSSI -55.00 dBm  SNR 13.75 dB
+  Raw : 051,81,22.528600,113.940480,3.92,1784103886,SV=12
+Device ID : 051
+  Seq       : 81
+  Latitude  : 22.528600
+  Longitude : 113.940480
+  Voltage   : 3.92 V
+  Timestamp : 1784103886 (unix)
+  >> ACK sent (after 50 ms): ACK,051,81
+---------------------------------------------------
+
+[PKT RECEIVED]  RSSI -55.00 dBm  SNR 12.50 dB
+  Raw : 051,80,22.528600,113.940480,3.92,1784103757,SV=12
+  Device ID : 051
+  Seq       : 80
+  Latitude  : 22.528600
+  Longitude : 113.940480
+  Voltage   : 3.92 V
+  Timestamp : 1784103757 (unix)
+  >> ACK sent (after 50 ms): ACK,051,80
+---------------------------------------------------
+
+[PKT RECEIVED]  RSSI -56.00 dBm  SNR 12.75 dB
+  Raw : 051,86,22.528600,113.940480,3.92,1784104670,SV=12
+Device ID : 051
+  Seq       : 86
+  Latitude  : 22.528600
+  Longitude : 113.940480
+  Voltage   : 3.92 V
+  Timestamp : 1784104670 (unix)
+  >> ACK sent (after 50 ms): ACK,051,86
+---------------------------------------------------
+
+[PKT RECEIVED]  RSSI -58.00 dBm  SNR 13.75 dB
+  Raw : 051,87,22.528600,113.940480,3.92,1784104791,SV=12
+  Device ID : 051
+  Seq       : 87
+  Latitude  : 22.528600
+  Longitude : 113.940480
+  Voltage   : 3.92 V
+  Timestamp : 1784104791 (unix)
+  >> ACK sent (after 50 ms): ACK,051,87
+---------------------------------------------------
+
+[PKT RECEIVED]  RSSI -57.00 dBm  SNR 13.00 dB
+  Raw : 051,88,22.528600,113.940480,3.92,1784104912,SV=12
+  Device ID : 051
+  Seq       : 88
+  Latitude  : 22.528600
+  Longitude : 113.940480
+Voltage   : 3.92 V
+  Timestamp : 1784104912 (unix)
+  >> ACK sent (after 50 ms): ACK,051,88
+---------------------------------------------------
+
+[PKT RECEIVED]  RSSI -64.00 dBm  SNR 12.50 dB
+  Raw : 051,89,22.528600,113.940480,3.92,1784105032,SV=12
+  Device ID : 051
+  Seq       : 89
+  Latitude  : 22.528600
+  Longitude : 113.940480
+  Voltage   : 3.92 V
+  Timestamp : 1784105032 (unix)
+  >> ACK sent (after 50 ms): ACK,051,89
+---------------------------------------------------

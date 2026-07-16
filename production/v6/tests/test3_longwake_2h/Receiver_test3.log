@@ -1,0 +1,44 @@
+
+[PKT RECEIVED]  RSSI -60.00 dBm  SNR 12.00 dB
+  Raw : 051,118,22.528600,113.940480,3.90,1784156375,SV=12
+  Device ID : 051
+  Seq       : 118
+  Latitude  : 22.528600
+  Longitude : 113.940480
+  Voltage   : 3.90 V
+  Timestamp : 1784156375 (unix)
+  >> ACK sent (after 50 ms): ACK,051,118
+---------------------------------------------------
+
+[PKT RECEIVED]  RSSI -65.00 dBm  SNR 12.50 dB
+  Raw : 051,117,22.528600,113.940480,3.92,1784156142,SV=12
+  Device ID : 051
+  Seq       : 117
+  Latitude  : 22.528600
+  Longitude : 113.940480
+  Voltage   : 3.92 V
+  Timestamp : 1784156142 (unix)
+  >> ACK sent (after 50 ms): ACK,051,117
+---------------------------------------------------
+
+[PKT RECEIVED]  RSSI -66.00 dBm  SNR 12.50 dB
+  Raw : 051,119,22.528600,113.940480,3.92,1784163606,SV=12
+  Device ID : 051
+  Seq       : 119
+  Latitude  : 22.528600
+  Longitude : 113.940480
+  Voltage   : 3.92 V
+  Timestamp : 1784163606 (unix)
+  >> ACK sent (after 50 ms): ACK,051,119
+---------------------------------------------------
+
+[PKT RECEIVED]  RSSI -68.00 dBm  SNR 13.25 dB
+  Raw : 051,120,22.528600,113.940480,3.92,1784170807,SV=12
+  Device ID : 051
+  Seq       : 120
+  Latitude  : 22.528600
+  Longitude : 113.940480
+  Voltage   : 3.92 V
+  Timestamp : 1784170807 (unix)
+  >> ACK sent (after 50 ms): ACK,051,120
+---------------------------------------------------

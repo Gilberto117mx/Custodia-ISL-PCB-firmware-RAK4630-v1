@@ -1,0 +1,30 @@
+=== ReceiverWithACK v3 ===
+Initializing SX1262...
+[RADIO] Listening. 915 MHz | BW=250 | SF=7 | CR=5 | pre=8 | sync=0x12
+ACK reply delay: 50 ms
+---------------------------------------------------
+
+[PKT RECEIVED]  RSSI -52.00 dBm  SNR 12.25 dB
+  Raw : 051,61,22.528619,113.940480,3.92,1783081357,SV=19
+  Device ID : 051
+  Seq       : 61
+  Latitude  : 22.528619
+  Longitude : 113.940480
+  Voltage   : 3.92 V
+  Timestamp : 1783081357 (unix)
+  >> ACK sent (after 50 ms): ACK,051,61
+---------------------------------------------------
+
+---------------------------------------------------
+
+[PKT RECEIVED]  RSSI -57.00 dBm  SNR 12.50 dB
+  Raw : 051,62,22.528612,113.940128,3.99,1783081974,SV=19
+  Device ID : 051
+  Seq       : 62
+  Latitude  : 22.528612
+  Longitude : 113.940128
+  Voltage   : 3.99 V
+  Timestamp : 1783081974 (unix)
+  >> ACK sent (after 50 ms): ACK,051,62
+---------------------------------------------------
+

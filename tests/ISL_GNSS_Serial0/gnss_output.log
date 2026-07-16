@@ -1,0 +1,46 @@
+ISL Board (RAK_feather) - GNSS bring-up capture
+Test: ISL_GNSS_Serial0 (rev2, EN=P1.02)
+Result: PASS - L76K powered, UART1/Serial0 streaming NMEA.
+Conditions: indoors, no sky view -> no position fix yet (00 satellites, status V=void),
+            but the module is alive and the antenna is detected ("ANTENNA OK").
+
+--- serial output (USB-C CDC, 115200) ---
+ISL GNSS on Serial0/UART1, EN=P1.02 (rev2). Heartbeat, then GPS init...
+Current Work Mode: LoRaWAN.
+[alive] 0 ms
+[alive] 500 ms
+[alive] 1000 ms
+[alive] 1500 ms
+[alive] 2000 ms
+[alive] 2500 ms
+[alive] 3000 ms
+STEP 1: GPS power ON (P1.02 LOW, active-low)...
+STEP 1 done
+STEP 2: Serial0.begin(9600, RAK_CUSTOM_MODE)  [UART1 = P0.19/P0.20]...
+STEP 2 done - UART1 open. Raw NMEA below (expect $GxRMC/$GxGGA):
+  ------------------------------------------------------------
+$GNGGA,,,,,,0,00,25.5,,,,,,*64
+$GNGLL,,,,,,V,N*7A
+$GNGSA,A,1,,,,,,,,,,,,,25.5,25.5,25.5,1*01
+$GNGSA,A,1,,,,,,,,,,,,,25.5,25.5,25.5,4*04
+$GPGSV,1,1,00,0*65
+$BDGSV,1,1,00,0*74
+$GNRMC,,V,,,,,,,,,,N,V*37
+$GNVTG,,,,,,,,,N*2E
+$GNZDA,,,,,,*56
+$GNGGA,,,,,,0,00,25.5,,,,,,*64
+$GNGLL,,,,,,V,N*7A
+$GNGSA,A,1,,,,,,,,,,,,,25.5,25.5,25.5,1*01
+$GNGSA,A,1,,,,,,,,,,,,,25.5,25.5,25.5,4*04
+$GPGSV,1,1,00,0*65
+$BDGSV,1,1,00,0*74
+$GNRMC,,V,,,,,,,,,,N,V*37
+$GNVTG,,,,,,,,,N*2E
+$GNZDA,,,,,,*56
+$GPTXT,01,01,01,ANTENNA OK*35
+$GNGGA,,,,,,0,00,25.5,,,
+
+--- notes ---
+* Talker IDs GN/GP/BD => multi-GNSS (GPS + BeiDou) L76K.
+* $GPTXT "ANTENNA OK" => active antenna path is good.
+* Next: validate an actual fix outdoors (expect GGA fix-quality > 0 and RMC status A).
