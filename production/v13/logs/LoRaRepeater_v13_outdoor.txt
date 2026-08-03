@@ -1,0 +1,563 @@
+
+================================================================
+  SolarNode LoRa Repeater  -  firmware v1
+  Board : SenseCAP Solar Node P1-Pro (XIAO nRF52840 Plus + SX1262)
+  Built : Jul 25 2026  22:04:01
+================================================================
+[ROLE] RX node  ->  ACK node  ->  relay onward to gateway
+       (Meshtastic-style managed flood, <id,seq> dedup)
+[CFG]  repeaterID=91  ackDelay=50ms  relayGap=20ms  dedup=16  heartbeat=30s
+[PHY]  915 MHz  BW=250kHz  SF7  CR4/5  sync=0x12  preamble=8  TXpwr=22dBm  TC1.8V  (matches ISL board)
+[PINS] LoRa CS=D4 DIO1=D1 RST=D2 BUSY=D3 | LED white=P0.15 blue=P0.19 | PWRbt1.01
+[USB] monitor connected - repeater was never paused; resuming live logs
+[STAT] up 0d 01:18:57  |  rx=15 ack=15 relay=15 dup=0 bad=0  |  dedup 15/16
+[STAT] last packet 116 s ago
+[LoRa] listening for node packets...
+[STAT] up 0d 01:19:15  |  rx=15 ack=15 relay=15 dup=0 bad=0  |  dedup 15/16
+[STAT] last packet 134 s ago
+[STAT] up 0d 01:19:45  |  rx=15 ack=15 relay=15 dup=0 bad=0  |  dedup 15/16
+[STAT] last packet 164 s ago
+[STAT] up 0d 01:20:15  |  rx=15 ack=15 relay=15 dup=0 bad=0  |  dedup 15/16
+[STAT] last packet 194 s ago
+[STAT] up 0d 01:20:45  |  rx=15 ack=15 relay=15 dup=0 bad=0  |  dedup 15/16
+[STAT] last packet 224 s ago
+[STAT] up 0d 01:21:15  |  rx=15 ack=15 relay=15 dup=0 bad=0  |  dedup 15/16
+[STAT] last packet 254 s ago
+[STAT] up 0d 01:21:45  |  rx=15 ack=15 relay=15 dup=0 bad=0  |  dedup 15/16
+[STAT] last packet 284 s ago
+[STAT] up 0d 01:22:15  |  rx=15 ack=15 relay=15 dup=0 bad=0  |  dedup 15/16
+[STAT] last packet 314 s ago
+[STAT] up 0d 01:22:45  |  rx=15 ack=15 relay=15 dup=0 bad=0  |  dedup 15/16
+[STAT] last packet 344 s ago
+[STAT] up 0d 01:23:15  |  rx=15 ack=15 relay=15 dup=0 bad=0  |  dedup 15/16
+[STAT] last packet 374 s ago
+[STAT] up 0d 01:23:45  |  rx=15 ack=15 relay=15 dup=0 bad=0  |  dedup 15/16
+[STAT] last packet 404 s ago
+[STAT] up 0d 01:24:15  |  rx=15 ack=15 relay=15 dup=0 bad=0  |  dedup 15/16
+[STAT] last packet 434 s ago
+[STAT] up 0d 01:24:45  |  rx=15 ack=15 relay=15 dup=0 bad=0  |  dedup 15/16
+[STAT] last packet 464 s ago
+[STAT] up 0d 01:25:15  |  rx=15 ack=15 relay=15 dup=0 bad=0  |  dedup 15/16
+[STAT] last packet 494 s ago
+[STAT] up 0d 01:25:45  |  rx=15 ack=15 relay=15 dup=0 bad=0  |  dedup 15/16
+[STAT] last packet 524 s ago
+[STAT] up 0d 01:26:15  |  rx=15 ack=15 relay=15 dup=0 bad=0  |  dedup 15/16
+[STAT] last packet 554 s ago
+[STAT] up 0d 01:26:45  |  rx=15 ack=15 relay=15 dup=0 bad=0  |  dedup 15/16
+[STAT] last packet 584 s ago
+[STAT] up 0d 01:27:15  |  rx=15 ack=15 relay=15 dup=0 bad=0  |  dedup 15/16
+[STAT] last packet 614 s ago
+[STAT] up 0d 01:27:45  |  rx=15 ack=15 relay=15 dup=0 bad=0  |  dedup 15/16
+[STAT] last packet 644 s ago
+[STAT] up 0d 01:28:15  |  rx=15 ack=15 relay=15 dup=0 bad=0  |  dedup 15/16
+[STAT] last packet 674 s ago
+[STAT] up 0d 01:28:45  |  rx=15 ack=15 relay=15 dup=0 bad=0  |  dedup 15/16
+[STAT] last packet 704 s ago
+[STAT] up 0d 01:29:15  |  rx=15 ack=15 relay=15 dup=0 bad=0  |  dedup 15/16
+[STAT] last packet 734 s ago
+[STAT] up 0d 01:29:45  |  rx=15 ack=15 relay=15 dup=0 bad=0  |  dedup 15/16
+[STAT] last packet 764 s ago
+[STAT] up 0d 01:30:15  |  rx=15 ack=15 relay=15 dup=0 bad=0  |  dedup 15/16
+[STAT] last packet 794 s ago
+[STAT] up 0d 01:30:45  |  rx=15 ack=15 relay=15 dup=0 bad=0  |  dedup 15/16
+[STAT] last packet 824 s ago
+[STAT] up 0d 01:31:15  |  rx=15 ack=15 relay=15 dup=0 bad=0  |  dedup 15/16
+[STAT] last packet 854 s ago
+[STAT] up 0d 01:31:45  |  rx=15 ack=15 relay=15 dup=0 bad=0  |  dedup 15/16
+[STAT] last packet 884 s ago
+[STAT] up 0d 01:32:15  |  rx=15 ack=15 relay=15 dup=0 bad=0  |  dedup 15/16
+[STAT] last packet 914 s ago
+[RX] #16  RSSI=-110.0 dBm  SNR=0.0 dB  len=45  "051,122,0.000000,0.000000,3.946685882,SV=0"
+[RX] parsed id=51 seq=122
+[ACK] sent "ACK,51,122"  (16 total)
+[RELAY] forwarded id=51 seq=122 onward (16 total)
+[STAT] up 0d 01:32:45  |  rx=16 ack=16 relay=16 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 17 s ago
+[STAT] up 0d 01:33:15  |  rx=16 ack=16 relay=16 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 47 s ago
+[STAT] up 0d 01:33:45  |  rx=16 ack=16 relay=16 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 77 s ago
+[STAT] up 0d 01:34:15  |  rx=16 ack=16 relay=16 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 107 s ago
+[STAT] up 0d 01:34:45  |  rx=16 ack=16 relay=16 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 137 s ago
+[STAT] up 0d 01:35:15  |  rx=16 ack=16 relay=16 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 167 s ago
+[STAT] up 0d 01:35:45  |  rx=16 ack=16 relay=16 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 197 s ago
+[STAT] up 0d 01:36:15  |  rx=16 ack=16 relay=16 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 227 s ago
+[STAT] up 0d 01:36:45  |  rx=16 ack=16 relay=16 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 257 s ago
+[STAT] up 0d 01:37:15  |  rx=16 ack=16 relay=16 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 287 s ago
+[STAT] up 0d 01:37:45  |  rx=16 ack=16 relay=16 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 317 s ago
+[STAT] up 0d 01:38:15  |  rx=16 ack=16 relay=16 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 347 s ago
+[STAT] up 0d 01:38:45  |  rx=16 ack=16 relay=16 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 377 s ago
+[STAT] up 0d 01:39:15  |  rx=16 ack=16 relay=16 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 407 s ago
+[STAT] up 0d 01:39:45  |  rx=16 ack=16 relay=16 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 437 s ago
+[STAT] up 0d 01:40:15  |  rx=16 ack=16 relay=16 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 467 s ago
+[STAT] up 0d 01:40:45  |  rx=16 ack=16 relay=16 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 497 s ago
+[STAT] up 0d 01:41:15  |  rx=16 ack=16 relay=16 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 527 s ago
+[STAT] up 0d 01:41:45  |  rx=16 ack=16 relay=16 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 557 s ago
+[STAT] up 0d 01:42:15  |  rx=16 ack=16 relay=16 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 587 s ago
+[STAT] up 0d 01:42:45  |  rx=16 ack=16 relay=16 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 617 s ago
+[STAT] up 0d 01:43:15  |  rx=16 ack=16 relay=16 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 647 s ago
+[STAT] up 0d 01:43:45  |  rx=16 ack=16 relay=16 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 677 s ago
+[STAT] up 0d 01:44:15  |  rx=16 ack=16 relay=16 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 707 s ago
+[STAT] up 0d 01:44:45  |  rx=16 ack=16 relay=16 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 737 s ago
+[STAT] up 0d 01:45:15  |  rx=16 ack=16 relay=16 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 767 s ago
+[STAT] up 0d 01:45:45  |  rx=16 ack=16 relay=16 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 797 s ago
+[STAT] up 0d 01:46:15  |  rx=16 ack=16 relay=16 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 827 s ago
+[STAT] up 0d 01:46:45  |  rx=16 ack=16 relay=16 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 857 s ago
+[STAT] up 0d 01:47:15  |  rx=16 ack=16 relay=16 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 887 s ago
+[STAT] up 0d 01:47:45  |  rx=16 ack=16 relay=16 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 917 s ago
+[RX] #17  RSSI=-110.0 dBm  SNR=1.0 dB  len=45  "051,123,0.000000,0.000000,3.946686809,SV=0"
+[RX] parsed id=51 seq=123
+[ACK] sent "ACK,51,123"  (17 total)
+[RELAY] forwarded id=51 seq=123 onward (17 total)
+[STAT] up 0d 01:48:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 20 s ago
+[STAT] up 0d 01:48:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 50 s ago
+[STAT] up 0d 01:49:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 80 s ago
+[STAT] up 0d 01:49:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 110 s ago
+[STAT] up 0d 01:50:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 140 s ago
+[STAT] up 0d 01:50:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 170 s ago
+[STAT] up 0d 01:51:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 200 s ago
+[STAT] up 0d 01:51:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 230 s ago
+[STAT] up 0d 01:52:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 260 s ago
+[STAT] up 0d 01:52:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 290 s ago
+[STAT] up 0d 01:53:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 320 s ago
+[STAT] up 0d 01:53:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 350 s ago
+[STAT] up 0d 01:54:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 380 s ago
+[STAT] up 0d 01:54:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 410 s ago
+[STAT] up 0d 01:55:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 440 s ago
+[STAT] up 0d 01:55:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 470 s ago
+[STAT] up 0d 01:56:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 500 s ago
+[STAT] up 0d 01:56:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 530 s ago
+[STAT] up 0d 01:57:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 560 s ago
+[STAT] up 0d 01:57:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 590 s ago
+[STAT] up 0d 01:58:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 620 s ago
+[STAT] up 0d 01:58:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 650 s ago
+[STAT] up 0d 01:59:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 680 s ago
+[STAT] up 0d 01:59:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 710 s ago
+[STAT] up 0d 02:00:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 740 s ago
+[STAT] up 0d 02:00:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 770 s ago
+[STAT] up 0d 02:01:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 800 s ago
+[STAT] up 0d 02:01:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 830 s ago
+[STAT] up 0d 02:02:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 860 s ago
+[STAT] up 0d 02:02:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 890 s ago
+[STAT] up 0d 02:03:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 920 s ago
+[STAT] up 0d 02:03:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 950 s ago
+[STAT] up 0d 02:04:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 980 s ago
+[STAT] up 0d 02:04:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 1010 s ago
+[STAT] up 0d 02:05:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 1040 s ago
+[STAT] up 0d 02:05:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 1070 s ago
+[STAT] up 0d 02:06:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 1100 s ago
+[STAT] up 0d 02:06:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 1130 s ago
+[STAT] up 0d 02:07:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 1160 s ago
+[STAT] up 0d 02:07:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 1190 s ago
+[STAT] up 0d 02:08:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 1220 s ago
+[STAT] up 0d 02:08:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 1250 s ago
+[STAT] up 0d 02:09:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 1280 s ago
+[STAT] up 0d 02:09:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 1310 s ago
+[STAT] up 0d 02:10:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 1340 s ago
+[STAT] up 0d 02:10:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 1370 s ago
+[STAT] up 0d 02:11:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 1400 s ago
+[STAT] up 0d 02:11:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 1430 s ago
+[STAT] up 0d 02:12:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 1460 s ago
+[STAT] up 0d 02:12:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 1490 s ago
+[STAT] up 0d 02:13:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 1520 s ago
+[STAT] up 0d 02:13:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 1550 s ago
+[STAT] up 0d 02:14:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 1580 s ago
+[STAT] up 0d 02:14:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 1610 s ago
+[STAT] up 0d 02:15:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 1640 s ago
+[STAT] up 0d 02:15:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 1670 s ago
+[STAT] up 0d 02:16:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 1700 s ago
+[STAT] up 0d 02:16:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 1730 s ago
+[STAT] up 0d 02:17:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 1760 s ago
+[STAT] up 0d 02:17:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 1790 s ago
+[STAT] up 0d 02:18:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 1820 s ago
+[STAT] up 0d 02:18:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 1850 s ago
+[STAT] up 0d 02:19:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 1880 s ago
+[STAT] up 0d 02:19:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 1910 s ago
+[STAT] up 0d 02:20:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 1940 s ago
+[STAT] up 0d 02:20:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 1970 s ago
+[STAT] up 0d 02:21:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 2000 s ago
+[STAT] up 0d 02:21:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 2030 s ago
+[STAT] up 0d 02:22:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 2060 s ago
+[STAT] up 0d 02:22:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 2090 s ago
+[STAT] up 0d 02:23:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 2120 s ago
+[STAT] up 0d 02:23:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 2150 s ago
+[STAT] up 0d 02:24:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 2180 s ago
+[STAT] up 0d 02:24:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 2210 s ago
+[STAT] up 0d 02:25:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 2240 s ago
+[STAT] up 0d 02:25:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 2270 s ago
+[STAT] up 0d 02:26:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 2300 s ago
+[STAT] up 0d 02:26:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 2330 s ago
+[STAT] up 0d 02:27:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 2360 s ago
+[STAT] up 0d 02:27:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 2390 s ago
+[STAT] up 0d 02:28:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 2420 s ago
+[STAT] up 0d 02:28:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 2450 s ago
+[STAT] up 0d 02:29:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 2480 s ago
+[STAT] up 0d 02:29:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 2510 s ago
+[STAT] up 0d 02:30:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 2540 s ago
+[STAT] up 0d 02:30:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 2570 s ago
+[STAT] up 0d 02:31:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 2600 s ago
+[STAT] up 0d 02:31:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 2630 s ago
+[STAT] up 0d 02:32:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 2660 s ago
+[STAT] up 0d 02:32:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 2690 s ago
+[STAT] up 0d 02:33:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 2720 s ago
+[STAT] up 0d 02:33:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 2750 s ago
+[STAT] up 0d 02:34:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 2780 s ago
+[STAT] up 0d 02:34:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 2810 s ago
+[STAT] up 0d 02:35:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 2840 s ago
+[STAT] up 0d 02:35:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 2870 s ago
+[STAT] up 0d 02:36:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 2900 s ago
+[STAT] up 0d 02:36:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 2930 s ago
+[STAT] up 0d 02:37:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 2960 s ago
+[STAT] up 0d 02:37:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 2990 s ago
+[STAT] up 0d 02:38:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 3020 s ago
+[STAT] up 0d 02:38:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 3050 s ago
+[STAT] up 0d 02:39:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 3080 s ago
+[STAT] up 0d 02:39:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 3110 s ago
+[STAT] up 0d 02:40:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 3140 s ago
+[STAT] up 0d 02:40:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 3170 s ago
+[STAT] up 0d 02:41:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 3200 s ago
+[STAT] up 0d 02:41:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 3230 s ago
+[STAT] up 0d 02:42:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 3260 s ago
+[STAT] up 0d 02:42:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 3290 s ago
+[STAT] up 0d 02:43:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 3320 s ago
+[STAT] up 0d 02:43:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 3350 s ago
+[STAT] up 0d 02:44:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 3380 s ago
+[STAT] up 0d 02:44:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 3410 s ago
+[STAT] up 0d 02:45:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 3440 s ago
+[STAT] up 0d 02:45:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 3470 s ago
+[STAT] up 0d 02:46:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 3500 s ago
+[STAT] up 0d 02:46:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 3530 s ago
+[STAT] up 0d 02:47:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 3560 s ago
+[STAT] up 0d 02:47:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 3590 s ago
+[STAT] up 0d 02:48:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 3620 s ago
+[STAT] up 0d 02:48:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 3650 s ago
+[STAT] up 0d 02:49:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 3680 s ago
+[STAT] up 0d 02:49:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 3710 s ago
+[STAT] up 0d 02:50:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 3740 s ago
+[STAT] up 0d 02:50:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 3770 s ago
+[STAT] up 0d 02:51:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 3800 s ago
+[STAT] up 0d 02:51:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 3830 s ago
+[STAT] up 0d 02:52:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 3860 s ago
+[STAT] up 0d 02:52:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 3890 s ago
+[STAT] up 0d 02:53:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 3920 s ago
+[STAT] up 0d 02:53:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 3950 s ago
+[STAT] up 0d 02:54:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 3980 s ago
+[STAT] up 0d 02:54:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 4010 s ago
+[STAT] up 0d 02:55:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 4040 s ago
+[STAT] up 0d 02:55:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 4070 s ago
+[STAT] up 0d 02:56:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 4100 s ago
+[STAT] up 0d 02:56:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 4130 s ago
+[STAT] up 0d 02:57:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 4160 s ago
+[STAT] up 0d 02:57:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 4190 s ago
+[STAT] up 0d 02:58:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 4220 s ago
+[STAT] up 0d 02:58:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 4250 s ago
+[STAT] up 0d 02:59:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 4280 s ago
+[STAT] up 0d 02:59:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 4310 s ago
+[STAT] up 0d 03:00:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 4340 s ago
+[STAT] up 0d 03:00:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 4370 s ago
+[STAT] up 0d 03:01:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 4400 s ago
+[STAT] up 0d 03:01:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 4430 s ago
+[STAT] up 0d 03:02:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 4460 s ago
+[STAT] up 0d 03:02:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 4490 s ago
+[STAT] up 0d 03:03:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 4520 s ago
+[STAT] up 0d 03:03:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 4550 s ago
+[STAT] up 0d 03:04:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 4580 s ago
+[STAT] up 0d 03:04:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 4610 s ago
+[STAT] up 0d 03:05:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 4640 s ago
+[STAT] up 0d 03:05:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 4670 s ago
+[STAT] up 0d 03:06:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 4700 s ago
+[STAT] up 0d 03:06:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 4730 s ago
+[STAT] up 0d 03:07:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 4760 s ago
+[STAT] up 0d 03:07:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 4790 s ago
+[STAT] up 0d 03:08:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 4820 s ago
+[STAT] up 0d 03:08:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 4850 s ago
+[STAT] up 0d 03:09:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 4880 s ago
+[STAT] up 0d 03:09:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 4910 s ago
+[STAT] up 0d 03:10:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 4940 s ago
+[STAT] up 0d 03:10:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 4970 s ago
+[STAT] up 0d 03:11:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 5000 s ago
+[STAT] up 0d 03:11:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 5030 s ago
+[STAT] up 0d 03:12:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 5060 s ago
+[STAT] up 0d 03:12:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 5090 s ago
+[STAT] up 0d 03:13:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 5120 s ago
+[STAT] up 0d 03:13:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 5150 s ago
+[STAT] up 0d 03:14:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 5180 s ago
+[STAT] up 0d 03:14:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 5210 s ago
+[STAT] up 0d 03:15:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 5240 s ago
+[STAT] up 0d 03:15:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 5270 s ago
+[STAT] up 0d 03:16:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 5300 s ago
+[STAT] up 0d 03:16:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 5330 s ago
+[STAT] up 0d 03:17:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 5360 s ago
+[STAT] up 0d 03:17:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 5390 s ago
+[STAT] up 0d 03:18:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 5420 s ago
+[STAT] up 0d 03:18:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 5450 s ago
+[STAT] up 0d 03:19:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 5480 s ago
+[STAT] up 0d 03:19:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 5510 s ago
+[STAT] up 0d 03:20:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 5540 s ago
+[STAT] up 0d 03:20:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 5570 s ago
+[STAT] up 0d 03:21:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 5600 s ago
+[STAT] up 0d 03:21:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 5630 s ago
+[STAT] up 0d 03:22:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 5660 s ago
+[STAT] up 0d 03:22:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 5690 s ago
+[STAT] up 0d 03:23:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 5720 s ago
+[STAT] up 0d 03:23:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 5750 s ago
+[STAT] up 0d 03:24:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 5780 s ago
+[STAT] up 0d 03:24:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 5810 s ago
+[STAT] up 0d 03:25:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 5840 s ago
+[STAT] up 0d 03:25:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 5870 s ago
+[STAT] up 0d 03:26:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 5900 s ago
+[STAT] up 0d 03:26:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 5930 s ago
+[STAT] up 0d 03:27:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 5960 s ago
+[STAT] up 0d 03:27:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 5990 s ago
+[STAT] up 0d 03:28:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 6020 s ago
+[STAT] up 0d 03:28:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 6050 s ago
+[STAT] up 0d 03:29:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 6080 s ago
+[STAT] up 0d 03:29:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 6110 s ago
+[STAT] up 0d 03:30:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 6140 s ago
+[STAT] up 0d 03:30:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 6170 s ago
+[STAT] up 0d 03:31:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 6200 s ago
+[STAT] up 0d 03:31:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 6230 s ago
+[STAT] up 0d 03:32:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 6260 s ago
+[STAT] up 0d 03:32:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 6290 s ago
+[STAT] up 0d 03:33:15  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 6320 s ago
+[STAT] up 0d 03:33:45  |  rx=17 ack=17 relay=17 dup=0 bad=0  |  dedup 16/16
+[STAT] last packet 6350 s ago

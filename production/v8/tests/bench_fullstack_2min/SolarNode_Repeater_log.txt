@@ -1,0 +1,146 @@
+
+================================================================
+  SolarNode LoRa Repeater  -  firmware v1
+  Board : SenseCAP Solar Node P1-Pro (XIAO nRF52840 Plus + SX1262)
+  Built : Jul 25 2026  22:04:01
+================================================================
+[ROLE] RX node  ->  ACK node  ->  relay onward to gateway
+       (Meshtastic-style managed flood, <id,seq> dedup)
+[CFG]  repeaterID=91  ackDelay=50ms  relayGap=20ms  dedup=16  heartbeat=30s
+[PHY]  915 MHz  BW=250kHz  SF7  CR4/5  sync=0x12  preamble=8  TXpwr=22dBm  TCXO=1.8V  (matches ISL board)
+[PINS] LoRa CS=D4 DIO1=D1 RST=D2 BUSY=D3 | LED white=P0.15 blue=P0.19 | PWRbtn=P1.01
+[USB] monitor connected - repeater was never paused; resuming live logs
+[STAT] up 0d 00:00:10  |  rx=0 ack=0 relay=0 dup=0 bad=0  |  dedup 0/16
+[STAT] no node packets heard yet - listening
+[LoRa] listening for node packets...
+
+================================================================
+  SolarNode LoRa Repeater  -  firmware v1
+  Board : SenseCAP Solar Node P1-Pro (XIAO nRF52840 Plus + SX1262)
+  Built : Jul 25 2026  22:04:01
+================================================================
+[ROLE] RX node  ->  ACK node  ->  relay onward to gateway
+       (Meshtastic-style managed flood, <id,seq> dedup)
+[CFG]  repeaterID=91  ackDelay=50ms  relayGap=20ms  dedup=16  heartbeat=30s
+[PHY]  915 MHz  BW=250kHz  SF7  CR4/5  sync=0x12  preamble=8  TXpwr=22dBm  TCXO=1.8V  (matches ISL board)
+[PINS] LoRa CS=D4 DIO1=D1 RST=D2 BUSY=D3 | LED white=P0.15 blue=P0.19 | PWRbtn=P1.01
+[USB] monitor connected - repeater was never paused; resuming live logs
+[STAT] up 0d 00:00:23  |  rx=0 ack=0 relay=0 dup=0 bad=0  |  dedup 0/16
+[STAT] no node packets heard yet - listening
+[LoRa] listening for node packets...
+[STAT] up 0d 00:00:29  |  rx=0 ack=0 relay=0 dup=0 bad=0  |  dedup 0/16
+[STAT] no node packets heard yet - listening
+[STAT] up 0d 00:00:59  |  rx=0 ack=0 relay=0 dup=0 bad=0  |  dedup 0/16
+[STAT] no node packets heard yet - listening
+[STAT] up 0d 00:01:29  |  rx=0 ack=0 relay=0 dup=0 bad=0  |  dedup 0/16
+[STAT] no node packets heard yet - listening
+[STAT] up 0d 00:01:59  |  rx=0 ack=0 relay=0 dup=0 bad=0  |  dedup 0/16
+[STAT] no node packets heard yet - listening
+[STAT] up 0d 00:02:29  |  rx=0 ack=0 relay=0 dup=0 bad=0  |  dedup 0/16
+[STAT] no node packets heard yet - listening
+[RX] #1  RSSI=-72.0 dBm  SNR=12.5 dB  len=50  "051,179,22.528600,113.940480,3.89,1784059200,SV=12"
+[RX] parsed id=51 seq=179
+[ACK] sent "ACK,51,179"  (1 total)
+[RELAY] forwarded id=51 seq=179 onward (1 total)
+[STAT] up 0d 00:02:59  |  rx=1 ack=1 relay=1 dup=0 bad=0  |  dedup 1/16
+[STAT] last packet 18 s ago
+[RX] #2  RSSI=-71.0 dBm  SNR=11.5 dB  len=50  "051,177,22.528600,113.940480,3.90,1784138714,SV=12"
+[RX] parsed id=51 seq=177
+[ACK] sent "ACK,51,177"  (2 total)
+[RELAY] forwarded id=51 seq=177 onward (2 total)
+[STAT] up 0d 00:03:29  |  rx=2 ack=2 relay=2 dup=0 bad=0  |  dedup 2/16
+[STAT] last packet 17 s ago
+[RX] #3  RSSI=-76.0 dBm  SNR=12.2 dB  len=50  "051,176,22.528600,113.940480,3.90,1784131483,SV=12"
+[RX] parsed id=51 seq=176
+[ACK] sent "ACK,51,176"  (3 total)
+[RELAY] forwarded id=51 seq=176 onward (3 total)
+[STAT] up 0d 00:03:59  |  rx=3 ack=3 relay=3 dup=0 bad=0  |  dedup 3/16
+[STAT] last packet 17 s ago
+[RX] #4  RSSI=-70.0 dBm  SNR=10.8 dB  len=50  "051,175,22.528600,113.940480,3.90,1784124252,SV=12"
+[RX] parsed id=51 seq=175
+[ACK] sent "ACK,51,175"  (4 total)
+[RELAY] forwarded id=51 seq=175 onward (4 total)
+[STAT] up 0d 00:04:29  |  rx=4 ack=4 relay=4 dup=0 bad=0  |  dedup 4/16
+[STAT] last packet 16 s ago
+[RX] #5  RSSI=-71.0 dBm  SNR=11.2 dB  len=50  "051,174,22.528600,113.940480,3.90,1784117021,SV=12"
+[RX] parsed id=51 seq=174
+[ACK] sent "ACK,51,174"  (5 total)
+[RELAY] forwarded id=51 seq=174 onward (5 total)
+[STAT] up 0d 00:04:59  |  rx=5 ack=5 relay=5 dup=0 bad=0  |  dedup 5/16
+[STAT] last packet 16 s ago
+[RX] #6  RSSI=-68.0 dBm  SNR=12.0 dB  len=50  "051,173,22.528600,113.940480,3.89,1784109791,SV=12"
+[RX] parsed id=51 seq=173
+[ACK] sent "ACK,51,173"  (6 total)
+[RELAY] forwarded id=51 seq=173 onward (6 total)
+[STAT] up 0d 00:05:29  |  rx=6 ack=6 relay=6 dup=0 bad=0  |  dedup 6/16
+[STAT] last packet 16 s ago
+[STAT] up 0d 00:05:59  |  rx=6 ack=6 relay=6 dup=0 bad=0  |  dedup 6/16
+[STAT] last packet 46 s ago
+[STAT] up 0d 00:06:29  |  rx=6 ack=6 relay=6 dup=0 bad=0  |  dedup 6/16
+[STAT] last packet 76 s ago
+[STAT] up 0d 00:06:59  |  rx=6 ack=6 relay=6 dup=0 bad=0  |  dedup 6/16
+[STAT] last packet 106 s ago
+[RX] #7  RSSI=-67.0 dBm  SNR=11.5 dB  len=50  "051,180,22.528600,113.940480,3.96,1784059473,SV=12"
+[RX] parsed id=51 seq=180
+[ACK] sent "ACK,51,180"  (7 total)
+[RELAY] forwarded id=51 seq=180 onward (7 total)
+[STAT] up 0d 00:07:29  |  rx=7 ack=7 relay=7 dup=0 bad=0  |  dedup 7/16
+[STAT] last packet 14 s ago
+[STAT] up 0d 00:07:59  |  rx=7 ack=7 relay=7 dup=0 bad=0  |  dedup 7/16
+[STAT] last packet 44 s ago
+[STAT] up 0d 00:08:29  |  rx=7 ack=7 relay=7 dup=0 bad=0  |  dedup 7/16
+[STAT] last packet 74 s ago
+[STAT] up 0d 00:08:59  |  rx=7 ack=7 relay=7 dup=0 bad=0  |  dedup 7/16
+[STAT] last packet 104 s ago
+[RX] #8  RSSI=-71.0 dBm  SNR=12.2 dB  len=50  "051,181,22.528600,113.940480,3.97,1784059595,SV=12"
+[RX] parsed id=51 seq=181
+[ACK] sent "ACK,51,181"  (8 total)
+[RELAY] forwarded id=51 seq=181 onward (8 total)
+[STAT] up 0d 00:09:29  |  rx=8 ack=8 relay=8 dup=0 bad=0  |  dedup 8/16
+[STAT] last packet 8 s ago
+[STAT] up 0d 00:09:59  |  rx=8 ack=8 relay=8 dup=0 bad=0  |  dedup 8/16
+[STAT] last packet 38 s ago
+[STAT] up 0d 00:10:29  |  rx=8 ack=8 relay=8 dup=0 bad=0  |  dedup 8/16
+[STAT] last packet 68 s ago
+[STAT] up 0d 00:10:59  |  rx=8 ack=8 relay=8 dup=0 bad=0  |  dedup 8/16
+[STAT] last packet 98 s ago
+[STAT] up 0d 00:11:29  |  rx=8 ack=8 relay=8 dup=0 bad=0  |  dedup 8/16
+[STAT] last packet 128 s ago
+[RX] #9  RSSI=-66.0 dBm  SNR=12.0 dB  len=50  "051,182,22.528600,113.940480,3.97,1784059735,SV=12"
+[RX] parsed id=51 seq=182
+[ACK] sent "ACK,51,182"  (9 total)
+[RELAY] forwarded id=51 seq=182 onward (9 total)
+[STAT] up 0d 00:11:59  |  rx=9 ack=9 relay=9 dup=0 bad=0  |  dedup 9/16
+[STAT] last packet 18 s ago
+[STAT] up 0d 00:12:29  |  rx=9 ack=9 relay=9 dup=0 bad=0  |  dedup 9/16
+[STAT] last packet 48 s ago
+[STAT] up 0d 00:12:59  |  rx=9 ack=9 relay=9 dup=0 bad=0  |  dedup 9/16
+[STAT] last packet 78 s ago
+[STAT] up 0d 00:13:29  |  rx=9 ack=9 relay=9 dup=0 bad=0  |  dedup 9/16
+[STAT] last packet 108 s ago
+[STAT] up 0d 00:13:59  |  rx=9 ack=9 relay=9 dup=0 bad=0  |  dedup 9/16
+[STAT] last packet 138 s ago
+[RX] #10  RSSI=-70.0 dBm  SNR=11.0 dB  len=50  "051,183,22.528600,113.940480,3.98,1784059875,SV=12"
+[RX] parsed id=51 seq=183
+[ACK] sent "ACK,51,183"  (10 total)
+[RELAY] forwarded id=51 seq=183 onward (10 total)
+[STAT] up 0d 00:14:29  |  rx=10 ack=10 relay=10 dup=0 bad=0  |  dedup 10/16
+[STAT] last packet 28 s ago
+[STAT] up 0d 00:14:59  |  rx=10 ack=10 relay=10 dup=0 bad=0  |  dedup 10/16
+[STAT] last packet 58 s ago
+[STAT] up 0d 00:15:29  |  rx=10 ack=10 relay=10 dup=0 bad=0  |  dedup 10/16
+[STAT] last packet 88 s ago
+[STAT] up 0d 00:15:59  |  rx=10 ack=10 relay=10 dup=0 bad=0  |  dedup 10/16
+[STAT] last packet 118 s ago
+[RX] #11  RSSI=-67.0 dBm  SNR=12.8 dB  len=50  "051,184,22.528600,113.940480,3.98,1784060015,SV=12"
+[RX] parsed id=51 seq=184
+[ACK] sent "ACK,51,184"  (11 total)
+[RELAY] forwarded id=51 seq=184 onward (11 total)
+[STAT] up 0d 00:16:29  |  rx=11 ack=11 relay=11 dup=0 bad=0  |  dedup 11/16
+[STAT] last packet 8 s ago
+[STAT] up 0d 00:16:59  |  rx=11 ack=11 relay=11 dup=0 bad=0  |  dedup 11/16
+[STAT] last packet 38 s ago
+[STAT] up 0d 00:17:29  |  rx=11 ack=11 relay=11 dup=0 bad=0  |  dedup 11/16
+[STAT] last packet 68 s ago
+[STAT] up 0d 00:17:59  |  rx=11 ack=11 relay=11 dup=0 bad=0  |  dedup 11/16
+[STAT] last packet 98 s ago

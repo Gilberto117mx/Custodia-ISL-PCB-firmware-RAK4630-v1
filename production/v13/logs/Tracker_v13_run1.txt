@@ -1,0 +1,330 @@
+ ...12s  sats=0  timeValid=1 year=2000
+   ...17s  sats=0  timeValid=1 year=2000
+   ...22s  sats=0  timeValid=1 year=2000
+   ...27s  sats=0  timeValid=1 year=2000
+   ...32s  sats=0  timeValid=1 year=2000
+   ...37s  sats=0  timeValid=1 year=2000
+   ...42s  sats=0  timeValid=1 year=2000
+   ...47s  sats=0  timeValid=1 year=2000
+   ...52s  sats=0  timeValid=1 year=2000
+   ...57s  sats=0  timeValid=1 year=2000
+   ...62s  sats=0  timeValid=1 year=2000
+   ...67s  sats=0  timeValid=1 year=2000
+   ...72s  sats=0  timeValid=1 year=2000
+   ...77s  sats=0  timeValid=1 year=2000
+   ...82s  sats=0  timeValid=1 year=2000
+   ...87s  sats=0  timeValid=1 year=2000
+   ...92s  sats=0  timeValid=1 year=2000
+   ...97s  sats=0  timeValid=1 year=2000
+   ...102s  sats=0  timeValid=1 year=2000
+   ...107s  sats=0  timeValid=1 year=2000
+   ...112s  sats=0  timeValid=1 year=2000
+   ...117s  sats=0  timeValid=1 year=2000
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[TIME] no GPS time yet - will keep trying in COLLECT sessions
+[CFG] id=051  period=3 min (1Hz tick)  SV_MIN=4  no_sky_abort=25 s  fix_max=120                                                                            s  settle=5 s  ack=8 s  backoff=K3/360min  tx_gap=30 s  buffer=1  pend_slots=5                                                                             WUR_wake=0  SIM_FIX=1  rtcSynced=0
+[CFG-ACCEL] accel_collect_every=324 s  drone_pass_every=720 s (SIMULATE_WUR)  ri                                                                           ng=64 records  clear_after_send=1  ring_now=0
+== COLLECT (cycle 1, up 128 s, noFixStreak=0) ==
+[BAT] 3877 mV
+[RTC] SET FROM GPS: 2026-07-14 20:00:00 UTC (unix~1784059200)
+[GPS] SIMULATED FIX  used=12  IN-VIEW=12  lat=22528600 lon=113940480  ts=1784059                                                                           200
+== ACCEL collect 10 s -> ring (accel timer, every 324 s) ==
+[ACCEL] 100 samples in 10000 ms
+[RING] stored seq=1 ts=1784059200 n=100 -> slot 0 (1/64)
+[BUF] staged seq=108 (fix), buf=1/1  pend=1
+[TX pass] cycle=1 buffer=1 pending=1
+[TX] seq=108 (fix): 051,108,22.528600,113.940480,3.87,1784059200,SV=12
++EVT:TXP2P DONE
++EVT:RXP2P RECEIVE TIMEOUT
+[RX] not-ACK ("")
+[TX pass] done: delivered=106 lastSeq=106 pending=2 undelivered=0
+== IDLE deep-sleep 180 s ==
+[SLEEP] 180 s
+[RTC] timer: preset=180 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~1002 ms
+== COLLECT (cycle 2, up 149 s, noFixStreak=0) ==
+[BAT] 3909 mV
+[GPS] SIMULATED FIX  used=12  IN-VIEW=12  lat=22528600 lon=113940480  ts=1784059                                                                           220
+[BUF] staged seq=109 (fix), buf=1/1  pend=2
+[TX pass] cycle=2 buffer=1 pending=2
+[TX] seq=109 (fix): 051,109,22.528600,113.940480,3.90,1784059220,SV=12
++EVT:TXP2P DONE
++EVT:RXP2P RECEIVE TIMEOUT
+[RX] not-ACK ("")
+[TX pass] done: delivered=106 lastSeq=106 pending=3 undelivered=0
+== IDLE deep-sleep 180 s ==
+[SLEEP] 180 s
+[RTC] timer: preset=180 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~14702 ms
+== COLLECT (cycle 3, up 172 s, noFixStreak=0) ==
+[BAT] 3925 mV
+[GPS] SIMULATED FIX  used=12  IN-VIEW=12  lat=22528600 lon=113940480  ts=1784059                                                                           244
+[BUF] staged seq=110 (fix), buf=1/1  pend=3
+[TX pass] cycle=3 buffer=1 pending=3
+[TX] seq=110 (fix): 051,110,22.528600,113.940480,3.92,1784059244,SV=12
++EVT:TXP2P DONE
++EVT:RXP2P RECEIVE TIMEOUT
+[RX] not-ACK ("")
+[TX pass] done: delivered=106 lastSeq=106 pending=4 undelivered=0
+== IDLE deep-sleep 180 s ==
+[SLEEP] 180 s
+[RTC] timer: preset=180 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~180002 ms
+== COLLECT (cycle 4, up 361 s, noFixStreak=0) ==
+[BAT] 3957 mV
+[GPS] SIMULATED FIX  used=12  IN-VIEW=12  lat=22528600 lon=113940480  ts=1784059                                                                           433
+[BUF] staged seq=111 (fix), buf=1/1  pend=4
+[TX pass] cycle=4 buffer=1 pending=4
+[TX] seq=111 (fix): 051,111,22.528600,113.940480,3.95,1784059433,SV=12
++EVT:TXP2P DONE
++EVT:RXP2P:-50:13:41434B2C35312C313131
+[RX] ACK OK  RSSI=-50 dBm  SNR=13 dB
+[GAP] 30 s at floor (ACK-window guard)
+[TX] seq=110 (fix): 051,110,22.528600,113.940480,3.92,1784059244,SV=12
++EVT:TXP2P DONE
++EVT:RXP2P:-51:14:41434B2C35312C313130
+[RX] ACK OK  RSSI=-51 dBm  SNR=14 dB
+[GAP] 30 s at floor (ACK-window guard)
+[TX] seq=109 (fix): 051,109,22.528600,113.940480,3.90,1784059220,SV=12
++EVT:TXP2P DONE
++EVT:RXP2P:-51:13:41434B2C35312C313039
+[RX] ACK OK  RSSI=-51 dBm  SNR=13 dB
+[GAP] 30 s at floor (ACK-window guard)
+[TX] seq=108 (fix): 051,108,22.528600,113.940480,3.87,1784059200,SV=12
++EVT:TXP2P DONE
++EVT:RXP2P:-51:13:41434B2C35312C313038
+[RX] ACK OK  RSSI=-51 dBm  SNR=13 dB
+[GAP] 30 s at floor (ACK-window guard)
+[TX] seq=107 (fix): 051,107,22.528600,113.940480,3.89,1784059200,SV=12
++EVT:TXP2P DONE
++EVT:RXP2P:-49:13:41434B2C35312C313037
+[RX] ACK OK  RSSI=-49 dBm  SNR=13 dB
+[TX pass] done: delivered=111 lastSeq=107 pending=0 undelivered=0
+== IDLE deep-sleep 180 s ==
+[SLEEP] 180 s
+[RTC] timer: preset=180 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~180003 ms
+== COLLECT (cycle 5, up 664 s, noFixStreak=0) ==
+[BAT] 3970 mV
+[GPS] SIMULATED FIX  used=12  IN-VIEW=12  lat=22528600 lon=113940480  ts=1784059                                                                           736
+== ACCEL collect 10 s -> ring (accel timer, every 324 s) ==
+[ACCEL] 100 samples in 10000 ms
+[RING] stored seq=2 ts=1784059736 n=100 -> slot 1 (2/64)
+[BUF] staged seq=112 (fix), buf=1/1  pend=0
+[TX pass] cycle=5 buffer=1 pending=0
+[TX] seq=112 (fix): 051,112,22.528600,113.940480,3.97,1784059736,SV=12
++EVT:TXP2P DONE
++EVT:RXP2P:-51:13:41434B2C35312C313132
+[RX] ACK OK  RSSI=-51 dBm  SNR=13 dB
+[TX pass] done: delivered=112 lastSeq=112 pending=0 undelivered=0
+== IDLE deep-sleep 180 s ==
+[SLEEP] 180 s
+[RTC] timer: preset=180 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~180002 ms
+== COLLECT (cycle 6, up 856 s, noFixStreak=0) ==
+[BAT] 3972 mV
+[GPS] SIMULATED FIX  used=12  IN-VIEW=12  lat=22528600 lon=113940480  ts=1784059                                                                           928
+[BUF] staged seq=113 (fix), buf=1/1  pend=0
+[TX pass] cycle=6 buffer=1 pending=0
+[TX] seq=113 (fix): 051,113,22.528600,113.940480,3.97,1784059928,SV=12
++EVT:TXP2P DONE
++EVT:RXP2P:-44:13:41434B2C35312C313133
+[RX] ACK OK  RSSI=-44 dBm  SNR=13 dB
+[TX pass] done: delivered=113 lastSeq=113 pending=0 undelivered=0
+== IDLE deep-sleep 180 s ==
+[SLEEP] 180 s
+[RTC] timer: preset=180 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~180002 ms
+== DRONE PASS: offloading 2 records ==
+[BLE] api.ble.uart advertising 'Custodia-Tracker', 2 records x2, settling 6000 m                                                                           s (fire-and-forget)...
+Connected.
+[BLE] blasted 2 records as id=51 x2 reps (fire-and-forget) - reboot-to-sleep cle                                                                           ars BLE
+[RING] cleared (delivered)
+== DRONE PASS done (blasted+cleared (next pass = new data)) -> reboot-to-sleep =                                                                           =
+== REBOOT-to-sleep: queued 180 s, resetting to clear BLE ==
+ISL Production v13 boot. Heartbeat, then init...
+Current Work Mode: LoRa P2P.
+[alive] 0 ms
+[alive] 500 ms
+[alive] 1000 ms
+[alive] 1500 ms
+[alive] 2000 ms
+[alive] 2500 ms
+[alive] 3000 ms
+========================================================
+ISL Board - PRODUCTION v13 (COLLAR: 2 timers [accel-collect + drone-pass], NEW d                                                                           ata each pass, per-record timestamp)
+========================================================
+[RTC] GPS-synced flag present  current: 2026-07-14 20:15:30
+[FLASH] Loaded: nextSeq=114 delivered=113 undelivered=0 buf=0 pend=0
+[CFG] id=051  period=3 min (1Hz tick)  SV_MIN=4  no_sky_abort=25 s  fix_max=120                                                                            s  settle=5 s  ack=8 s  backoff=K3/360min  tx_gap=30 s  buffer=1  pend_slots=5                                                                             WUR_wake=0  SIM_FIX=1  rtcSynced=1
+[CFG-ACCEL] accel_collect_every=324 s  drone_pass_every=720 s (SIMULATE_WUR)  ri                                                                           ng=64 records  clear_after_send=1  ring_now=0
+== BOOT: performing queued 180 s deep-sleep (BLE-clean) ==
+[SLEEP] 180 s
+[RTC] timer: preset=180 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~180002 ms
+== COLLECT (cycle 1, up 184 s, noFixStreak=0) ==
+[BAT] 3977 mV
+[GPS] SIMULATED FIX  used=12  IN-VIEW=12  lat=22528600 lon=113940480  ts=1784060                                                                           310
+== ACCEL collect 10 s -> ring (accel timer, every 324 s) ==
+[ACCEL] 100 samples in 10000 ms
+[RING] stored seq=3 ts=1784060310 n=100 -> slot 0 (1/64)
+[BUF] staged seq=114 (fix), buf=1/1  pend=0
+[TX pass] cycle=1 buffer=1 pending=0
+[TX] seq=114 (fix): 051,114,22.528600,113.940480,3.97,1784060310,SV=12
++EVT:TXP2P DONE
++EVT:RXP2P:-44:13:41434B2C35312C313134
+[RX] ACK OK  RSSI=-44 dBm  SNR=13 dB
+[TX pass] done: delivered=114 lastSeq=114 pending=0 undelivered=0
+== IDLE deep-sleep 180 s ==
+[SLEEP] 180 s
+[RTC] timer: preset=180 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~180002 ms
+== COLLECT (cycle 2, up 376 s, noFixStreak=0) ==
+[BAT] 3977 mV
+[GPS] SIMULATED FIX  used=12  IN-VIEW=12  lat=22528600 lon=113940480  ts=1784060                                                                           502
+[BUF] staged seq=115 (fix), buf=1/1  pend=0
+[TX pass] cycle=2 buffer=1 pending=0
+[TX] seq=115 (fix): 051,115,22.528600,113.940480,3.97,1784060502,SV=12
++EVT:TXP2P DONE
++EVT:RXP2P:-44:13:41434B2C35312C313135
+[RX] ACK OK  RSSI=-44 dBm  SNR=13 dB
+[TX pass] done: delivered=115 lastSeq=115 pending=0 undelivered=0
+== IDLE deep-sleep 180 s ==
+[SLEEP] 180 s
+[RTC] timer: preset=180 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~180002 ms
+== COLLECT (cycle 3, up 557 s, noFixStreak=0) ==
+[BAT] 3983 mV
+[GPS] SIMULATED FIX  used=12  IN-VIEW=12  lat=22528600 lon=113940480  ts=1784060                                                                           683
+== ACCEL collect 10 s -> ring (accel timer, every 324 s) ==
+[ACCEL] 100 samples in 10000 ms
+[RING] stored seq=4 ts=1784060683 n=100 -> slot 1 (2/64)
+[BUF] staged seq=116 (fix), buf=1/1  pend=0
+[TX pass] cycle=3 buffer=1 pending=0
+[TX] seq=116 (fix): 051,116,22.528600,113.940480,3.98,1784060683,SV=12
++EVT:TXP2P DONE
++EVT:RXP2P:-44:13:41434B2C35312C313136
+[RX] ACK OK  RSSI=-44 dBm  SNR=13 dB
+[TX pass] done: delivered=116 lastSeq=116 pending=0 undelivered=0
+== IDLE deep-sleep 180 s ==
+[SLEEP] 180 s
+[RTC] timer: preset=180 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~180002 ms
+== DRONE PASS: offloading 2 records ==
+[BLE] api.ble.uart advertising 'Custodia-Tracker', 2 records x2, settling 6000 m                                                                           s (fire-and-forget)...
+Connected.
+[BLE] blasted 2 records as id=51 x2 reps (fire-and-forget) - reboot-to-sleep cle                                                                           ars BLE
+[RING] cleared (delivered)
+== DRONE PASS done (blasted+cleared (next pass = new data)) -> reboot-to-sleep =                                                                           =
+== REBOOT-to-sleep: queued 180 s, resetting to clear BLE ==
+ISL Production v13 boot. Heartbeat, then init...
+Current Work Mode: LoRa P2P.
+[alive] 0 ms
+[alive] 500 ms
+[alive] 1000 ms
+[alive] 1500 ms
+[alive] 2000 ms
+[alive] 2500 ms
+[alive] 3000 ms
+========================================================
+ISL Board - PRODUCTION v13 (COLLAR: 2 timers [accel-collect + drone-pass], NEW d                                                                           ata each pass, per-record timestamp)
+========================================================
+[RTC] GPS-synced flag present  current: 2026-07-14 20:28:16
+[FLASH] Loaded: nextSeq=117 delivered=116 undelivered=0 buf=0 pend=0
+[CFG] id=051  period=3 min (1Hz tick)  SV_MIN=4  no_sky_abort=25 s  fix_max=120                                                                            s  settle=5 s  ack=8 s  backoff=K3/360min  tx_gap=30 s  buffer=1  pend_slots=5                                                                             WUR_wake=0  SIM_FIX=1  rtcSynced=1
+[CFG-ACCEL] accel_collect_every=324 s  drone_pass_every=720 s (SIMULATE_WUR)  ri                                                                           ng=64 records  clear_after_send=1  ring_now=0
+== BOOT: performing queued 180 s deep-sleep (BLE-clean) ==
+[SLEEP] 180 s
+[RTC] timer: preset=180 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~180002 ms
+== COLLECT (cycle 1, up 184 s, noFixStreak=0) ==
+[BAT] 3979 mV
+[GPS] SIMULATED FIX  used=12  IN-VIEW=12  lat=22528600 lon=113940480  ts=1784061                                                                           076
+== ACCEL collect 10 s -> ring (accel timer, every 324 s) ==
+[ACCEL] 100 samples in 10000 ms
+[RING] stored seq=5 ts=1784061076 n=100 -> slot 0 (1/64)
+[BUF] staged seq=117 (fix), buf=1/1  pend=0
+[TX pass] cycle=1 buffer=1 pending=0
+[TX] seq=117 (fix): 051,117,22.528600,113.940480,3.97,1784061076,SV=12
++EVT:TXP2P DONE
++EVT:RXP2P:-51:13:41434B2C35312C313137
+[RX] ACK OK  RSSI=-51 dBm  SNR=13 dB
+[TX pass] done: delivered=117 lastSeq=117 pending=0 undelivered=0
+== IDLE deep-sleep 180 s ==
+[SLEEP] 180 s
+[RTC] timer: preset=180 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~180002 ms
+== COLLECT (cycle 2, up 376 s, noFixStreak=0) ==
+[BAT] 3979 mV
+[GPS] SIMULATED FIX  used=12  IN-VIEW=12  lat=22528600 lon=113940480  ts=1784061
+[BUF] staged seq=118 (fix), buf=1/1  pend=0
+[TX pass] cycle=2 buffer=1 pending=0
+[TX] seq=118 (fix): 051,118,22.528600,113.940480,3.97,1784061268,SV=12
++EVT:TXP2P DONE
++EVT:RXP2P:-45:13:41434B2C35312C313138
+[RX] ACK OK  RSSI=-45 dBm  SNR=13 dB
+[TX pass] done: delivered=118 lastSeq=118 pending=0 undelivered=0
+== IDLE deep-sleep 180 s ==
+[SLEEP] 180 s
+[RTC] timer: preset=180 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~180002 ms
+== COLLECT (cycle 3, up 557 s, noFixStreak=0) ==
+[BAT] 3981 mV
+[GPS] SIMULATED FIX  used=12  IN-VIEW=12  lat=22528600 lon=113940480  ts=1784061
+== ACCEL collect 10 s -> ring (accel timer, every 324 s) ==
+[ACCEL] 100 samples in 10000 ms
+[RING] stored seq=6 ts=1784061449 n=100 -> slot 1 (2/64)
+[BUF] staged seq=119 (fix), buf=1/1  pend=0
+[TX pass] cycle=3 buffer=1 pending=0
+[TX] seq=119 (fix): 051,119,22.528600,113.940480,3.98,1784061449,SV=12
++EVT:TXP2P DONE
++EVT:RXP2P:-42:13:41434B2C35312C313139
+[RX] ACK OK  RSSI=-42 dBm  SNR=13 dB
+[TX pass] done: delivered=119 lastSeq=119 pending=0 undelivered=0
+== IDLE deep-sleep 180 s ==
+[SLEEP] 180 s
+[RTC] timer: preset=180 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~180003 ms
+== DRONE PASS: offloading 2 records ==
+[BLE] api.ble.uart advertising 'Custodia-Tracker', 2 records x2, settling 6000 m
+Connected.
+[BLE] blasted 2 records as id=51 x2 reps (fire-and-forget) - reboot-to-sleep cle
+[RING] cleared (delivered)
+== DRONE PASS done (blasted+cleared (next pass = new data)) -> reboot-to-sleep =
+== REBOOT-to-sleep: queued 180 s, resetting to clear BLE ==
+ISL Production v13 boot. Heartbeat, then init...
+Current Work Mode: LoRa P2P.
+[alive] 0 ms
+[alive] 500 ms
+[alive] 1000 ms
+[alive] 1500 ms
+[alive] 2000 ms
+[alive] 2500 ms
+[alive] 3000 ms
+========================================================
+ISL Board - PRODUCTION v13 (COLLAR: 2 timers [accel-collect + drone-pass], NEW d                                                                           mp)
+========================================================
+[RTC] GPS-synced flag present  current: 2026-07-14 20:41:02
+[FLASH] Loaded: nextSeq=120 delivered=119 undelivered=0 buf=0 pend=0
+[CFG] id=051  period=3 min (1Hz tick)  SV_MIN=4  no_sky_abort=25 s  fix_max=120                                                                            3/360min  tx_gap=30 s  buffer=1  pend_slots=5  WUR_wake=0  SIM_FIX=1  rtcSynced=
+[CFG-ACCEL] accel_collect_every=324 s  drone_pass_every=720 s (SIMULATE_WUR)  ri                                                                             ring_now=0
+== BOOT: performing queued 180 s deep-sleep (BLE-clean) ==
+[SLEEP] 180 s
+[RTC] timer: preset=180 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~180002 ms
+== COLLECT (cycle 1, up 184 s, noFixStreak=0) ==
+[BAT] 3986 mV
+[GPS] SIMULATED FIX  used=12  IN-VIEW=12  lat=22528600 lon=113940480  ts=1784061843
+== ACCEL collect 10 s -> ring (accel timer, every 324 s) ==
+[ACCEL] 100 samples in 10000 ms
+[RING] stored seq=7 ts=1784061843 n=100 -> slot 0 (1/64)
+[BUF] staged seq=120 (fix), buf=1/1  pend=0
+[TX pass] cycle=1 buffer=1 pending=0
+[TX] seq=120 (fix): 051,120,22.528600,113.940480,3.98,1784061843,SV=12
++EVT:TXP2P DONE
++EVT:RXP2P:-40:13:41434B2C35312C313230
+[RX] ACK OK  RSSI=-40 dBm  SNR=13 dB
+[TX pass] done: delivered=120 lastSeq=120 pending=0 undelivered=0
+== IDLE deep-sleep 180 s ==
+[SLEEP] 180 s
+[RTC] timer: preset=180 s (1 Hz tick)

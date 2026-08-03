@@ -1,13 +1,14 @@
 # ISL Board — Deep-Sleep Rules (consolidated)
 
 Every rule needed to reach and hold the ISL deep-sleep floor, established during
-this board's bring-up (tests #5/#6). **The production firmware must follow all of
-these.**
+this board's bring-up (tests #5/#6) and the v7 floor fix. **The production firmware
+must follow all of these.**
 
 ## The numbers (all @ 3.6 V — project convention, battery nominal)
 | State | Floor |
 |---|---|
-| **ISL baseline, everything parked (test #5)** | **157 µA** — cause now UNKNOWN (see correction below); the real 1 MΩ divider is only ~1.8 µA, so it is *not* the floor |
+| **ISL baseline, everything parked (test #5)** | **157 µA** — but this was an AIN7 GPIO crowbar (see RESOLVED note below), **fixed in v7 → 34 µA** |
+| **ISL production v7 (crowbar fixed), modules attached** | **34 µA @ 3.6 V** (battery, verified `../production/v7/logs/`) |
 | **ISL with GPS duty-cycled (test #6 v3)** | **157–159 µA** — GPS adds ~0 when torn down correctly |
 | ISL with GPS torn down *wrong* (test #6 v2) | ~600 µA (phantom-powering the module — see rule 4) |
 
@@ -58,15 +59,24 @@ schematic diagram; it was never the real board.** The actual board (schematic v2
 confirmed on hardware) has a **1 MΩ/1 MΩ divider + C17 100 nF filter**, drawing only
 **~1.8 µA**. The battery-voltage calibration is unaffected (the ratio is still 2.0).
 
-Consequences:
-- The **157 µA floor was measured on the real (1 MΩ) board**, so the number stands —
-  but its **cause is now unexplained.** Divider ~1.8 µA + RV-3028 (~45 nA) + AS3933
-  listening (~2.7 µA) + nRF52840 sleep (single-digit µA) + RT9080 LDO quiescent
-  should total well under ~20 µA. **~130–150 µA is missing.**
-- There is therefore **real deep-sleep headroom** — the firmware is **not** at the
-  hardware limit (the previous claim was based on the wrong divider). Suspects to
-  investigate: LDO quiescent/feedback path, a pull-up or peripheral not fully parked,
-  a leakage path through the GPS/WUR domain, or an always-on rail. Needs a **headless
-  battery-only teardown** (isolate rails/peripherals one at a time).
-- The old "next-rev: raise the divider to 1–2 MΩ" recommendation is **obsolete** —
-  that change is already in this board.
+## ✅ RESOLVED (2026-07-19): the ~120 µA was an AIN7 GPIO crowbar — fixed in v7
+A step-by-step deep-sleep teardown found it: the whole overage was
+**`pinMode(P0.31, INPUT)`** on the battery-sense pin. P0.31 (AIN7) floats at the
+**1 MΩ divider midpoint ≈ VDD/2**; a *connected* digital input buffer held at
+mid-rail conducts ~**118 µA** of shoot-through ("crowbar") current.
+- **Evidence:** minimal sketch = **32–37 µA** (modules attached).
+  Additive sweep localized the jump to the GPIO-parking step (34 → 152 µA). The
+  park-breakdown pinned it to ONE pin: batt-sense OFF = 34 µA, every other parked
+  pin (GPS_EN/UART, WUR, RTC_INT) = 152 µA. Wire, RV-3028 config, the trickle-charge
+  write, the countdown timer, and the wake-pin setup each cost **~0 µA**.
+- **Fix (production v7):** keep P0.31's input buffer **DISCONNECTED** except during
+  the SAADC sample — `battPinDisconnect()` writes `NRF_P0->PIN_CNF[31] = 2`, called
+  after ADC init, after each read, and before every `deepSleep()`/`napSleep()`. The
+  SAADC reads the analog voltage through its own mux, so the calibrated battery read
+  is unaffected. **Floor: ~155 → 34 µA (with GNSS + WUR attached, verified on
+  battery) ≈ 4.5× idle life.**
+- The old "raise the divider" and "maybe it's the LDO / the modules" theories are
+  both disproven. It was our own `pinMode`. The RT9080 LDO is fine (~32 µA bare).
+
+### For any future firmware: never leave a connected input buffer on an analog /
+### high-impedance pin sitting at mid-rail. Configure ADC pins as input-DISCONNECT.

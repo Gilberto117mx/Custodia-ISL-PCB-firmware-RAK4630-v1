@@ -1,0 +1,62 @@
+[alive] 1000 ms
+[alive] 1500 ms
+[alive] 2000 ms
+[alive] 2500 ms
+[alive] 3000 ms
+========================================================
+ISL Board - PRODUCTION v7  (v6 + deep-sleep floor fix: AIN7 crowbar ~155->~35 uA)
+========================================================
+[RTC] NOT GPS-synced (will seed from GNSS)  current: 2000-01-01 00:00:05
+[FLASH] Loaded: nextSeq=6 delivered=5 undelivered=0 buf=0 pend=0
+[TIME] boot GPS time-sync (up to 120 s, no fix needed)...
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+   ...0s  sats=0  timeValid=0 year=0
+   ...5s  sats=0  timeValid=1 year=2000
+   ...10s  sats=0  timeValid=1 year=2000
+   ...15s  sats=0  timeValid=1 year=2000
+   ...20s  sats=0  timeValid=1 year=2000
+   ...25s  sats=0  timeValid=1 year=2000
+   ...30s  sats=0  timeValid=1 year=2000
+   ...35s  sats=0  timeValid=1 year=2000
+   ...40s  sats=0  timeValid=1 year=2000
+   ...45s  sats=0  timeValid=1 year=2000
+   ...50s  sats=0  timeValid=1 year=2000
+   ...55s  sats=0  timeValid=1 year=2000
+   ...60s  sats=0  timeValid=1 year=2000
+   ...65s  sats=0  timeValid=1 year=2000
+   ...70s  sats=0  timeValid=1 year=2000
+   ...75s  sats=0  timeValid=1 year=2000
+   ...80s  sats=0  timeValid=1 year=2000
+   ...85s  sats=0  timeValid=1 year=2000
+   ...90s  sats=0  timeValid=1 year=2000
+   ...95s  sats=0  timeValid=1 year=2000
+   ...100s  sats=0  timeValid=1 year=2000
+   ...105s  sats=0  timeValid=1 year=2000
+   ...110s  sats=0  timeValid=1 year=2000
+   ...115s  sats=0  timeValid=1 year=2000
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[TIME] no GPS time yet - will keep trying in COLLECT sessions
+[CFG] id=051  period=4 min (1Hz tick)  SV_MIN=4  no_sky_abort=25 s  fix_max=120 s  settle=5 s  ack=8 s  backoff=K3/360min  tx_gap=30 s  buffer=1  pend_slots=5  WUR_wake=0  SIM_FIX=1  rtcSynced=0
+== COLLECT (cycle 1, up 125 s, noFixStreak=0) ==
+[BAT] 3864 mV
+[RTC] SET FROM GPS: 2026-07-14 20:00:00 UTC (unix~1784059200)
+[GPS] SIMULATED FIX  used=12  IN-VIEW=12  lat=22528600 lon=113940480  ts=1784059200
+== ACCEL collect 10 s -> ring (fix #1) ==
+[ACCEL] 100 samples in 10000 ms
+[RING] stored seq=5 ts=1784059200 n=100 -> slot 4 (5/16)
+[BUF] staged seq=6 (fix), buf=1/1  pend=0
+[TX pass] cycle=1 buffer=1 pending=0
+[TX] seq=6 (fix): 051,6,22.528600,113.940480,3.86,1784059200,SV=12
++EVT:TXP2P DONE
++EVT:RXP2P:-42:12:41434B2C35312C36
+[RX] ACK OK  RSSI=-42 dBm  SNR=12 dB
+[TX pass] done: delivered=6 lastSeq=6 pending=0 undelivered=0
+== IDLE deep-sleep 240 s ==
+[SLEEP] 240 s
+[RTC] timer: preset=240 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~240002 ms
+== DRONE PASS: offloading 5 records ==
+[BLE] drone offload: advertising 'Custodia-Tracker', 5 records, settling 5000 ms...
+Connected.
+[BLE] sent REQ, waiting for GO...
+Pairing procedure fail.

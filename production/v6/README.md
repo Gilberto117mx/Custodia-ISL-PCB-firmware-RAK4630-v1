@@ -112,8 +112,8 @@ had ≥4 sats near the window), **strategy B backoff** (was disabled, `K=999`), 
 2 h confirmation.
 
 ## Status
-Current field-strategy build; supersedes v5. Core behaviours (A-extend, C, #5)
-validated on hardware. Remaining before deployment: no-sky abort + backoff
-confirmation, the retention-depth question (`PENDING_SLOTS` vs. undelivered
-replay), the robustness checklist (brownout/blackout, >68 min/1-60 Hz cadence,
-headless battery-floor run), and the AS3933 WUR real-wake test.
+Field-strategy build; supersedes v5. Core behaviours (A-extend, C, #5, 2 h wake)
+validated on hardware (`tests/`). **Superseded by `../v7/`** — same firmware plus
+the deep-sleep floor fix (155 → 34 µA); v7 is the deployment build. Remaining items
+(no-sky abort + backoff field confirmation, retention-depth question, brownout/
+blackout, multi-wake endurance, WUR wake) are tracked in `../../docs/ROADMAP.md`.

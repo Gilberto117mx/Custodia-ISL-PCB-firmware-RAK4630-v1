@@ -18,7 +18,7 @@ Indoors, USB-attached, receiver ON.
 ## Files
 | File | What it is |
 |---|---|
-| `Node_test3.log` | ISL node serial — the two 2 h sleep/wake cycles |
+| `Tracker_test3.log` | ISL node serial — the two 2 h sleep/wake cycles |
 | `Receiver_test3.log`| Receiver serial — cadence cross-check + ACKs |
 | `PowerProfile_test3.csv` | Current trace, 10 samples/s, ~4.2 h |
 

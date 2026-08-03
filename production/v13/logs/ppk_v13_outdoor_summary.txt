@@ -1,0 +1,13 @@
+PPK summary - v13 outdoor headless run 2026-07-29 (raw CSV ~866535 samples, 144 min; not committed - too large)
+uA: mean=1294 p1=309.7 p50=325 p90=332 p99=42027 max=91168
+per-decile mean uA (shows ~43 min active cycling, then flat ~325 uA = backoff deep-sleep):
+    0- 10%  t~     0s  mean=    7259  max=   91168  min=    0.1
+   10- 20%  t~   867s  mean=    1584  max=   91042  min=  230.8
+   20- 30%  t~  1733s  mean=    1815  max=   90551  min=  220.4
+   30- 40%  t~  2600s  mean=     325  max=     647  min=  240.3
+   40- 50%  t~  3466s  mean=     325  max=     638  min=  229.9
+   50- 60%  t~  4333s  mean=     324  max=     641  min=  237.9
+   60- 70%  t~  5199s  mean=     324  max=     632  min=  234.2
+   70- 80%  t~  6066s  mean=     325  max=     612  min=  251.7
+   80- 90%  t~  6932s  mean=     327  max=     636  min=  241.5
+   90-100%  t~  7799s  mean=     329  max=     591  min=  213.6

@@ -1,0 +1,10 @@
+PPK summary - v14 overnight outdoor run 2026-07-30 (raw CSV not committed - too large)
+span=4.81 h  uA: mean=835 p1=309 p50=326(=sleep floor, accel module) p90=332 p99=44093 max=105089
+GPS-active bursts (hourly cycles): 6
+  cycle 1: t~0.00h  gps-on~54s
+  cycle 2: t~0.02h  gps-on~8s
+  cycle 3: t~1.02h  gps-on~69s
+  cycle 4: t~2.04h  gps-on~44s
+  cycle 5: t~3.05h  gps-on~27s
+  cycle 6: t~4.06h  gps-on~38s
+Between bursts the current is flat ~325 uA (accel-module deep-sleep floor) -> collar cycles + sleeps normally, no hang.

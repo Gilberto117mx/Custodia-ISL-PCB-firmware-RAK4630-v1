@@ -31,7 +31,7 @@ trustworthy (v1 was reporting it ~30 % low).
 Set in `ISL_Production/ISL_Production.ino`:
 `GNSS_PERIOD_MIN`, `TX_RETRY_MIN`, `GNSS_RETRY_WAIT_MIN` (minutes);
 `GNSS_FIX_TIMEOUT_SEC`, `POST_FIX_SETTLE_SEC`, `ACK_TIMEOUT_SEC` (seconds);
-`TX_BUFFER_SIZE`, `MAX_GNSS_RETRIES`, `MAX_TX_RETRIES`, `DEVICE_ID` (counts).
+`TRACKER_BUFFER_SIZE`, `MAX_GNSS_RETRIES`, `MAX_TX_RETRIES`, `DEVICE_ID` (counts).
 Auto-converted to ms by a "do not edit" block. `[CFG]` prints them in those units.
 
 ## Inherited hardware layer (unchanged from v1)
@@ -39,7 +39,7 @@ Auto-converted to ms by a "do not edit" block. `[CFG]` prints them in those unit
 |---|---|
 | GPS | `Serial0`/UART1 (P0.19/20), EN=P1.02 active-low, isolation teardown (test #6) |
 | RTC wake | P0.21 (test #5) |
-| Deep-sleep floor | ~155 µA @ 3.6 V (cause unexplained — not the 1 MΩ divider; see `../../docs/ISL_DeepSleep_Notes.md`) |
+| Deep-sleep floor | ~155 µA @ 3.6 V (later SOLVED: AIN7 crowbar, fixed in v7 → 34 µA; see `../../docs/ISL_DeepSleep_Notes.md`) |
 | Debug | native USB `Serial` (drops in sleep; `if(Serial)`-guarded) |
 | Start | always hot (external L76X has its own backup battery) |
 | `DEVICE_ID` | 51 (`"051"`) |

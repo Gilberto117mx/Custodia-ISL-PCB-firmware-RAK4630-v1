@@ -10,7 +10,7 @@ be read **headless from the receiver**.
 - Per-session log now prints `used=U  IN-VIEW peak=V`.
 - `GNSS_FIX_TIMEOUT_SEC` back to **90 s**.
 
-## Field result — outdoors (`logs/Node_outdoors_FIX.txt`, `logs/Receiver_outdoors_FIX.txt`)
+## Field result — outdoors (`logs/Tracker_outdoors_FIX.txt`, `logs/Receiver_outdoors_FIX.txt`)
 🎉 **First full production position fix on the ISL board:**
 ```
 [GPS] FIX in 6977 ms  used=14  IN-VIEW peak=19   lat=22.528619 lon=113.940480
@@ -35,6 +35,7 @@ genuine GPS time), keeping the sane+two-sample guard. See
 `../../docs/GNSS_FieldStrategy.md`.
 
 ## Status
-Latest field build. Superseded by the upcoming **v6** (adaptive SV-gated GPS
-timeout + no-sky backoff + fix-only RTC re-sync + low-battery lockout — the field
-strategy). The `SV` field added here is v6's control input.
+Field-diagnostic build. Superseded by **v6** (adaptive SV-gated GPS timeout +
+no-sky backoff + fix-only RTC re-sync — the field strategy), with the deployment
+path continuing in **v7** (adds the 34 µA deep-sleep floor fix). The `SV` field
+added here became v6's control input.

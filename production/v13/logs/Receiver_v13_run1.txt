@@ -1,0 +1,67 @@
+=== ISL v13 Drone Receiver (reference) - api.ble.uart NUS, name-match, NEW data                                                                            + per-record ts ===
+[BLE] Scanning for 'Custodia-Tracker' by name...
+
+[BLE] Found Custodia-Tracker (by name)! Connecting...
+[BLE] Connected! Discovering NUS... ok.
+[BLE] subscribed - receiving blast:
+
+
+== Collar id=051 announcing 2 records ==
+                                        [REC] seq=1 n=100 ck=29696 ...
+                                                                            seq=                                                                           1 ts=1784059200 OK (100 samples, checksum match)
+                                                [REC] seq=2 n=100 ck=29184 ...
+                                                                                                                                                               seq=2 ts=1784059736 OK (100 samples, checksum match)
+                                                        == END id=051: 2 records                                                                            | session new=2 dup=0 bad=0 ==
+
+
+                               == Collar id=051 announcing 2 records ==
+                                                                       [REC] seq                                                                           =1 (dup, skipping)
+                  [REC] seq=2 (dup, skipping)
+                                             == END id=051: 2 records | session                                                                            new=2 dup=2 bad=0 ==
+
+
+                    [BLE] Disconnected - resuming scan...
+
+[BLE] Found Custodia-Tracker (by name)! Connecting...
+[BLE] Connected! Discovering NUS... ok.
+[BLE] subscribed - receiving blast:
+
+
+== Collar id=051 announcing 2 records ==
+                                        [REC] seq=3 n=100 ck=59664 ...
+                                                                            seq=                                                                           3 ts=1784060310 OK (100 samples, checksum match)
+                                                [REC] seq=4 n=100 ck=61600 ...
+                                                                                                                                                               seq=4 ts=1784060683 OK (100 samples, checksum match)
+                                                        == END id=051: 2 records                                                                            | session new=4 dup=2 bad=0 ==
+
+
+                               == Collar id=051 announcing 2 records ==
+                                                                       [REC] seq                                                                           =3 (dup, skipping)
+                  [REC] seq=4 (dup, skipping)
+                                             == END id=051: 2 records | session                                                                            new=4 dup=4 bad=0 ==
+
+
+                    [BLE] Disconnected - resuming scan...
+
+[BLE] Found Custodia-Tracker (by name)! Connecting...
+[BLE] Connected! Discovering NUS... ok.
+[BLE] subscribed - receiving blast:
+
+
+== Collar id=051 announcing 2 records ==
+                                        [REC] seq=5 n=100 ck=1152 ...
+                                                                           seq=5                                                                           atch)
+     [REC] seq=6 n=100 ck=42832 ...
+                                         seq=6 ts=1784061449 OK (100 samples, ch
+                                                                                                                                                           ssion new=6 dup=4 bad=0 ==
+
+
+                          == Collar id=051 announcing 2 records ==
+                                                                  [REC] seq=5 (d
+
+                                                                                                                                                            END id=051: 2 records | session new=6 dup=6 bad=0 ==
+
+
+                                                     [BLE] Disconnected - resumi
+
+

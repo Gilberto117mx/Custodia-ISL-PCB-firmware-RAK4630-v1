@@ -41,8 +41,8 @@
  * init switches it to P2P and REBOOTS ONCE automatically. That's expected - the
  * second boot runs normally.
  *
- * Companion receiver: the project's LoRa ACK receiver (external to this repo -
- * it echoes the devID it hears, so DEVICE_ID below works without receiver changes).
+ * Companion receiver: the project's LoRa ACK receiver (external to this repo - it echoes the
+ * devID it hears, so DEVICE_ID below works without receiver changes).
  *
  * On-air TX payload (6 fields):  "<devID3>,<seq>,<lat.6>,<lon.6>,<vbatV.2>,<ts>"
  * ACK payload:                   "ACK,<devID3>,<seq>"
@@ -60,7 +60,7 @@
 // USER CONFIGURATION
 // ============================================================================
 constexpr uint32_t GNSS_PERIOD_MS       = 60000UL;    // normal cadence (1 min TEST; deployment ~2 h)
-constexpr uint8_t  TX_BUFFER_SIZE  = 1;          // packets to accumulate before TX (max 3)
+constexpr uint8_t  TRACKER_BUFFER_SIZE  = 1;          // packets to accumulate before TX (max 3)
 constexpr uint32_t TX_RETRY_MS          = 300000UL;   // 5 min between TX retries
 constexpr uint8_t  MAX_TX_RETRIES       = 3;          // TX attempts before -> undelivered
 constexpr uint32_t GNSS_FIX_TIMEOUT_MS  = 60000UL;    // 1 min max per fix attempt
@@ -559,12 +559,12 @@ void doCollect()
     p.hasFix     = haveFix ? 1 : 0;
     p.txAttempts = 0;
 
-    queuePush(buffer, header.bufferCount, p, TX_BUFFER_SIZE);
+    queuePush(buffer, header.bufferCount, p, TRACKER_BUFFER_SIZE);
     saveBuffer();
     saveHeader();
     DBG("[BUF] added seq=%lu (%s), buf=%u/%u\r\n",
         (unsigned long)p.seq, haveFix ? "fix" : "no-fix",
-        header.bufferCount, TX_BUFFER_SIZE);
+        header.bufferCount, TRACKER_BUFFER_SIZE);
 }
 
 void doTransmitPass()
@@ -676,7 +676,7 @@ void initEverything()
     DBG("[CFG] id=%03u  GNSS period=%lu s  buffer=%u  TX retry=%lu s  fix timeout=%lu s  WUR wake=%d\r\n",
         (unsigned)DEVICE_ID,
         (unsigned long)(GNSS_PERIOD_MS / 1000),
-        TX_BUFFER_SIZE,
+        TRACKER_BUFFER_SIZE,
         (unsigned long)(TX_RETRY_MS / 1000),
         (unsigned long)(GNSS_FIX_TIMEOUT_MS / 1000),
         ENABLE_WUR_WAKE);
@@ -715,7 +715,7 @@ void loop()
     doCollect();
 
     // 2) TX + ACK cycle if the buffer is full or retries are pending
-    bool triggerTx = (header.bufferCount >= TX_BUFFER_SIZE) || (header.pendingCount > 0);
+    bool triggerTx = (header.bufferCount >= TRACKER_BUFFER_SIZE) || (header.pendingCount > 0);
     if (triggerTx) {
         doTransmitWithRetries();
     }

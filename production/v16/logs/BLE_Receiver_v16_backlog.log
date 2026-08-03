@@ -1,0 +1,188 @@
+=== ISL v15 Drone Receiver (reference) - api.ble.uart NUS, name-match, NEW data + per-record ts ===
+[BLE] Scanning for 'Custodia-Tracker' by name...
+
+[BLE] Found Custodia-Tracker (by name)! Connecting...
+[BLE] Connected! Discovering NUS... ok.
+[BLE] subscribed - receiving blast:
+
+
+== Collar id=051 announcing 1 records ==
+[REC] seq=20 n=100 ck=42592 ...
+      seq=20 ts=1785730769 OK (100 samples, checksum match)
+== END id=051: 1 records | session new=1 dup=0 bad=0 ==
+
+
+== Collar id=051 announcing 1 records ==
+[REC] seq=20 (dup, skipping)
+== END id=051: 1 records | session new=1 dup=1 bad=0 ==
+
+
+[BLE] Disconnected - resuming scan...
+
+[BLE] Found Custodia-Tracker (by name)! Connecting...
+[BLE] Connected! Discovering NUS... ok.
+[BLE] subscribed - receiving blast:
+
+
+== Collar id=051 announcing 3 records ==
+[REC] seq=21 n=100 ck=54368 ...
+      seq=21 ts=1785731049 OK (100 samples, checksum match)
+[REC] seq=22 n=100 ck=61760 ...
+      seq=22 ts=1785731317 OK (100 samples, checksum match)
+[REC] seq=23 n=100 ck=49504 ...
+      seq=23 ts=1785731586 OK (100 samples, checksum match)
+== END id=051: 3 records | session new=4 dup=1 bad=0 ==
+
+
+== Collar id=051 announcing 3 records ==
+[REC] seq=21 (dup, skipping)
+[REC] seq=22 (dup, skipping)
+[REC] seq=23 (dup, skipping)
+== END id=051: 3 records | session new=4 dup=4 bad=0 ==
+
+
+[BLE] Disconnected - resuming scan...
+
+[BLE] Found Custodia-Tracker (by name)! Connecting...
+[BLE] Connected! Discovering NUS... ok.
+[BLE] subscribed - receiving blast:
+
+
+== Collar id=051 announcing 3 records ==
+[REC] seq=24 n=100 ck=48368 ...
+      seq=24 ts=1785732001 OK (100 samples, checksum match)
+[REC] seq=25 n=100 ck=59488 ...
+      seq=25 ts=1785732269 OK (100 samples, checksum match)
+[REC] seq=26 n=100 ck=64704 ...
+      seq=26 ts=1785732538 OK (100 samples, checksum match)
+== END id=051: 3 records | session new=7 dup=4 bad=0 ==
+
+
+== Collar id=051 announcing 3 records ==
+[REC] seq=24 (dup, skipping)
+[REC] seq=25 (dup, skipping)
+[REC] seq=26 (dup, skipping)
+== END id=051: 3 records | session new=7 dup=7 bad=0 ==
+
+
+[BLE] Disconnected - resuming scan...
+
+[BLE] Found Custodia-Tracker (by name)! Connecting...
+[BLE] Connected! Discovering NUS... ok.
+[BLE] subscribed - receiving blast:
+
+
+== Collar id=051 announcing 3 records ==
+[REC] seq=27 n=100 ck=42576 ...
+      seq=27 ts=1785732953 OK (100 samples, checksum match)
+[REC] seq=28 n=100 ck=63360 ...
+      seq=28 ts=1785733222 OK (100 samples, checksum match)
+[REC] seq=29 n=100 ck=41248 ...
+      seq=29 ts=1785733491 OK (100 samples, checksum match)
+== END id=051: 3 records | session new=10 dup=7 bad=0 ==
+
+
+== Collar id=051 announcing 3 records ==
+[REC] seq=27 (dup, skipping)
+[REC] seq=28 (dup, skipping)
+[REC] seq=29 (dup, skipping)
+== END id=051: 3 records | session new=10 dup=10 bad=0 ==
+
+
+[BLE] Disconnected - resuming scan...
+
+[BLE] Found Custodia-Tracker (by name)! Connecting...
+[BLE] Connected! Discovering NUS... ok.
+[BLE] subscribed - receiving blast:
+
+
+== Collar id=051 announcing 3 records ==
+[REC] seq=30 n=100 ck=5024 ...
+      seq=30 ts=1785733906 OK (100 samples, checksum match)
+[REC] seq=31 n=100 ck=7152 ...
+      seq=31 ts=1785734176 OK (100 samples, checksum match)
+[REC] seq=32 n=100 ck=55792 ...
+      seq=32 ts=1785734445 OK (100 samples, checksum match)
+== END id=051: 3 records | session new=13 dup=10 bad=0 ==
+
+
+== Collar id=051 announcing 3 records ==
+[REC] seq=30 (dup, skipping)
+[REC] seq=31 (dup, skipping)
+[REC] seq=32 (dup, skipping)
+== END id=051: 3 records | session new=13 dup=13 bad=0 ==
+
+
+[BLE] Disconnected - resuming scan...
+
+[BLE] Found Custodia-Tracker (by name)! Connecting...
+[BLE] Connected! Discovering NUS... ok.
+[BLE] subscribed - receiving blast:
+
+
+== Collar id=051 announcing 3 records ==
+[REC] seq=33 n=100 ck=1840 ...
+      seq=33 ts=1785734861 OK (100 samples, checksum match)
+[REC] seq=34 n=100 ck=49504 ...
+      seq=34 ts=1785735130 OK (100 samples, checksum match)
+[REC] seq=35 n=100 ck=54912 ...
+      seq=35 ts=1785735400 OK (100 samples, checksum match)
+== END id=051: 3 records | session new=16 dup=13 bad=0 ==
+
+
+== Collar id=051 announcing 3 records ==
+[REC] seq=33 (dup, skipping)
+[REC] seq=34 (dup, skipping)
+[REC] seq=35 (dup, skipping)
+== END id=051: 3 records | session new=16 dup=16 bad=0 ==
+
+
+[BLE] Disconnected - resuming scan...
+
+[BLE] Found Custodia-Tracker (by name)! Connecting...
+[BLE] Connected! Discovering NUS... ok.
+[BLE] subscribed - receiving blast:
+
+
+== Collar id=051 announcing 3 records ==
+[REC] seq=36 n=100 ck=46448 ...
+      seq=36 ts=1785735816 OK (100 samples, checksum match)
+[REC] seq=37 n=100 ck=50144 ...
+      seq=37 ts=1785736086 OK (100 samples, checksum match)
+[REC] seq=38 n=100 ck=52144 ...
+      seq=38 ts=1785736356 OK (100 samples, checksum match)
+== END id=051: 3 records | session new=19 dup=16 bad=0 ==
+
+
+== Collar id=051 announcing 3 records ==
+[REC] seq=36 (dup, skipping)
+[REC] seq=37 (dup, skipping)
+[REC] seq=38 (dup, skipping)
+== END id=051: 3 records | session new=19 dup=19 bad=0 ==
+
+
+[BLE] Disconnected - resuming scan...
+
+[BLE] Found Custodia-Tracker (by name)! Connecting...
+[BLE] Connected! Discovering NUS... ok.
+[BLE] subscribed - receiving blast:
+
+
+== Collar id=051 announcing 3 records ==
+[REC] seq=39 n=100 ck=59440 ...
+      seq=39 ts=1785736772 OK (100 samples, checksum match)
+[REC] seq=40 n=100 ck=52912 ...
+      seq=40 ts=1785737042 OK (100 samples, checksum match)
+[REC] seq=41 n=100 ck=46768 ...
+      seq=41 ts=1785737312 OK (100 samples, checksum match)
+== END id=051: 3 records | session new=22 dup=19 bad=0 ==
+
+
+== Collar id=051 announcing 3 records ==
+[REC] seq=39 (dup, skipping)
+[REC] seq=40 (dup, skipping)
+[REC] seq=41 (dup, skipping)
+== END id=051: 3 records | session new=22 dup=22 bad=0 ==
+
+
+[BLE] Disconnected - resuming scan...

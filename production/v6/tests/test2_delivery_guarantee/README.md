@@ -21,7 +21,7 @@ itself a useful result: **un-ACK'd fixes survive a reboot** and stay in the queu
 ## Files
 | File | What it is |
 |---|---|
-| `Node_test2.txt` | ISL node serial — the off/on toggle, backlog drain, `[GAP]` naps |
+| `Tracker_test2.txt` | ISL node serial — the off/on toggle, backlog drain, `[GAP]` naps |
 | `Receiver_test2.txt`| Receiver serial — confirms the newest-first arrival order |
 | `PowerProfile_test2.csv` | Current trace, **10 samples/s** (see caveat) |
 

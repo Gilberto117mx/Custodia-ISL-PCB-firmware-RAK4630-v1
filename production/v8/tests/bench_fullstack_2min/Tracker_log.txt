@@ -1,0 +1,319 @@
+
+ISL Board - PRODUCTION v7  (v6 + deep-sleep floor fix: AIN7 crowbar ~155->~35 uA)
+========================================================
+[RTC] NOT GPS-synced (will seed from GNSS)  current: 2000-01-01 00:00:05
+[FLASH] Loaded: nextSeq=179 delivered=108 undelivered=56 buf=1 pend=5
+[TIME] boot GPS time-sync (up to 120 s, no fix needed)...
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+   ...0s  sats=0  timeValid=0 year=0
+   ...5s  sats=0  timeValid=1 year=2000
+   ...10s  sats=0  timeValid=1 year=2000
+   ...15s  sats=0  timeValid=1 year=2000
+   ...20s  sats=0  timeValid=1 year=2000
+   ...25s  sats=0  timeValid=1 year=2000
+   ...30s  sats=0  timeValid=1 year=2000
+   ...35s  sats=0  timeValid=1 year=2000
+   ...40s  sats=0  timeValid=1 year=2000
+   ...45s  sats=0  timeValid=1 year=2000
+   ...50s  sats=0  timeValid=1 year=2000
+   ...55s  sats=0  timeValid=1 year=2000
+   ...60s  sats=0  timeValid=1 year=2000
+   ...65s  sats=0  timeValid=1 year=2000
+   ...70s  sats=0  timeValid=1 year=2000
+   ...75s  sats=0  timeValid=1 year=2000
+   ...80s  sats=0  timeValid=1 year=2000
+...85s  sats=0  timeValid=1 year=2000
+   ...90s  sats=0  timeValid=1 year=2000
+   ...95s  sats=0  timeValid=1 year=2000
+   ...100s  sats=0  timeValid=1 year=2000
+   ...105s  sats=0  timeValid=1 year=2000
+   ...110s  sats=0  timeValid=1 year=2000
+   ...115s  sats=0  timeValid=1 year=2000
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[TIME] no GPS time yet - will keep trying in COLLECT sessions
+[CFG] id=051  period=2 min (1Hz tick)  SV_MIN=4  no_sky_abort=25 s  fix_max=60 s  settle=5 s  ack=8 s  backoff=K3/360min  tx_gap=30 s  buffer=1  pend_slots=5  WUR_wake=0  SIM_FIX=1  rtcSynced=0
+== COLLECT (cycle 1, up 125 s, noFixStreak=0) ==
+[BAT] 3891 mV
+[RTC] SET FROM GPS: 2026-07-14 20:00:00 UTC (unix~1784059200)
+[GPS] SIMULATED FIX  used=12  IN-VIEW=12  lat=22528600 lon=113940480  ts=1784059200
+== ACCEL collect (5000 ms @ 100 ms) ==
+[ACCEL] LIS3DHTR not found (WHO_AM_I != 0x33) - skipping
+[BUF] staged seq=179 (fix), buf=1/1  pend=5
+[TX pass] cycle=1 buffer=1 pending=5
+[TX] seq=179 (fix): 051,179,22.528600,113.940480,3.89,1784059200,SV=12
++EVT:TXP2P DONE
++EVT:RXP2P:-49:13:41434B2C35312C313739
+[RX] ACK OK  RSSI=-49 dBm  SNR=13 dB
+[GAP] 30 s at floor (ACK-window guard)
+[TX] seq=177 (fix): 051,177,22.528600,113.940480,3.90,1784138714,SV=12
++EVT:TXP2P DONE
++EVT:RXP2P:-48:13:41434B2C35312C313737
+[RX] ACK OK  RSSI=-48 dBm  SNR=13 dB
+[GAP] 30 s at floor (ACK-window guard)
+[TX] seq=176 (fix): 051,176,22.528600,113.940480,3.90,1784131483,SV=12
++EVT:TXP2P DONE
++EVT:RXP2P:-49:13:41434B2C35312C313736
+[RX] ACK OK  RSSI=-49 dBm  SNR=13 dB
+[GAP] 30 s at floor (ACK-window guard)
+[TX] seq=175 (fix): 051,175,22.528600,113.940480,3.90,1784124252,SV=12
++EVT:TXP2P DONE
++EVT:RXP2P:-47:13:41434B2C35312C313735
+[RX] ACK OK  RSSI=-47 dBm  SNR=13 dB
+[GAP] 30 s at floor (ACK-window guard)
+[TX] seq=174 (fix): 051,174,22.528600,113.940480,3.90,1784117021,SV=12
++EVT:TXP2P DONE
++EVT:RXP2P:-47:13:41434B2C35312C313734
+[RX] ACK OK  RSSI=-47 dBm  SNR=13 dB
+[GAP] 30 s at floor (ACK-window guard)
+[TX] seq=173 (fix): 051,173,22.528600,113.940480,3.89,1784109791,SV=12
++EVT:TXP2P DONE
++EVT:RXP2P:-45:13:41434B2C35312C313733
+[RX] ACK OK  RSSI=-45 dBm  SNR=13 dB
+[TX pass] done: delivered=114 lastSeq=173 pending=0 undelivered=56
+== IDLE deep-sleep 120 s ==
+[SLEEP] 120 s
+[RTC] timer: preset=120 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~120003 ms
+== COLLECT (cycle 2, up 399 s, noFixStreak=0) ==
+[BAT] 3968 mV
+[GPS] SIMULATED FIX  used=12  IN-VIEW=12  lat=22528600 lon=113940480  ts=1784059473
+== ACCEL collect (5000 ms @ 100 ms) ==
+[ACCEL] LIS3DHTR not found (WHO_AM_I != 0x33) - skipping
+[BUF] staged seq=180 (fix), buf=1/1  pend=0
+[TX pass] cycle=2 buffer=1 pending=0
+[TX] seq=180 (fix): 051,180,22.528600,113.940480,3.96,1784059473,SV=12
++EVT:TXP2P DONE
++EVT:RXP2P:-44:13:41434B2C35312C313830
+[RX] ACK OK  RSSI=-44 dBm  SNR=13 dB
+[TX pass] done: delivered=115 lastSeq=180 pending=0 undelivered=56
+== IDLE deep-sleep 120 s ==
+[SLEEP] 120 s
+[RTC] timer: preset=120 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~120002 ms
+== COLLECT (cycle 3, up 520 s, noFixStreak=0) ==
+[BAT] 3974 mV
+GPS] SIMULATED FIX  used=12  IN-VIEW=12  lat=22528600 lon=113940480  ts=1784059595
+== ACCEL collect (5000 ms @ 100 ms) ==
+[ACCEL] 49 samples gathered
+[BUF] staged seq=181 (fix), buf=1/1  pend=0
+[TX pass] cycle=3 buffer=1 pending=0
+[TX] seq=181 (fix): 051,181,22.528600,113.940480,3.97,1784059595,SV=12
++EVT:TXP2P DONE
++EVT:RXP2P:-46:13:41434B2C35312C313831
+[RX] ACK OK  RSSI=-46 dBm  SNR=13 dB
+[TX pass] done: delivered=116 lastSeq=181 pending=0 undelivered=56
+== BLE accel TX ==
+[BLE] advertising 'Custodia-Tracker', settling 5000 ms for the receiver...
+Connected.
+[BLE] accel burst sent (49 samples) - will reboot-to-sleep
+== IDLE (reboot-to-sleep) 120 s ==
+== REBOOT-to-sleep: queued 120 s, resetting to clear BLE ==
+ISL Production v7 boot. Heartbeat, then init...
+Current Work Mode: LoRa P2P.
+[alive] 0 ms
+[alive] 500 ms
+[alive] 1000 ms
+[alive] 1500 ms
+[alive] 2000 ms
+[alive] 2500 ms
+[alive] 3000 ms
+========================================================
+ISL Board - PRODUCTION v7  (v6 + deep-sleep floor fix: AIN7 crowbar ~155->~35 uA)
+========================================================
+[RTC] GPS-synced flag present  current: 2026-07-14 20:06:54
+[FLASH] Loaded: nextSeq=182 delivered=116 undelivered=56 buf=0 pend=0
+[CFG] id=051  period=2 min (1Hz tick)  SV_MIN=4  no_sky_abort=25 s  fix_max=60 s  settle=5 s  ack=8 s  backoff=K3/360min  tx_gap=30 s  buffer=1  pend_slots=5  WUR_wake=0  SIM_FIX=1  rtcSynced=1
+== BOOT: performing queued 120 s deep-sleep (BLE-clean) ==
+[SLEEP] 120 s
+[RTC] timer: preset=120 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~120002 ms
+== COLLECT (cycle 1, up 124 s, noFixStreak=0) ==
+[BAT] 3975 mV
+[GPS] SIMULATED FIX  used=12  IN-VIEW=12  lat=22528600 lon=113940480  ts=1784059735
+== ACCEL collect (5000 ms @ 100 ms) ==
+[ACCEL] 49 samples gathered
+[BUF] staged seq=182 (fix), buf=1/1  pend=0
+[TX pass] cycle=1 buffer=1 pending=0
+[TX] seq=182 (fix): 051,182,22.528600,113.940480,3.97,1784059735,SV=12
++EVT:TXP2P DONE
++EVT:RXP2P:-42:13:41434B2C35312C313832
+[RX] ACK OK  RSSI=-42 dBm  SNR=13 dB
+[TX pass] done: delivered=117 lastSeq=182 pending=0 undelivered=56
+== BLE accel TX ==
+[BLE] advertising 'Custodia-Tracker', settling 5000 ms for the receiver...
+Connected.
+[BLE] accel burst sent (49 samples) - will reboot-to-sleep
+== IDLE (reboot-to-sleep) 120 s ==
+== REBOOT-to-sleep: queued 120 s, resetting to clear BLE ==
+ISL Production v7 boot. Heartbeat, then init...
+Current Work Mode: LoRa P2P.
+[alive] 0 ms
+[alive] 500 ms
+[alive] 1000 ms
+[alive] 1500 ms
+[alive] 2000 ms
+[alive] 2500 ms
+[alive] 3000 ms
+========================================================
+ISL Board - PRODUCTION v7  (v6 + deep-sleep floor fix: AIN7 crowbar ~155->~35 uA)
+========================================================
+[RTC] GPS-synced flag present  current: 2026-07-14 20:09:15
+[FLASH] Loaded: nextSeq=183 delivered=117 undelivered=56 buf=0 pend=0
+[CFG] id=051  period=2 min (1Hz tick)  SV_MIN=4  no_sky_abort=25 s  fix_max=60 s  settle=5 s  ack=8 s  backoff=K3/360min  tx_gap=30 s  buffer=1  pend_slots=5  WUR_wake=0  SIM_FIX=1  rtcSynced=1
+== BOOT: performing queued 120 s deep-sleep (BLE-clean) ==
+[SLEEP] 120 s
+[RTC] timer: preset=120 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~120002 ms
+== COLLECT (cycle 1, up 124 s, noFixStreak=0) ==
+[BAT] 3988 mV
+[GPS] SIMULATED FIX  used=12  IN-VIEW=12  lat=22528600 lon=113940480  ts=1784059875
+== ACCEL collect (5000 ms @ 100 ms) ==
+[ACCEL] 49 samples gathered
+[BUF] staged seq=183 (fix), buf=1/1  pend=0
+[TX pass] cycle=1 buffer=1 pending=0
+[TX] seq=183 (fix): 051,183,22.528600,113.940480,3.98,1784059875,SV=12
++EVT:TXP2P DONE
++EVT:RXP2P:-46:13:41434B2C35312C313833
+[RX] ACK OK  RSSI=-46 dBm  SNR=13 dB
+[TX pass] done: delivered=118 lastSeq=183 pending=0 undelivered=56
+== BLE accel TX ==
+[BLE] advertising 'Custodia-Tracker', settling 5000 ms for the receiver...
+Connected.
+[BLE] accel burst sent (49 samples) - will reboot-to-sleep
+== IDLE (reboot-to-sleep) 120 s ==
+== REBOOT-to-sleep: queued 120 s, resetting to clear BLE ==
+ISL Production v7 boot. Heartbeat, then init...
+Current Work Mode: LoRa P2P.
+[alive] 0 ms
+[alive] 500 ms
+[alive] 1000 ms
+[alive] 1500 ms
+[alive] 2000 ms
+[alive] 2500 ms
+[alive] 3000 ms
+========================================================
+ISL Board - PRODUCTION v7  (v6 + deep-sleep floor fix: AIN7 crowbar ~155->~35 uA)
+========================================================
+[RTC] GPS-synced flag present  current: 2026-07-14 20:11:35
+[FLASH] Loaded: nextSeq=184 delivered=118 undelivered=56 buf=0 pend=0
+[CFG] id=051  period=2 min (1Hz tick)  SV_MIN=4  no_sky_abort=25 s  fix_max=60 s  settle=5 s  ack=8 s  backoff=K3/360min  tx_gap=30 s  buffer=1  pend_slots=5  WUR_wake=0  SIM_FIX=1  rtcSynced=1
+== BOOT: performing queued 120 s deep-sleep (BLE-clean) ==
+[SLEEP] 120 s
+[RTC] timer: preset=120 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~120002 ms
+== COLLECT (cycle 1, up 124 s, noFixStreak=0) ==
+[BAT] 3981 mV
+[GPS] SIMULATED FIX  used=12  IN-VIEW=12  lat=22528600 lon=113940480  ts=1784060015
+== ACCEL collect (5000 ms @ 100 ms) ==
+[ACCEL] 49 samples gathered
+[BUF] staged seq=184 (fix), buf=1/1  pend=0
+[TX pass] cycle=1 buffer=1 pending=0
+[TX] seq=184 (fix): 051,184,22.528600,113.940480,3.98,1784060015,SV=12
++EVT:TXP2P DONE
++EVT:RXP2P:-44:13:41434B2C35312C313834
+[RX] ACK OK  RSSI=-44 dBm  SNR=13 dB
+[TX pass] done: delivered=119 lastSeq=184 pending=0 undelivered=56
+== BLE accel TX ==
+[BLE] advertising 'Custodia-Tracker', settling 5000 ms for the receiver...
+Connected.
+[BLE] accel burst sent (49 samples) - will reboot-to-sleep
+== IDLE (reboot-to-sleep) 120 s ==
+== REBOOT-to-sleep: queued 120 s, resetting to clear BLE ==
+ISL Production v7 boot. Heartbeat, then init...
+Current Work Mode: LoRa P2P.
+[alive] 0 ms
+[alive] 500 ms
+[alive] 1000 ms
+[alive] 1500 ms
+[alive] 2000 ms
+alive] 2500 ms
+[alive] 3000 ms
+========================================================
+ISL Board - PRODUCTION v7  (v6 + deep-sleep floor fix: AIN7 crowbar ~155->~35 uA)
+========================================================
+[RTC] GPS-synced flag present  current: 2026-07-14 20:13:55
+[FLASH] Loaded: nextSeq=185 delivered=119 undelivered=56 buf=0 pend=0
+[CFG] id=051  period=2 min (1Hz tick)  SV_MIN=4  no_sky_abort=25 s  fix_max=60 s  settle=5 s  ack=8 s  backoff=K3/360min  tx_gap=30 s  buffer=1  pend_slots=5  WUR_wake=0  SIM_FIX=1  rtcSynced=1
+== BOOT: performing queued 120 s deep-sleep (BLE-clean) ==
+[SLEEP] 120 s
+[RTC] timer: preset=120 s (1 Hz tick)
+ISL Production v7 boot. Heartbeat, then init...
+Current Work Mode: LoRa P2P.
+[alive] 0 ms
+[alive] 500 ms
+[alive] 1000 ms
+[alive] 1500 ms
+[alive] 2000 ms
+[alive] 2500 ms
+[alive] 3000 ms
+========================================================
+ISL Board - PRODUCTION v7  (v6 + deep-sleep floor fix: AIN7 crowbar ~155->~35 uA)
+========================================================
+[RTC] NOT GPS-synced (will seed from GNSS)  current: 2000-01-01 00:00:05
+[FLASH] Loaded: nextSeq=185 delivered=119 undelivered=56 buf=0 pend=0
+[TIME] boot GPS time-sync (up to 120 s, no fix needed)...
+[GPS] VCC ON (P1.02 LOW, hot start via module backup battery)
+   ...0s  sats=0  timeValid=0 year=0
+   ...5s  sats=0  timeValid=1 year=2000
+   ...10s  sats=0  timeValid=1 year=2000
+   ...15s  sats=0  timeValid=1 year=2000
+   ...20s  sats=0  timeValid=1 year=2000
+   ...25s  sats=0  timeValid=1 year=2000
+   ...30s  sats=0  timeValid=1 year=2000
+   ...35s  sats=0  timeValid=1 year=2000
+   ...40s  sats=0  timeValid=1 year=2000
+   ...45s  sats=0  timeValid=1 year=2000
+   ...50s  sats=0  timeValid=1 year=2000
+   ...55s  sats=0  timeValid=1 year=2000
+   ...60s  sats=0  timeValid=1 year=2000
+   ...65s  sats=0  timeValid=1 year=2000
+   ...70s  sats=0  timeValid=1 year=2000
+   ...75s  sats=0  timeValid=1 year=2000
+   ...80s  sats=0  timeValid=1 year=2000
+   ...85s  sats=0  timeValid=1 year=2000
+...90s  sats=0  timeValid=1 year=2000
+   ...95s  sats=0  timeValid=1 year=2000
+   ...100s  sats=0  timeValid=1 year=2000
+   ...105s  sats=0  timeValid=1 year=2000
+   ...110s  sats=0  timeValid=1 year=2000
+   ...115s  sats=0  timeValid=1 year=2000
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[TIME] no GPS time yet - will keep trying in COLLECT sessions
+[CFG] id=051  period=2 min (1Hz tick)  SV_MIN=4  no_sky_abort=25 s  fix_max=60 s  settle=5 s  ack=8 s  backoff=K3/360min  tx_gap=30 s  buffer=1  pend_slots=5  WUR_wake=0  SIM_FIX=1  rtcSynced=0
+== COLLECT (cycle 1, up 125 s, noFixStreak=0) ==
+[BAT] 3896 mV
+[RTC] SET FROM GPS: 2026-07-14 20:00:00 UTC (unix~1784059200)
+[GPS] SIMULATED FIX  used=12  IN-VIEW=12  lat=22528600 lon=113940480  ts=1784059200
+== ACCEL collect (5000 ms @ 100 ms) ==
+[ACCEL] 49 samples gathered
+[BUF] staged seq=185 (fix), buf=1/1  pend=0
+[TX pass] cycle=1 buffer=1 pending=0
+[TX] seq=185 (fix): 051,185,22.528600,113.940480,3.89,1784059200,SV=12
++EVT:TXP2P DONE
++EVT:RXP2P:-49:13:41434B2C35312C313835
+[RX] ACK OK  RSSI=-49 dBm  SNR=13 dB
+[TX pass] done: delivered=120 lastSeq=185 pending=0 undelivered=56
+== BLE accel TX ==
+[BLE] advertising 'Custodia-Tracker', settling 5000 ms for the receiver...
+Connected.
+[BLE] accel burst sent (49 samples) - will reboot-to-sleep
+== IDLE (reboot-to-sleep) 120 s ==
+== REBOOT-to-sleep: queued 120 s, resetting to clear BLE ==
+ISL Production v7 boot. Heartbeat, then init...
+Current Work Mode: LoRa P2P.
+[alive] 0 ms
+[alive] 500 ms
+[alive] 1000 ms
+[alive] 1500 ms
+[alive] 2000 ms
+[alive] 2500 ms
+[alive] 3000 ms
+========================================================
+ISL Board - PRODUCTION v7  (v6 + deep-sleep floor fix: AIN7 crowbar ~155->~35 uA)
+========================================================
+[RTC] GPS-synced flag present  current: 2026-07-14 20:00:19
+[FLASH] Loaded: nextSeq=186 delivered=120 undelivered=56 buf=0 pend=0
+[CFG] id=051  period=2 min (1Hz tick)  SV_MIN=4  no_sky_abort=25 s  fix_max=60 s  settle=5 s  ack=8 s  backoff=K3/360min  tx_gap=30 s  buffer=1  pend_slots=5  WUR_wake=0  SIM_FIX=1  rtcSynced=1
+== BOOT: performing queued 120 s deep-sleep (BLE-clean) ==
+[SLEEP] 120 s
+[RTC] timer: preset=120 s (1 Hz tick)

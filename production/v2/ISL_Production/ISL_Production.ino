@@ -48,7 +48,7 @@
 // The *_MS values the code uses are derived automatically further down - you do
 // NOT edit those.
 constexpr uint32_t GNSS_PERIOD_MIN       = 15;    // idle deep-sleep between cycles (deployment target ~120)
-constexpr uint8_t  TX_BUFFER_SIZE   = 1;    // packets to accumulate before a TX pass (max 3)
+constexpr uint8_t  TRACKER_BUFFER_SIZE   = 1;    // packets to accumulate before a TX pass (max 3)
 constexpr uint32_t TX_RETRY_MIN          = 5;    // deep sleep between TX retries
 constexpr uint8_t  MAX_TX_RETRIES        = 3;    // TX attempts before a packet is archived UNDELIVERED
 constexpr uint32_t GNSS_FIX_TIMEOUT_SEC  = 90;   // max listen time per fix attempt
@@ -575,12 +575,12 @@ void doCollect()
     p.hasFix     = haveFix ? 1 : 0;
     p.txAttempts = 0;
 
-    queuePush(buffer, header.bufferCount, p, TX_BUFFER_SIZE);
+    queuePush(buffer, header.bufferCount, p, TRACKER_BUFFER_SIZE);
     saveBuffer();
     saveHeader();
     DBG("[BUF] added seq=%lu (%s), buf=%u/%u\r\n",
         (unsigned long)p.seq, haveFix ? "fix" : "no-fix",
-        header.bufferCount, TX_BUFFER_SIZE);
+        header.bufferCount, TRACKER_BUFFER_SIZE);
 }
 
 void doTransmitPass()
@@ -695,7 +695,7 @@ void initEverything()
         (unsigned long)TX_RETRY_MIN,
         (unsigned long)ACK_TIMEOUT_SEC,
         (unsigned long)POST_FIX_SETTLE_SEC,
-        TX_BUFFER_SIZE, MAX_GNSS_RETRIES, MAX_TX_RETRIES, ENABLE_WUR_WAKE);
+        TRACKER_BUFFER_SIZE, MAX_GNSS_RETRIES, MAX_TX_RETRIES, ENABLE_WUR_WAKE);
 }
 
 void setup()
@@ -729,7 +729,7 @@ void loop()
     // ==== OPERATE: one full cycle per pass ====
     doCollect();
 
-    bool triggerTx = (header.bufferCount >= TX_BUFFER_SIZE) || (header.pendingCount > 0);
+    bool triggerTx = (header.bufferCount >= TRACKER_BUFFER_SIZE) || (header.pendingCount > 0);
     if (triggerTx) {
         doTransmitWithRetries();
     }

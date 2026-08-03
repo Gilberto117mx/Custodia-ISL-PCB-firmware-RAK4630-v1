@@ -1,6 +1,6 @@
 # v6 Test 1 — adaptive GPS + fix re-sync, indoors near a window (overnight)
 
-First v6 field run. **70 cycles over ~13.8 h**, node + receiver on the same
+First v6 field run. **70 cycles over ~13.8 h**, tracker + receiver on the same
 PC over USB-C, electronics kept still all night next to a window. Strong pass:
 no crashes, no wedges, correct real-time clock, robust sleep/wake and TX/ACK.
 
@@ -20,7 +20,7 @@ BACKOFF_BENCH_MIN   = 0
 ## Files
 | File | What it is |
 |---|---|
-| `Node_log.txt` | ISL node serial (boot, per-cycle GPS/TX/sleep, RTC re-syncs) |
+| `Tracker_log.txt` | ISL node serial (boot, per-cycle GPS/TX/sleep, RTC re-syncs) |
 | `Receiver_log.txt`| Receiver serial (70 packets, RSSI/SNR, ACKs) |
 | `PowerProfile_v6.csv` | Current trace, **10 samples/s** (see the caveat below) |
 

@@ -1,0 +1,64 @@
+18:13:03.405 -> ================================================================
+18:13:03.405 ->   SolarNode LoRa Repeater  -  firmware v1
+18:13:03.405 ->   Board : SenseCAP Solar Node P1-Pro (XIAO nRF52840 Plus + SX1262)
+18:13:03.405 ->   Built : Jul 25 2026  22:04:01
+18:13:03.405 -> ================================================================
+18:13:03.405 -> [ROLE] RX node  ->  ACK node  ->  relay onward to gateway
+18:13:03.405 ->        (Meshtastic-style managed flood, <id,seq> dedup)
+18:13:03.405 -> [CFG]  repeaterID=91  ackDelay=50ms  relayGap=20ms  dedup=16  heartbeat=30s
+18:13:03.405 -> [PHY]  915 MHz  BW=250kHz  SF7  CR4/5  sync=0x12  preamble=8  TXpwr=22dBm  TCXO=1.8V  (matches ISL board)
+18:13:03.405 -> [PINS] LoRa CS=D4 DIO1=D1 RST=D2 BUSY=D3 | LED white=P0.15 blue=P0.19 | PWRbtn=P1.01
+18:13:03.405 -> [USB] monitor connected - repeater was never paused; resuming live logs
+18:13:03.405 -> [STAT] up 0d 00:36:34  |  rx=1 ack=1 relay=1 dup=0 bad=0  |  dedup 1/16
+18:13:03.405 -> [STAT] last packet 1772 s ago
+18:13:03.405 -> [LoRa] listening for node packets...
+18:13:03.405 -> [STAT] up 0d 00:36:34  |  rx=1 ack=1 relay=1 dup=0 bad=0  |  dedup 1/16
+18:13:03.405 -> [STAT] last packet 1772 s ago
+18:13:33.338 -> [STAT] up 0d 00:37:04  |  rx=1 ack=1 relay=1 dup=0 bad=0  |  dedup 1/16
+18:13:33.338 -> [STAT] last packet 1802 s ago
+18:14:03.346 -> [STAT] up 0d 00:37:34  |  rx=1 ack=1 relay=1 dup=0 bad=0  |  dedup 1/16
+18:14:03.346 -> [STAT] last packet 1832 s ago
+18:14:33.323 -> [STAT] up 0d 00:38:04  |  rx=1 ack=1 relay=1 dup=0 bad=0  |  dedup 1/16
+18:14:33.323 -> [STAT] last packet 1862 s ago
+18:15:03.347 -> [STAT] up 0d 00:38:34  |  rx=1 ack=1 relay=1 dup=0 bad=0  |  dedup 1/16
+18:15:03.347 -> [STAT] last packet 1892 s ago
+18:15:33.335 -> [STAT] up 0d 00:39:04  |  rx=1 ack=1 relay=1 dup=0 bad=0  |  dedup 1/16
+18:15:33.335 -> [STAT] last packet 1922 s ago
+18:16:03.343 -> [STAT] up 0d 00:39:34  |  rx=1 ack=1 relay=1 dup=0 bad=0  |  dedup 1/16
+18:16:03.343 -> [STAT] last packet 1952 s ago
+18:16:33.322 -> [STAT] up 0d 00:40:04  |  rx=1 ack=1 relay=1 dup=0 bad=0  |  dedup 1/16
+18:16:33.322 -> [STAT] last packet 1982 s ago
+18:17:03.319 -> [STAT] up 0d 00:40:34  |  rx=1 ack=1 relay=1 dup=0 bad=0  |  dedup 1/16
+18:17:03.319 -> [STAT] last packet 2012 s ago
+18:17:30.016 -> [RX] #2  RSSI=-65.0 dBm  SNR=12.5 dB  len=48  "051,6,22.528600,113.940480,3.86,1784059200,SV=12"
+18:17:30.016 -> [RX] parsed id=51 seq=6
+18:17:30.113 -> [ACK] sent "ACK,51,6"  (2 total)
+18:17:30.344 -> [RELAY] forwarded id=51 seq=6 onward (2 total)
+18:17:33.310 -> [STAT] up 0d 00:41:04  |  rx=2 ack=2 relay=2 dup=0 bad=0  |  dedup 2/16
+18:17:33.310 -> [STAT] last packet 3 s ago
+18:18:03.338 -> [STAT] up 0d 00:41:34  |  rx=2 ack=2 relay=2 dup=0 bad=0  |  dedup 2/16
+18:18:03.338 -> [STAT] last packet 33 s ago
+18:18:33.327 -> [STAT] up 0d 00:42:04  |  rx=2 ack=2 relay=2 dup=0 bad=0  |  dedup 2/16
+18:18:33.327 -> [STAT] last packet 63 s ago
+18:19:03.311 -> [STAT] up 0d 00:42:34  |  rx=2 ack=2 relay=2 dup=0 bad=0  |  dedup 2/16
+18:19:03.311 -> [STAT] last packet 93 s ago
+18:19:33.305 -> [STAT] up 0d 00:43:04  |  rx=2 ack=2 relay=2 dup=0 bad=0  |  dedup 2/16
+18:19:33.305 -> [STAT] last packet 123 s ago
+18:20:03.337 -> [STAT] up 0d 00:43:34  |  rx=2 ack=2 relay=2 dup=0 bad=0  |  dedup 2/16
+18:20:03.337 -> [STAT] last packet 153 s ago
+18:20:33.323 -> [STAT] up 0d 00:44:04  |  rx=2 ack=2 relay=2 dup=0 bad=0  |  dedup 2/16
+18:20:33.323 -> [STAT] last packet 183 s ago
+18:21:03.304 -> [STAT] up 0d 00:44:34  |  rx=2 ack=2 relay=2 dup=0 bad=0  |  dedup 2/16
+18:21:03.304 -> [STAT] last packet 213 s ago
+18:21:33.301 -> [STAT] up 0d 00:45:04  |  rx=2 ack=2 relay=2 dup=0 bad=0  |  dedup 2/16
+18:21:33.301 -> [STAT] last packet 243 s ago
+18:22:03.318 -> [STAT] up 0d 00:45:34  |  rx=2 ack=2 relay=2 dup=0 bad=0  |  dedup 2/16
+18:22:03.318 -> [STAT] last packet 273 s ago
+18:22:33.324 -> [STAT] up 0d 00:46:04  |  rx=2 ack=2 relay=2 dup=0 bad=0  |  dedup 2/16
+18:22:33.324 -> [STAT] last packet 303 s ago
+18:23:03.306 -> [STAT] up 0d 00:46:34  |  rx=2 ack=2 relay=2 dup=0 bad=0  |  dedup 2/16
+18:23:03.306 -> [STAT] last packet 333 s ago
+18:23:33.317 -> [STAT] up 0d 00:47:04  |  rx=2 ack=2 relay=2 dup=0 bad=0  |  dedup 2/16
+18:23:33.317 -> [STAT] last packet 363 s ago
+18:24:03.323 -> [STAT] up 0d 00:47:34  |  rx=2 ack=2 relay=2 dup=0 bad=0  |  dedup 2/16
+18:24:03.323 -> [STAT] last packet 393 s ago

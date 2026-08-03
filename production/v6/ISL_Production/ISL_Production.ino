@@ -74,7 +74,7 @@
 // USER CONFIGURATION  -->  MINUTES / SECONDS / counts
 // ============================================================================
 constexpr uint32_t GNSS_PERIOD_MIN       = 5;    // NORMAL idle deep-sleep between cycles (bench=5; deployment ~120 = 2 h)
-constexpr uint8_t  TX_BUFFER_SIZE   = 1;    // fresh packets staged before a TX pass (max 3; keep 1)
+constexpr uint8_t  TRACKER_BUFFER_SIZE   = 1;    // fresh packets staged before a TX pass (max 3; keep 1)
 constexpr uint32_t POST_FIX_SETTLE_SEC   = 5;    // a fix must stay valid this long before it's accepted
 constexpr uint32_t ACK_TIMEOUT_SEC       = 8;    // RX window for the ACK after each TX
 constexpr uint16_t DEVICE_ID             = 51;   // "051" - ISL node over-air ID
@@ -863,17 +863,17 @@ void doCollect()
     p.satsInView = r.peakInView;
 
     // stage into buffer (normally exactly one fresh packet)
-    if (header.bufferCount < TX_BUFFER_SIZE) {
+    if (header.bufferCount < TRACKER_BUFFER_SIZE) {
         buffer[header.bufferCount++] = p;
     } else {
-        for (uint8_t i = 0; i < TX_BUFFER_SIZE - 1; i++) buffer[i] = buffer[i + 1];
-        buffer[TX_BUFFER_SIZE - 1] = p;
+        for (uint8_t i = 0; i < TRACKER_BUFFER_SIZE - 1; i++) buffer[i] = buffer[i + 1];
+        buffer[TRACKER_BUFFER_SIZE - 1] = p;
     }
     saveBuffer();
     saveHeader();
     DBG("[BUF] staged seq=%lu (%s), buf=%u/%u  pend=%u\r\n",
         (unsigned long)p.seq, r.haveFix ? "fix" : "no-fix",
-        header.bufferCount, TX_BUFFER_SIZE, header.pendingCount);
+        header.bufferCount, TRACKER_BUFFER_SIZE, header.pendingCount);
 }
 
 // #5 delivery policy. Newest-first; only drain the backlog if the link is proven
@@ -981,7 +981,7 @@ void initEverything()
         SV_MIN, (unsigned long)NO_SKY_ABORT_SEC, (unsigned long)FIX_MAX_SEC,
         (unsigned long)POST_FIX_SETTLE_SEC, (unsigned long)ACK_TIMEOUT_SEC,
         (unsigned long)NOFIX_BACKOFF_AFTER, (unsigned long)BACKOFF_PERIOD_MIN,
-        (unsigned long)TX_PULSE_GAP_SEC, TX_BUFFER_SIZE, PENDING_SLOTS,
+        (unsigned long)TX_PULSE_GAP_SEC, TRACKER_BUFFER_SIZE, PENDING_SLOTS,
         ENABLE_WUR_WAKE, SIMULATE_FIX, rtcSynced ? 1 : 0);
 }
 

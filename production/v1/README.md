@@ -15,20 +15,22 @@ hears).
 > **Two sketches, same firmware:**
 > - `ISL_Production/` — original, knobs in milliseconds (run-1 as-run).
 > - **`ISL_Production_units/` — knobs in MINUTES/SECONDS, auto-converted to ms.
->   Identical logic. This is the current reference version going forward** (run-2
->   as-run, with `GNSS_PERIOD_MIN=15`, `GNSS_FIX_TIMEOUT_SEC=90`, `POST_FIX_SETTLE_SEC=5`).
+>   Identical logic** (run-2 as-run, with `GNSS_PERIOD_MIN=15`, `GNSS_FIX_TIMEOUT_SEC=90`,
+>   `POST_FIX_SETTLE_SEC=5`). *(The min/sec knob style carried into v2–v7; the current
+>   deployment build is `../v17/`.)*
 
 ```
 wake → read battery (quiet) → GNSS fix (retries) → build packet → BUFFER
      → buffer full or PENDING? → TX + ACK (retries, then UNDELIVERED archive)
      → deep-sleep GNSS_PERIOD_MS → repeat
 ```
+(The state machine is the one sketched above.)
 
 ## The knobs
 | Constant | Value | Role |
 |---|---|---|
 | `GNSS_PERIOD_MS` | 60 s | idle deep-sleep between cycles (deployment target ~2 h) |
-| `TX_BUFFER_SIZE` | 1 | packets buffered before a TX pass (max 3) |
+| `TRACKER_BUFFER_SIZE` | 1 | packets buffered before a TX pass (max 3) |
 | `GNSS_FIX_TIMEOUT_MS` | 60 s | max listen per fix attempt |
 | `POST_FIX_SETTLE_MS` | 3 s | fix must hold this long to be accepted |
 | `MAX_GNSS_RETRIES` | 2 | attempts before a timestamp-only packet |
@@ -54,8 +56,9 @@ Radio: 915 MHz · BW 250 kHz · SF7 · CR 4/5 · preamble 8 · 14 dBm.
 - **RTC wake pin** = **P0.21** (schematic v2; validated test #5).
 - **Extra wake** = AS3933 WUR on P1.04, behind `ENABLE_WUR_WAKE` (default off until validated).
 - **Structure** = **alive-first**: heartbeat 3 s, then init in `loop()` (native-USB wedge quirk).
-- **Sleep floor** = **157 µA @ 3.6 V** (cause UNEXPLAINED — the real 1 MΩ divider
-  is ~1.8 µA, not the floor; see `../../docs/ISL_DeepSleep_Notes.md` correction).
+- **Sleep floor** = **157 µA @ 3.6 V** here — later traced to an AIN7 input-buffer
+  crowbar (our own `pinMode`), **not** the divider/LDO, and fixed in **v7 → 34 µA**
+  (see `../../docs/ISL_DeepSleep_Notes.md`).
 
 Flash layout/magic, packet formatting (integer-only math), queue/pending/undelivered
 logic, RTC timer flow, unix-time algorithm, and LoRa config/callbacks are all part
@@ -92,8 +95,8 @@ to tests #5/#6 — so the deep-sleep, GPS-isolation, and RTC-wake mechanisms all
 hold under the real operate loop, for hours, without drift or hangs. The ~9.6 mA
 *average* is dominated entirely by GPS-on time; a **hot-start fix outdoors**
 (<30 s, the module has its own backup battery) collapses that on-time, and a
-longer `GNSS_PERIOD_MS` drops it further. The floor — the number the deep-sleep
-work targeted — is exactly where it should be.
+longer `GNSS_PERIOD_MS` drops it further. (This 157 µA floor was later cut to
+34 µA in v7 — see the deep-sleep notes.)
 
 Consistency check: 80 plateaus, medians 154.7–157.8 µA (2 % spread over 3.6 h);
 cycle structure (60 s idle + 300 s fix-retry + 60 s GPS attempts) matches the
@@ -129,20 +132,20 @@ full state machine stable for hours · min/sec config variant.
 ## ⚠ Robustness findings still needed (untested subset)
 Both runs exercised only the **happy path** (every packet ACK'd on the first
 try, every cycle clean). The failure/robustness branches exist in the code but
-have **never fired on this board** and need deliberate fault-injection runs
-before deployment:
+have **never fired on this board** in v1 and need deliberate fault-injection runs
+before deployment (most are addressed and validated by v6–v16 — see those READMEs):
 
 | Area | What must be exercised | How to test |
 |---|---|---|
 | **ACK loss / TX retry** | ACK-timeout path: packet → PENDING, `TX_RETRY` deep sleep, retry, delivery counters | run with the receiver OFF for a few cycles, then turn it on; check `pending` drains and `delivered` catches up |
-| **The lists** (PENDING / UNDELIVERED ring / buffer > 1) | queue rotation, flash slot bounds, the 8-slot undelivered ring wraparound, `TX_BUFFER_SIZE` 2–3 batching | receiver off past `MAX_TX_RETRIES` → packets must land in UNDELIVERED; also run a multi-packet buffer config |
+| **The lists** (PENDING / UNDELIVERED ring / buffer > 1) | queue rotation, flash slot bounds, the 8-slot undelivered ring wraparound, `TRACKER_BUFFER_SIZE` 2–3 batching | receiver off past `MAX_TX_RETRIES` → packets must land in UNDELIVERED; also run a multi-packet buffer config |
 | **Brownout** | battery sag during the 42 mA GPS burst / TX on a weak cell: does the nRF brown-out mid-cycle corrupt flash state? does `nextSeq` stay monotonic? | weak/CR-limited supply or bench supply with current limit; check state after recovery |
 | **Blackout** | total power loss mid-cycle → reboot recovery from flash (header/magic intact, no seq reuse, pending survives) | yank power at different cycle phases; verify `[FLASH] Loaded` state each time |
 | **Serial-log evidence** | a matched delivered/undelivered count (both runs so far were receiver-eyeball only) | log node + receiver serial to files for a multi-hour run |
 | **Long cadence** | single sleep ≤ 4095 s (~68 min, RV-3028 12-bit @ 1 Hz); the 2 h deployment target needs the 1/60 Hz tick mode | implement + verify a >68 min period |
 | ~~Battery calibration~~ | **FIXED in `../v2`** — v1 reads ~30 % low (2.4 V-FS assumption); v2 uses the calibrated `raw×1795/1000` (≤25 mV). v1 kept as the as-run validated build. | done in v2 |
-| **WUR second wake** | AS3933 real wake → `ENABLE_WUR_WAKE 1` → wake-on-demand cycle | after the LF-transmitter test passes (second engineer) |
+| **WUR second wake** | AS3933 real wake → `ENABLE_WUR_WAKE 1` → wake-on-demand cycle | after the LF-transmitter test passes (ISL lab engineers) |
 
-**This (`ISL_Production_units`) is our best/reference model as of now** — validated
-on the happy path end-to-end, with the table above as the acceptance checklist
-that remains before calling it deployment-ready.
+**v1 is the validated baseline record.** The current deployment build is `../v17/`
+(ported to PCB iteration3); the acceptance checklist above is carried forward and
+mostly closed across v6–v16.

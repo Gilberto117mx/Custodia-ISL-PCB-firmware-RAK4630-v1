@@ -14,8 +14,9 @@
  *   + AS3933 WUR sits powered on 3.3 V listening (~2.7 uA typ) - left in its default
  *     state here (not disabled), so it's included in the baseline.
  *   + RT9080-33 LDO quiescent current (nRF + SX1262 run off the 3.3 V rail).
- *   Measured floor is ~157 uA @ 3.6 V; its cause is unexplained (the known parts
- *   total well under that) - see docs/ISL_DeepSleep_Notes.md.
+ *   Measured floor here was ~157 uA @ 3.6 V; later traced to an AIN7 GPIO crowbar
+ *   (our own pinMode), NOT the divider/LDO - fixed in production v7 (34 uA). See
+ *   docs/ISL_DeepSleep_Notes.md.
  *
  * ISL pin map (schematic v2):
  *   RTC ~INT (wake) = P0.21   (was P1.03 in v1)   <- this test also VALIDATES it

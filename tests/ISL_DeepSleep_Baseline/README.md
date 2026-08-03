@@ -19,19 +19,21 @@ RV-3028 periodic timer armed (single-shot, 1 Hz tick) → `clearFPU()` →
 
 **ISL deep-sleep baseline = 157 µA @ 3.6 V.**
 
-## Where the 157 µA goes — ⚠️ UNRESOLVED (see correction)
+## Where the 157 µA goes — ✅ SOLVED (fixed in production v7)
 | Contributor | Approx @ 3.6 V |
 |---|---|
 | Battery divider **R9/R10 = 1 MΩ/1 MΩ + C17** (3.6 V / 2 MΩ) | **~1.8 µA** |
-| RT9080-33 LDO quiescent + nRF System-ON + RV-3028 + SX1262 sleep + AS3933 listening | expected single-digit µA |
-| **Unaccounted-for** | **~130–150 µA — cause unknown** |
+| nRF System-ON + RV-3028 + SX1262 sleep + AS3933 + RT9080 LDO Iq | ~30 µA (this is the real floor) |
+| **AIN7 input-buffer crowbar** — `pinMode(P0.31,INPUT)` at the 1 MΩ midpoint (~VDD/2) | **~118 µA ← the overage** |
 
-> **CORRECTION (2026-07-16):** this test was run believing the divider was 10k/10k
-> (~157 µA, "dominates"). **That diagram was wrong** — the real board is 1 MΩ/1 MΩ +
-> C17 (~1.8 µA). The **157 µA measurement is valid** (real board), but the divider
-> is *not* the cause, so **most of the floor is unexplained** and is genuine
-> deep-sleep headroom. Investigate with a headless battery-only rail teardown —
-> see `../../docs/ISL_DeepSleep_Notes.md` (correction note) and `ROADMAP.md` §6.
+> **RESOLVED (2026-07-19):** this baseline was run with the battery-sense pin parked
+> as `INPUT`. P0.31 (AIN7) floats at the 1 MΩ divider midpoint (~VDD/2), and a
+> *connected* digital input buffer there conducts ~118 µA of shoot-through ("crowbar")
+> current — the entire overage. A step-by-step teardown proved it
+> (method summarized in `../../docs/ROADMAP.md` §6; minimal sketch =
+> 34 µA, park-breakdown = batt-sense pin alone moved 34↔152 µA). **Production v7**
+> leaves that buffer disconnected → **34 µA on battery, verified**. The divider and
+> the RT9080 LDO are both fine. See `../../docs/ISL_DeepSleep_Notes.md`.
 
 ## Conventions established here
 - **Always measure/quote the sleep floor at 3.6 V** (battery nominal; nRF buck

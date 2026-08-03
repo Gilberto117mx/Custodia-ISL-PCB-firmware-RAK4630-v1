@@ -1,0 +1,36 @@
+ISL v16 backlog test - PPK power capture summary
+========================================================
+Capture: 750,005 samples @ 10 ms = 7500 s (125.0 min)
+
+*** MEASUREMENT CAVEAT - NOT a battery-life number ***
+USB-C was attached for serial logging AND a battery was in series with
+the PPK at the same time. With VBUS present the nRF52840 USB peripheral
+stays clocked/enumerated, so the deep-sleep FLOOR reads ~1.67 mA here,
+NOT the proven battery-only 34 uA (v7). USB also backfeeds/shares the
+rail, so absolute currents are not deployment-representative. Also
+SIM_FIX=1, so the periodic real-GPS burst is absent from this trace.
+=> Use this capture for BEHAVIOURAL SHAPE only. For battery life, re-run
+   battery-only (no USB), SIM_FIX=0, as the earlier clean PPK runs were.
+
+Current distribution (as captured, USB-inflated):
+  mean   =   2562.3 uA
+  min    =      0.1 uA   (pre-run / PPK zero)
+  p1     =   1669.6 uA   <- USB-attached sleep floor
+  median =   1678.5 uA
+  p90    =   4486.2 uA
+  p99    =  10316.1 uA
+  max    =  94899.0 uA   (LoRa TX peak)
+
+Time in bands:
+  <   1000 uA :   0.8 %
+  <   2000 uA :  87.8 %
+  <   3000 uA :  87.8 %
+  <   5000 uA :  92.6 %
+  <  10000 uA :  94.7 %
+  <  20000 uA :  99.3 %
+
+Charge over the 125 min capture = 5.338 mAh
+  ~88% at the (USB-inflated) floor; ~12% in BLE-settle / LoRa-TX-pass /
+  boot GPS-time-sync bursts. No stuck-awake anomaly; every burst returns
+  to the floor. The 42-packet backlog drain shows as a run of ~42 TX
+  spikes ~15 s apart, each dropping back to the floor between (deep-sleep nap).

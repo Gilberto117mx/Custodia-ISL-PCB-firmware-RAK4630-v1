@@ -1,9 +1,20 @@
 # ISL Board — Status & Roadmap (single source of truth)
 
-_Last updated: 2026-07-16._ What is validated, what is open, and the exact next
+_Last updated: 2026-08-03._ What is validated, what is open, and the exact next
 tests. Deployment target: a **sealed animal collar**, GNSS fix ~every **2 h**, that
 must survive ~24 h of blind transport and long low-sky stretches, then run for
 months on a LiSOCl₂ primary cell. Once sealed it cannot be reprogrammed.
+
+> ## 🏁 Final status
+> **`production/v17` is the latest and final firmware version** (v16's feature set
+> ported to **PCB iteration3**). The tracking data path is validated end-to-end:
+> GNSS strategy, LoRa delivery-guarantee + 1-week backlog, deep-sleep floor (34 µA),
+> GNSS-disciplined RTC, calibrated battery, and accelerometer capture.
+>
+> **The final integration of the two on-demand subsystems — the AS3933 wake-up
+> receiver (WUR) and the BLE offload — is handed to the ISL lab engineers.** Both are
+> wired, brought up, and have reference firmware in this repo; what remains is
+> closing the loop on real hardware (see §7).
 
 ---
 
@@ -16,21 +27,32 @@ All in `../tests/` (full matrix in `../tests/README.md`).
 | RV-3028 RTC | ✅ keeps time; **wake on P0.21** |
 | Battery ADC (AIN7/P0.31) | ✅ calibrated `raw×1795/1000`, ≤25 mV over 3.2–3.7 V |
 | L76K GNSS | ✅ **Serial0/UART1**, EN=**P1.02** active-low; open-sky 12-sat 3D fix |
-| Deep-sleep floor | ✅ measured **157 µA @ 3.6 V** — but its **cause is unexplained** (the real 1 MΩ/1 MΩ+C17 divider is only ~1.8 µA, not the floor). Headroom to improve — see §6. |
+| Deep-sleep floor | ✅ **34 µA on battery (v7)** — the old 157 µA was an AIN7 input-buffer crowbar (our `pinMode`), not the divider/LDO. Fixed & verified — see §6. |
 | GPS duty-cycle teardown | ✅ cut EN → quiet → `end()` → drive P0.19/P0.20 LOW (adds ~0 µA) |
 | RTC ← GNSS UTC time | ✅ seed in seconds with sats=0 (time-before-fix) |
 | AS3933 wake-up radio | ⚠️ SPI + config + RC-cal PASS; **real LF wake pending** (2nd engineer) |
 
-## 2. Production firmware — v1 → v6
+## 2. Production firmware — v1 → v17
 Each version adds one capability; `../production/vN/README.md` has the detail.
 
 | Ver | Adds | State |
 |---|---|---|
 | v1 | full node loop (GNSS + LoRa TX/ACK + persistence + deep sleep) | validated happy-path |
 | v2 | calibrated battery reader | validated |
-| v3 | GPS→RTC time seed + long wakes (1/60 Hz tick) | superseded by v6 |
+| v3 | GPS→RTC time seed + long wakes (1/60 Hz tick) | superseded |
 | v4/v5 | field runs; SV-in-view diagnostic in packet | field-tested |
-| **v6** | **GNSS field strategy (A/B/C) + delivery guarantee** | **current — see §3** |
+| v6 | GNSS field strategy (A/B/C) + delivery guarantee | validated (§3) |
+| v7 | v6 + deep-sleep floor fix (AIN7 crowbar, ~155→34 µA) | ✅ VERIFIED (34 µA on battery) |
+| v8 | v7 + accelerometer (5 s/fix) over BLE after the LoRa pass | ✅ bench-verified (accel→LoRa→BLE, 5 clean cycles; reboot-to-sleep fix) |
+| v9 | v8 + drone-pass bulk offload: 10 s accel → flash ring, custom-open BLE blast | superseded by v10 |
+| v10 | v9 + collar BLE offload reverts to v8's `api.ble.uart` fire-and-forget (name-advertised NUS), one-directional, ID-tagged | ✅ no-freeze proven (6+ passes) but data didn't validate — see `../production/v10/logs/ANALYSIS.md`. Kept as reference. |
+| **v11** | **v10 + BLE offload data-integrity fix: every line ≤ 20 B (one NUS notification, 16-bit checksum), whole ring blasted x2 with seq-dedup; receiver hardened + accepts Just-Works. Root-causes v10's `n=4294952064` garbage.** | **✅ VERIFIED — LAST KNOWN-GOOD. Bench: 3 drone passes, 20 unique records, 0 bad/0 corrupt; collar never froze, LoRa 100%. Ring kept (drone dedups). See `../production/v11/logs/`.** |
+| **v12** | **v11 but each pass transmits ONLY NEW accel data (clear-after-send): a drone pass carries just the records collected since the previous pass, never a re-send. On-collar buffering/replay intentionally dropped — the other engineer owns that with a different BLE approach.** | ✅ VERIFIED (bench): ~13 passes, new=35, 0 bad/0 corrupt, no cross-pass dup; passes as short as ~9 s; collar never froze, LoRa 100%. See `../production/v12/logs/`. |
+| **v17** | **v16 PORTED to ISL PCB iteration3 (the "onboard accelerometer" board). Feature set byte-for-byte v16; ONLY the hardware interface changed in two places: (1) the accelerometer moved from an external Grove LIS3DHTR on I²C (P0.24/25) to the ONBOARD LIS3DHTR (U5) on a 4-wire SPI bus shared with the WuR (CLK P0.03, MOSI P0.30, MISO P0.29, accel CS P0.28) — driver rewritten I²C→bit-bang SPI (mode 3), same regs/records/ring, and the Grove module's ~296 µA parasitic is gone; (2) GPS power moved from an active-LOW P-FET to an active-HIGH TPS22918 load switch (`L76K_EN`=P1.02, HIGH=ON), guarded by `GPS_EN_ACTIVE_HIGH`. RTC/GPS-UART/battery/LoRa/BLE/sleep identical; schema unchanged (4). Board added as `hardware/iteration3`; pin map updated.** | **current — 🆕 built, awaiting first bench run on the new board. Verify: `[CFG-BOARD]` banner, GPS powers on (active-HIGH), accel reads over SPI (WHO_AM_I 0x33), and a clean battery-only sleep-floor PPK (expected near v7's 34 µA now the Grove parasitic is gone). See `../production/v17/README.md`.** |
+| **v16** | **v15 + DURABLE LONG-EXCURSION LoRa BACKLOG. Animals roam out of repeater range for days; GPS keeps fixing, and the un-ACK'd fixes are held in the flash-persisted `pending[]` backlog and replayed newest-first when the link returns. v15 kept only 5 slots (~10 h @ 2 h) and dropped the rest, so a multi-day excursion lost most of its track. v16 raises `PENDING_SLOTS` 5→84 (= 1 week @ 2 h, ~2 KB flash placed above the accel ring; `static_assert`s prove the two can't collide and both fit the ~132 KB budget), and drains a big backlog on a shorter `BACKLOG_GAP_SEC`=15 s so a week replays in minutes (deep-sleep gaps → wall-clock cost, not battery). Newest-first + stop-at-miss + persistence make an interrupted catch-up resume next pass. Transport/BLE/GPS/sleep byte-identical to v15; schema 3→4.** | **✅ BENCH-VALIDATED (prior stable, PCB iteration2; 2026-08-03, repeater off→on): `pending` climbed 1→42 (past v15's cap of 5), survived every drone-pass reboot, and on reconnect drained newest-first 42→1 → `delivered=42 pending=0 undelivered=0`, ALL 42 fixes, zero loss/zero out-of-order; accel ring shared the flash with 0 bad. Flash-budget math compile-checked (accel ends 0x9E00, backlog 0xA000–0xA7E0, 512 B guard). Power capture was USB-attached (floor ~1.67 mA = artifact) → one clean battery-only run still to do. See `../production/v16/logs/BACKLOG_TEST_ANALYSIS.md`.** |
+| **v15** | **v14 + GPS backup-cell (MS621FE) HEALTH + CHARGE-ON-COLD. Measured: a charged cell hot-starts (~4 s) even after 1 h off; a flat cell cold-starts (~35 s) or fails. v15 infers health from TTFF: HOT (fast) → power off; LOW (slow) → keep GPS on to `GPS_CHARGE_SEC`=180 s to recharge (the patient window IS the charge); DEAD (non-hot ×4 despite charging) → flag + stop charging. Every LoRa packet carries `TTFF=<s>,CELL=<OK\|LOW\|DEAD>` (repeater relays raw; reference LoRa receiver parses it). Self-regulating; worst case ~9–12 mo on a 9 Ah 26500.** | **✅ FIELD-VALIDATED (prior stable; outdoor 2026-08-02, `SIM_FIX=0`): a drained cell was detected (110 s cold fix → `CELL=LOW`) and self-charged into hot starts (`TTFF` 110→35→14→9 s, `CELL=OK`) within two 180 s holds — the whole thesis on real hardware. Zero regression: BLE 7 rec/0 bad/no freeze, LoRa delivery-guarantee backfilled a 33 min repeater outage (lost only 2 oldest to the 5-slot cap), two-timer accel + real-GPS RTC + flash persistence intact. See `../production/v15/logs/OUTDOOR_ANALYSIS.md`.** |
+| **v14** | **v13 + COLD / FIRST-FIX GPS strategy: a fix is COLD when the clock was lost (`!rtcSynced`), we've never fixed (`lastFixUnix==0`), it's been a long time since the last fix (stale / NEW CITY), or we just left a no-sky streak — and a COLD fix gets a patient `COLD_FIX_MAX_SEC` (180 s) window with NO early no-sky abort, while normal wakes keep a frugal budget. `lastFixUnix` persisted in flash so the new-city case is caught whether the battery stayed on (stale gap) or was lost (`!rtcSynced`). Fixes the outdoor cold-start silence.** | **current — ✅ cold-fix VALIDATED (overnight: real SV=9/11 fixes, first fix cold-locked, no hang). Tuned from that run: WARM `NO_SKY_ABORT_SEC` 25→45 s (was killing warm reacquisitions), `COLD_AFTER_NOFIX` 2→1. See `../production/v14/logs/`.** |
+| v13 | v12 + (1) TWO INDEPENDENT TIMERS — accel collection on its own `ACCEL_PERIOD_HOURS` cadence, decoupled from the GNSS/LoRa cadence and the drone pass; each pass still sends the WHOLE ring accumulated since the last pass; bounded ring drops oldest when full (default 64, sized for a 2-wk/6-h deployment). (2) the per-record TIMESTAMP restored to the wire as its own `T <ts>` line. Transport byte-identical to the proven v12.** | **✅ VERIFIED (bench 2026-07-29): accel on its own 324 s timer (not every GNSS cycle), each pass sends everything since last + clears, per-record ts cross-checks, bad=0, no freeze; LoRa delivery-guarantee handled a repeater outage. See `../production/v13/logs/`.** |
 
 ## 3. v6 validation — where we are now
 
@@ -56,16 +78,16 @@ The three big behavioural unknowns (C, A-extend, #5, long-wake) are all **green*
 ## 4. What's next to test (prioritized)
 
 > These are mostly **endurance + real power numbers**, not logic. Bench hooks
-> (`SIMULATE_FIX`, `BACKOFF_BENCH_MIN`) let several run indoors — see the v6 README.
+> (`SIMULATE_FIX`, `BACKOFF_BENCH_MIN`) let several run indoors — see the v17/v16 READMEs.
 
 | Pri | Test | Goal | How | Receiver |
 |---|---|---|---|---|
-| **1** | **Headless battery-floor run + floor teardown** | Real floor + true battery voltage under v6 (every run so far was USB-attached → 1.78 mA VBUS artifact, fake 3.9 V). **Also the entry point for §6**: confirm the ~155 µA and start isolating the **unexplained ~150 µA** (it is NOT the divider). Unblocks the battery-life estimate. | Run on **battery only**, no USB; standalone power meter. `SIMULATE_FIX=1`, `GNSS_PERIOD_MIN=120`; then isolate rails/peripherals per §6. | optional |
+| **1** | **v17 first bench run on PCB iteration3** | Confirm the two hardware ports: `[CFG-BOARD]` banner, GPS powers on (active-HIGH TPS22918), accel reads over SPI (`WHO_AM_I`=0x33), clean battery-only sleep-floor PPK (expect near v7's 34 µA now the Grove parasitic is gone). | Flash `production/v17`; battery-only PPK; a quick repeat of the v16 backlog check. | ON |
 | 2 | **Multi-wake 2 h endurance** | Confirm the long-wake path over a **full night (≥4 wakes)** — mechanism already proven in test3. | `SIMULATE_FIX=1`, `GNSS_PERIOD_MIN=120`, overnight. | ON |
 | 3 | **Strategy B backoff** | K consecutive no-fix → cadence stretches, snaps back on first fix. | `SIMULATE_FIX=0`, `NOFIX_BACKOFF_AFTER=3`, `BACKOFF_BENCH_MIN=3`; needs no-fix cycles. | ON |
-| 4 | **Strategy A no-sky abort (25 s)** | Confirm early abort when `SV<4` (energy save in dens/canopy). | `SIMULATE_FIX=0` in a genuine no-sky interior (`SV<4`); watch `(no-sky abort)` at ~25 s not 120 s. | optional |
-| 5 | **Real TX current** | Confirm true LoRa TX ≈ **90 mA** (10 sps under-samples the ms-scale burst; traces so far showed 40–102 mA artifacts). | Higher-rate power capture during a TX. | — |
-| 6 | **AS3933 WUR real wake** | A real LF wake event → P1.04 IRQ + pattern match; then set `ENABLE_WUR_WAKE 1`. | `reference/AS3933_wakeup/WuTx*` transmitter. | — (2nd engineer) |
+| 4 | **Strategy A no-sky abort** | Confirm early abort when `SV<4` (energy save in dens/canopy). | `SIMULATE_FIX=0` in a genuine no-sky interior; watch `(no-sky abort)`. | optional |
+| 5 | **Real TX current** | Confirm true LoRa TX ≈ **90 mA** (10 sps under-samples the ms-scale burst). | Higher-rate power capture during a TX. | — |
+| 6 | **AS3933 WUR real wake + BLE field integration** | See **§7 — handed to the ISL lab engineers.** | — | — |
 
 ### Robustness checklist (still to close before deployment)
 - Brownout / blackout mid-cycle (power yanked during GPS or TX) → flash integrity + resume.
@@ -74,34 +96,66 @@ The three big behavioural unknowns (C, A-extend, #5, long-wake) are all **green*
 
 ---
 
-## 5. Open design questions (no code change yet — decide, then implement)
-- **Retention depth vs. archive replay.** `#5` keeps only the newest
-  `PENDING_SLOTS` (=5) fixes; older ones during a long receiver outage roll into
-  the `undelivered` flash archive, which is currently **fire-and-forget (never
-  re-transmitted)**. At 2 h cadence that's a ~10 h outage window before the oldest
-  start dropping from the over-air guarantee. Options: raise `PENDING_SLOTS`, or add
-  an "undelivered replay" drain after `pending`. (Seen live in test2: 9 fixes archived.)
-- **AS3933 WUR enable.** Gated behind `ENABLE_WUR_WAKE 0` until the real-wake test
-  passes.
+## 5. Open design questions
+- ~~**Retention depth vs. archive replay.**~~ **RESOLVED in v16:** `PENDING_SLOTS`
+  raised **5 → 84** (= 1 week @ 2 h), so a multi-day out-of-range excursion now replays
+  every fix newest-first on return (bench-validated: 42 fixes, zero loss). The
+  `undelivered` archive remains the fire-and-forget overflow only beyond a week.
+- **AS3933 WUR enable + BLE field integration** — gated OFF (`ENABLE_WUR_WAKE 0`)
+  until validated on hardware; owned by the ISL lab engineers (see §7).
 
-## 6. Deep-sleep floor — unexplained ~150 µA (NEW, high-value)
-**Correction (2026-07-16):** the board's battery divider is **1 MΩ/1 MΩ + C17**
-(~1.8 µA), **not** 10k/10k — earlier docs used a wrong diagram. So the measured
-**157 µA floor is NOT the divider**, and known parts (LDO Iq + nRF sleep + RTC +
-AS3933) should total <~20 µA. **~130–150 µA is unaccounted for → real headroom.**
-- **Next step:** a **headless battery-only teardown** — measure the floor, then
-  isolate rails/peripherals one at a time (LDO quiescent path, GPS/WUR domain
-  leakage, any un-parked pull-up/peripheral) to find the missing current.
-- The old "raise the divider to 1–2 MΩ" idea is **obsolete** — already done.
-- Battery calibration is unaffected (divider ratio is still 2.0). Details:
-  `ISL_DeepSleep_Notes.md` (correction note) and `ISL_Pinout.md`.
-- Future schematic revs: follow the one-authoritative-schematic rule in
-  `../hardware/README.md` (new rev → `iteration3/`, move the pointer, update
-  `ISL_Pinout.md` in the same commit).
+## 6. Deep-sleep floor — ✅ SOLVED (was "unexplained ~150 µA")
+**Root cause found & fixed in production v7.** A step-by-step deep-sleep teardown
+proved the ~120 µA overage was a single line: **`pinMode(P0.31, INPUT)`** on the
+battery-sense pin. P0.31 (AIN7) floats at the **1 MΩ divider midpoint ≈ VDD/2**; a
+connected digital input buffer there conducts ~**118 µA** of shoot-through
+("crowbar") current.
+- **Evidence (modules attached):** minimal sketch = **32–37 µA**;
+  additive sweep pinned the jump to the GPIO-parking step (34 → 152 µA); the
+  park-breakdown pinned it to **one pin** — batt-sense OFF = 34 µA, all other
+  parked pins = 152 µA. Wire/RTC/trickle-charge/timer/wake-pin all cost ~0.
+- **Fix (v7):** keep P0.31's input buffer **DISCONNECTED** except during the SAADC
+  sample (`battPinDisconnect()` → `PIN_CNF[31]=2`). The ADC reads via its analog
+  mux, so battery reading is unaffected. **Floor: ~155 → 34 µA (~4.5× idle life).**
+- **✅ VERIFIED** on battery: 34 µA floor, sane battery read, TX/ACK intact
+  (`../production/v7/logs/PowerProfile_v7_battery.csv`).
+- The old "raise the divider" and "maybe it's the LDO/modules" theories are both
+  disproven — it was our own `pinMode`, not hardware. The RT9080 LDO is fine.
+- Any *further* squeeze (32 µA → single digits) would be a low-Iq-LDO schematic-v3
+  item, worth far less than this firmware win. Future schematic revs: follow the
+  one-authoritative-schematic rule in `../hardware/README.md`.
+
+---
+
+## 7. Handoff to ISL lab engineers — final integration (WUR + BLE)
+The tracking data path is finished and validated through **v17**. The two **on-demand**
+subsystems are wired, brought up, and have reference firmware in this repo; their final
+integration onto the sealed collar is **owned by the ISL lab engineers**.
+
+### 7a. AS3933 wake-up receiver (WUR) — on-demand wake
+- **Done:** SPI comms, pattern-mode config, and RC-oscillator calibration all PASS
+  (`../tests/ISL_WUR_AS3933/`). Wired to **P1.04** (wake IRQ), SPI shared with the accel.
+- **Remaining:** trigger a **real LF wake** from a transmitter
+  (`../reference/AS3933_wakeup/WuTx*` — 433 MHz, 19 kHz OOK/Manchester, pattern `0x9669`),
+  confirm the **P1.04 rising-edge IRQ + R13 pattern match**, then arm it as the second
+  deep-sleep wake source in production (`ENABLE_WUR_WAKE 1`). Gated OFF until validated so
+  an unvalidated wake source can't wreck the duty cycle.
+
+### 7b. BLE offload — accelerometer → drone
+- **Done:** the collar advertises as **`Custodia-Tracker`** and streams the accel flash
+  ring over BLE; the transport is **bench-verified** (no-freeze, 0 bad/0 corrupt records,
+  LoRa unaffected). Reference emitter/receiver: `../production/v17/ISL_v17_Drone_Receiver`,
+  `../tests/ISL_BLE_CustomOpen/`, `../tests/Accelerometer/`.
+- **Remaining:** the **field/range integration** (real drone pass distances/timing) and any
+  on-collar buffering/replay strategy — deliberately left to the ISL lab engineers' preferred
+  BLE approach (see the v12 note on dropping on-collar replay).
+
+Everything needed to continue both is in this repo: pin map (`ISL_Pinout.md`), the bring-up
+tests, the reference emitters/receivers, and the firmware hooks in `../production/v17`.
 
 ---
 
 ### Quick pointers
 - Pin map of record: **`ISL_Pinout.md`** · Deep-sleep rules: **`ISL_DeepSleep_Notes.md`**
 - GNSS field findings + strategy origin: **`GNSS_FieldStrategy.md`**
-- Current firmware + knobs: **`../production/v6/README.md`** · Test logs: `../production/v6/tests/`
+- Current/final firmware + knobs: **`../production/v17/README.md`**
