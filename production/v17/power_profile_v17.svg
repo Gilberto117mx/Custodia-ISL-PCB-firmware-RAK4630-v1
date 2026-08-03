@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
+  <rect x="0" y="0" width="820" height="470" fill="#ffffff"/>
+  <text x="410" y="28" text-anchor="middle" font-size="18" font-weight="700" fill="#1a1a1a">ISL v17 — current draw over one GNSS wake cycle</text>
+  <text x="410" y="48" text-anchor="middle" font-size="12.5" fill="#8a5a00">Power-profiling / information only — deployment uses much longer periods (GNSS ~1 h, not the 2-min bench cadence)</text>
+
+  <!-- Y axis title -->
+  <text x="22" y="225" text-anchor="middle" font-size="13" fill="#333" transform="rotate(-90 22 225)">Current  (mA, log scale)</text>
+  <!-- X axis title -->
+  <text x="430" y="452" text-anchor="middle" font-size="13" fill="#333">Elapsed time within one wake cycle (s)</text>
+
+  <!-- gridlines + Y labels: 0.1 / 1 / 10 / 100 mA -->
+  <g stroke="#dddddd" stroke-width="1">
+    <line x1="70" y1="380" x2="790" y2="380"/>
+    <line x1="70" y1="286" x2="790" y2="286"/>
+    <line x1="70" y1="192" x2="790" y2="192"/>
+    <line x1="70" y1="98"  x2="790" y2="98"/>
+  </g>
+  <g font-size="11.5" fill="#555" text-anchor="end">
+    <text x="62" y="384">0.1</text>
+    <text x="62" y="290">1</text>
+    <text x="62" y="196">10</text>
+    <text x="62" y="102">100</text>
+  </g>
+
+  <!-- axes -->
+  <line x1="70" y1="70" x2="70" y2="380" stroke="#333" stroke-width="1.5"/>
+  <line x1="70" y1="380" x2="790" y2="380" stroke="#333" stroke-width="1.5"/>
+  <!-- X ticks 0..12 s -->
+  <g font-size="11.5" fill="#555" text-anchor="middle">
+    <line x1="70"    y1="380" x2="70"    y2="385" stroke="#333"/><text x="70"    y="399">0</text>
+    <line x1="185.2" y1="380" x2="185.2" y2="385" stroke="#333"/><text x="185.2" y="399">2</text>
+    <line x1="300.4" y1="380" x2="300.4" y2="385" stroke="#333"/><text x="300.4" y="399">4</text>
+    <line x1="415.6" y1="380" x2="415.6" y2="385" stroke="#333"/><text x="415.6" y="399">6</text>
+    <line x1="530.8" y1="380" x2="530.8" y2="385" stroke="#333"/><text x="530.8" y="399">8</text>
+    <line x1="646"   y1="380" x2="646"   y2="385" stroke="#333"/><text x="646"   y="399">10</text>
+    <line x1="761.2" y1="380" x2="761.2" y2="385" stroke="#333"/><text x="761.2" y="399">12</text>
+  </g>
+
+  <!-- filled area under the current trace -->
+  <path d="M70,354 L127.6,354 L127.6,234 L242.8,234 L242.8,140 L703.6,140 L703.6,96 L715.1,96 L715.1,192 L749.7,192 L749.7,354 L790,354 L790,380 L70,380 Z"
+        fill="#d9480f" fill-opacity="0.10"/>
+  <!-- the current trace (stepped) -->
+  <path d="M70,354 L127.6,354 L127.6,234 L242.8,234 L242.8,140 L703.6,140 L703.6,96 L715.1,96 L715.1,192 L749.7,192 L749.7,354 L790,354"
+        fill="none" stroke="#d9480f" stroke-width="2.5" stroke-linejoin="round"/>
+
+  <!-- phase labels -->
+  <g font-size="11.5" fill="#1a1a1a">
+    <text x="74" y="348">sleep 0.19 mA</text>
+    <text x="132" y="228">wake/init ~3.6 mA</text>
+    <text x="360" y="132" text-anchor="middle">GPS hot fix — ~36 mA, ~8 s</text>
+    <text x="712" y="90" text-anchor="middle" fill="#b03000" font-weight="600">LoRa TX</text>
+    <text x="712" y="76" text-anchor="middle" fill="#b03000" font-weight="600">105 mA (50 ms)</text>
+    <text x="742" y="186" text-anchor="middle">ACK ~10 mA</text>
+    <text x="770" y="348" text-anchor="end">sleep</text>
+  </g>
+
+  <text x="790" y="420" text-anchor="end" font-size="10.5" fill="#999">Source: production/v17/logs/ppk_v17_iter3_summary.txt (PPK, 2026-08-03). Trace is representative; TX shown widened for visibility.</text>
+</svg>

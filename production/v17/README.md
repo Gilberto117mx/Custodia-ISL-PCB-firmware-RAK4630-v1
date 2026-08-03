@@ -80,6 +80,10 @@ GPS UART (`Serial0` P0.19/P0.20), battery (P0.31/AIN7), LoRa, BLE, the whole sle
 
 ## Power & lifespan (measured 2026-08-03, `ppk20260803T143349`)
 
+> 📊 **Full power-profiling section — per-phase table + current-vs-time graph:**
+> [`POWER_PROFILE.md`](POWER_PROFILE.md). (Profiling numbers use an accelerated bench
+> cadence; deployment periods are much longer — see that doc.)
+
 Deep-sleep floor **~190 µA** (119 s continuous run confirms it). Per-op from the capture:
 hot GPS fix ~8 s @ ~36 mA, LoRa TX 105 mA/50 ms, accel 10 s @ ~3.6 mA, BLE offload
 ~120 s/pass. Modelled at the deployment cadence **(GNSS/1 h, accel/3 h, BLE/2 wk) on a
