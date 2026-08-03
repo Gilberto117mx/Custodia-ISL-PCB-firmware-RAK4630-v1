@@ -5,11 +5,20 @@ tests. Deployment target: a **sealed animal collar**, GNSS fix ~every **2 h**, t
 must survive ~24 h of blind transport and long low-sky stretches, then run for
 months on a LiSOCl₂ primary cell. Once sealed it cannot be reprogrammed.
 
-> ## 🏁 Final status
-> **`production/v17` is the latest and final firmware version** (v16's feature set
-> ported to **PCB iteration3**). The tracking data path is validated end-to-end:
-> GNSS strategy, LoRa delivery-guarantee + 1-week backlog, deep-sleep floor (34 µA),
-> GNSS-disciplined RTC, calibrated battery, and accelerometer capture.
+> ## 🏁 Final status — **v17 VALIDATED (definitive)**
+> **`production/v17` is the definitive, validated firmware version** (v16's feature set
+> ported to **PCB iteration3**). **Validated on the iteration3 board (2026-08-03):** hot
+> GPS fixes (TTFF 6–7 s, 21–22 sats, `CELL=OK`), accelerometer over SPI (`bad=0`), and the
+> LoRa **delivery-guarantee + 1-week backlog with *real* fixes** (9 buffered → drained
+> newest-first, `delivered=10 pending=0 undelivered=0`, zero loss); GNSS-disciplined RTC,
+> deep sleep, battery, and flash all good. Evidence: `../production/v17/logs/`
+> (`VALIDATION.md` + collar/repeater/drone logs + PPK summary).
+>
+> **Measured power (PPK 2026-08-03):** deep-sleep floor **~190 µA** on iteration3 →
+> modelled **~3.3 yr** on a 9600 mAh LiSOCl₂ cell at the deployment cadence. Two
+> **optimization-only** items (neither a blocker — see §6): the floor is a fixable P1
+> input-buffer crowbar (→ ~35–45 µA ⇒ ~7 yr), and `TTFF`/`CELL` on backlogged packets
+> read transmit-time state (positions are always correct).
 >
 > **The final integration of the two on-demand subsystems — the AS3933 wake-up
 > receiver (WUR) and the BLE offload — is handed to the ISL lab engineers.** Both are
@@ -82,8 +91,9 @@ The three big behavioural unknowns (C, A-extend, #5, long-wake) are all **green*
 
 | Pri | Test | Goal | How | Receiver |
 |---|---|---|---|---|
-| **1** | **v17 first bench run on PCB iteration3** | Confirm the two hardware ports: `[CFG-BOARD]` banner, GPS powers on (active-HIGH TPS22918), accel reads over SPI (`WHO_AM_I`=0x33), clean battery-only sleep-floor PPK (expect near v7's 34 µA now the Grove parasitic is gone). | Flash `production/v17`; battery-only PPK; a quick repeat of the v16 backlog check. | ON |
-| 2 | **Multi-wake 2 h endurance** | Confirm the long-wake path over a **full night (≥4 wakes)** — mechanism already proven in test3. | `SIMULATE_FIX=1`, `GNSS_PERIOD_MIN=120`, overnight. | ON |
+| ✅ | ~~**v17 iteration3 validation**~~ **DONE (2026-08-03):** both hardware ports confirmed (GPS active-HIGH TPS22918, accel over SPI), hot GPS fixes, backlog drained 10/10 zero-loss, RTC/sleep/battery/flash good. PPK floor ~190 µA (opt #1). `../production/v17/logs/`. | — | — |
+| **1** | **Final battery-only PPK + P1-floor fix (opt #1)** | Book the true floor with USB detached and confirm the ~190 µA → ~35–45 µA P1-crowbar fix. | Park P1.03/P1.01/P1.04 input buffers before sleep; battery-only PPK. | — |
+| 2 | **1 h-cadence endurance / hot-fix hold** | Confirm the backup cell holds ephemeris across the 1 h gap so fixes stay hot (`CELL=OK`) — the single biggest lifespan lever. | Real 1 h cadence outdoors, watch `TTFF`/`CELL`. | ON |
 | 3 | **Strategy B backoff** | K consecutive no-fix → cadence stretches, snaps back on first fix. | `SIMULATE_FIX=0`, `NOFIX_BACKOFF_AFTER=3`, `BACKOFF_BENCH_MIN=3`; needs no-fix cycles. | ON |
 | 4 | **Strategy A no-sky abort** | Confirm early abort when `SV<4` (energy save in dens/canopy). | `SIMULATE_FIX=0` in a genuine no-sky interior; watch `(no-sky abort)`. | optional |
 | 5 | **Real TX current** | Confirm true LoRa TX ≈ **90 mA** (10 sps under-samples the ms-scale burst). | Higher-rate power capture during a TX. | — |
@@ -124,6 +134,24 @@ connected digital input buffer there conducts ~**118 µA** of shoot-through
 - Any *further* squeeze (32 µA → single digits) would be a low-Iq-LDO schematic-v3
   item, worth far less than this firmware win. Future schematic revs: follow the
   one-authoritative-schematic rule in `../hardware/README.md`.
+
+### iteration3 (v17) power profile — measured 2026-08-03 (`../production/v17/logs/ppk_v17_iter3_summary.txt`)
+- **Floor ~190 µA** on iteration3 (34.3 min capture; 119 s continuous sleep run).
+  Per-op: hot GPS fix ~8 s @ ~36 mA, LoRa TX 105 mA/50 ms, accel 10 s @ ~3.6 mA,
+  BLE offload ~120 s/pass. **Lifespan model** (9600 mAh, GNSS/1 h, accel/3 h, BLE/2 wk,
+  hot fixes): **~3.3 yr as-is; ~7 yr if the floor is parked.** Sensitivity: if fixes go
+  cold (180 s charge), 10 % cold ⇒ ~2.0 yr, 25 % ⇒ ~1.3 yr — so keeping fixes hot (v15
+  charge-on-cold) is the biggest lever.
+- **Optimization #1 — floor ~190 µA → ~35–45 µA.** Same crowbar class as v7, on the
+  iteration3 **P1** pins: `accelPinsPark()` disconnects only the P0 SPI pins, leaving
+  **P1.03 (accel INT1), P1.01 (accel INT2), P1.04 (WuR wake)** as connected `INPUT`
+  buffers that crowbar when floating. Fix: set `NRF_P1->PIN_CNF[1]/[3]/[4] = 2` before
+  sleep (guard P1.04 so it stays armed when `ENABLE_WUR_WAKE=1`). Low-risk, v7-consistent.
+- **Optimization #2 — `TTFF`/`CELL` on backlogged packets** read transmit-time state
+  (`formatPacket()` reads them from globals). Position/`SV`/ts/vbat are per-packet and
+  always correct; only the two *health* fields can read a false `LOW` after a backlog.
+  Optional per-packet fix stamps them at stage time (flash schema 4→5). Both items are
+  detailed in `../production/v17/README.md` → *Pending optimizations*.
 
 ---
 

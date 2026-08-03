@@ -1,0 +1,374 @@
+[alive] 2500 ms
+[alive] 3000 ms
+========================================================
+ISL Board - PRODUCTION v17 (COLLAR: v16 ported to PCB iteration3 - ONBOARD LIS3DHTR over SPI, GPS on TPS22918)
+========================================================
+[RTC] GPS-synced flag present  current: 2026-08-03 12:34:36
+[FLASH] Loaded: nextSeq=2 delivered=0 undelivered=0 buf=0 pend=1
+[CFG] id=051  period=2 min (1Hz tick)  SV_MIN=4  no_sky_abort=45 s  fix_max=120 s  settle=5 s  ack=8 s  backoff=K3/360min  tx_gap=30 s  buffer=1  pend_slots=84  WUR_wake=0  SIM_FIX=0  rtcSynced=1
+[CFG-BOARD] PCB iteration3  accel=ONBOARD LIS3DHTR/SPI(CS P0.28, shared WuR bus)  GPS_EN=active-HIGH TPS22918(P1.02)  [RTC/UART/batt = iteration2]
+[CFG-BACKLOG] pending=84 fixes (~2 h out-of-range @ 2 min) held in flash @0xA000, drain gap=15 s newest-first; overflow -> write-only archive
+[CFG-ACCEL] accel_collect_every=180 s  drone_pass_every=720 s (SIMULATE_WUR)  ring=64 records  clear_after_send=1  ring_now=1
+[CFG-GPS] warm=no-sky<45s/max<120s  COLD=<180s (no early abort)  cold_if: !synced | never-fixed | gap>=12h | noFixStreak>=1   lastFix=present
+[CFG-CELL] hot_if_ttff<15s  charge_when_low_to=180s_on  dead_after=4 non-hot  -> packet carries TTFF=<s>,CELL=<OK|LOW|DEAD>
+== COLLECT (cycle 1, up 7 s, noFixStreak=0) ==
+[BAT] 3936 mV
+[GPS] warm-fix budget (no-sky<45s, max<120s)  [rtcSynced=1 everFix=1 noFixStreak=0]
+[GPS] VCC ON (P1.02 -> TPS22918 ON, hot start via module backup battery)
+[RTC] SET FROM GPS: 2026-08-03 12:34:45 UTC (unix~1785760485)
+[GPS] FIX in 6848 ms  used=15  IN-VIEW peak=22    lat=22531066 lon=113938332
+[GPS] CELL=OK  lastTTFF=7s  coldStreak=0  (gps-on 6s)
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=2 (fix), buf=1/1  pend=1
+[TX pass] cycle=1 buffer=1 pending=1
+[TX] seq=2 (fix): 051,2,22.531066,113.938332,3.93,1785760485,SV=22,TTFF=7,CELL=OK
++EVT:TXP2P DONE
++EVT:RXP2P RECEIVE TIMEOUT
+[RX] not-ACK ("")
+[TX pass] done: delivered=0 lastSeq=0 pending=2 undelivered=0
+== IDLE deep-sleep 120 s ==
+[SLEEP] 120 s
+[RTC] timer: preset=120 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~120003 ms
+== COLLECT (cycle 2, up 144 s, noFixStreak=0) ==
+[BAT] 3965 mV
+[GPS] warm-fix budget (no-sky<45s, max<120s)  [rtcSynced=1 everFix=1 noFixStreak=0]
+[GPS] VCC ON (P1.02 -> TPS22918 ON, hot start via module backup battery)
+[RTC] SET FROM GPS: 2026-08-03 12:37:01 UTC (unix~1785760621)
+[GPS] FIX in 7050 ms  used=16  IN-VIEW peak=22    lat=22531110 lon=113938367
+[GPS] CELL=OK  lastTTFF=7s  coldStreak=0  (gps-on 7s)
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+== ACCEL collect 10 s -> ring (accel timer, every 180 s) ==
+[ACCEL] 100 samples in 10000 ms
+[RING] stored seq=2 ts=1785760621 n=100 -> slot 1 (2/64)
+[BUF] staged seq=3 (fix), buf=1/1  pend=2
+[TX pass] cycle=2 buffer=1 pending=2
+[TX] seq=3 (fix): 051,3,22.531110,113.938367,3.96,1785760621,SV=22,TTFF=7,CELL=OK
++EVT:TXP2P DONE
++EVT:RXP2P RECEIVE TIMEOUT
+[RX] not-ACK ("")
+[TX pass] done: delivered=0 lastSeq=0 pending=3 undelivered=0
+== IDLE deep-sleep 120 s ==
+[SLEEP] 120 s
+[RTC] timer: preset=120 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~120002 ms
+== COLLECT (cycle 3, up 292 s, noFixStreak=0) ==
+[BAT] 3974 mV
+[GPS] warm-fix budget (no-sky<45s, max<120s)  [rtcSynced=1 everFix=1 noFixStreak=0]
+[GPS] VCC ON (P1.02 -> TPS22918 ON, hot start via module backup battery)
+[RTC] SET FROM GPS: 2026-08-03 12:39:29 UTC (unix~1785760769)
+[GPS] FIX in 6624 ms  used=16  IN-VIEW peak=21    lat=22531031 lon=113938299
+[GPS] CELL=OK  lastTTFF=7s  coldStreak=0  (gps-on 6s)
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=4 (fix), buf=1/1  pend=3
+[TX pass] cycle=3 buffer=1 pending=3
+[TX] seq=4 (fix): 051,4,22.531031,113.938299,3.97,1785760769,SV=21,TTFF=7,CELL=OK
++EVT:TXP2P DONE
++EVT:RXP2P RECEIVE TIMEOUT
+[RX] not-ACK ("")
+[TX pass] done: delivered=0 lastSeq=0 pending=4 undelivered=0
+== IDLE deep-sleep 120 s ==
+[SLEEP] 120 s
+[RTC] timer: preset=120 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~120003 ms
+== COLLECT (cycle 4, up 428 s, noFixStreak=0) ==
+[BAT] 3975 mV
+[GPS] warm-fix budget (no-sky<45s, max<120s)  [rtcSynced=1 everFix=1 noFixStreak=0]
+[GPS] VCC ON (P1.02 -> TPS22918 ON, hot start via module backup battery)
+[RTC] SET FROM GPS: 2026-08-03 12:41:46 UTC (unix~1785760906)
+[GPS] FIX in 7093 ms  used=16  IN-VIEW peak=21    lat=22530957 lon=113938262
+[GPS] CELL=OK  lastTTFF=7s  coldStreak=0  (gps-on 7s)
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+== ACCEL collect 10 s -> ring (accel timer, every 180 s) ==
+[ACCEL] 100 samples in 10000 ms
+[RING] stored seq=3 ts=1785760906 n=100 -> slot 2 (3/64)
+[BUF] staged seq=5 (fix), buf=1/1  pend=4
+[TX pass] cycle=4 buffer=1 pending=4
+[TX] seq=5 (fix): 051,5,22.530957,113.938262,3.97,1785760906,SV=21,TTFF=7,CELL=OK
++EVT:TXP2P DONE
++EVT:RXP2P RECEIVE TIMEOUT
+[RX] not-ACK ("")
+[TX pass] done: delivered=0 lastSeq=0 pending=5 undelivered=0
+== IDLE deep-sleep 120 s ==
+[SLEEP] 120 s
+[RTC] timer: preset=120 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~120003 ms
+== COLLECT (cycle 5, up 576 s, noFixStreak=0) ==
+[BAT] 3979 mV
+[GPS] warm-fix budget (no-sky<45s, max<120s)  [rtcSynced=1 everFix=1 noFixStreak=0]
+[GPS] VCC ON (P1.02 -> TPS22918 ON, hot start via module backup battery)
+[RTC] SET FROM GPS: 2026-08-03 12:44:13 UTC (unix~1785761053)
+[GPS] FIX in 6452 ms  used=16  IN-VIEW peak=21    lat=22530655 lon=113939161
+[GPS] CELL=OK  lastTTFF=6s  coldStreak=0  (gps-on 6s)
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=6 (fix), buf=1/1  pend=5
+[TX pass] cycle=5 buffer=1 pending=5
+[TX] seq=6 (fix): 051,6,22.530655,113.939161,3.97,1785761053,SV=21,TTFF=6,CELL=OK
++EVT:TXP2P DONE
++EVT:RXP2P RECEIVE TIMEOUT
+[RX] not-ACK ("")
+[TX pass] done: delivered=0 lastSeq=0 pending=6 undelivered=0
+== IDLE deep-sleep 120 s ==
+[SLEEP] 120 s
+[RTC] timer: preset=120 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~120002 ms
+== COLLECT (cycle 6, up 712 s, noFixStreak=0) ==
+[BAT] 3979 mV
+[GPS] warm-fix budget (no-sky<45s, max<120s)  [rtcSynced=1 everFix=1 noFixStreak=0]
+[GPS] VCC ON (P1.02 -> TPS22918 ON, hot start via module backup battery)
+[RTC] SET FROM GPS: 2026-08-03 12:46:30 UTC (unix~1785761190)
+[GPS] FIX in 6903 ms  used=13  IN-VIEW peak=22    lat=22531073 lon=113938254
+[GPS] CELL=OK  lastTTFF=7s  coldStreak=0  (gps-on 6s)
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+== ACCEL collect 10 s -> ring (accel timer, every 180 s) ==
+[ACCEL] 100 samples in 10000 ms
+[RING] stored seq=4 ts=1785761190 n=100 -> slot 3 (4/64)
+[BUF] staged seq=7 (fix), buf=1/1  pend=6
+[TX pass] cycle=6 buffer=1 pending=6
+[TX] seq=7 (fix): 051,7,22.531073,113.938254,3.97,1785761190,SV=22,TTFF=7,CELL=OK
++EVT:TXP2P DONE
++EVT:RXP2P RECEIVE TIMEOUT
+[RX] not-ACK ("")
+[TX pass] done: delivered=0 lastSeq=0 pending=7 undelivered=0
+== IDLE deep-sleep 120 s ==
+[SLEEP] 120 s
+[RTC] timer: preset=120 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~120002 ms
+== DRONE PASS: offloading 4 records ==
+[BLE] api.ble.uart advertising 'Custodia-Tracker', 4 records x2, settling 6000 ms (fire-and-forget)...
+[BLE] blasted 4 records as id=51 x2 reps (fire-and-forget) - reboot-to-sleep clears BLE
+[RING] cleared (delivered)
+== DRONE PASS done (blasted+cleared (next pass = new data)) -> reboot-to-sleep ==
+== REBOOT-to-sleep: queued 120 s, resetting to clear BLE ==
+[alive] 2500 ms
+[alive] 3000 ms
+========================================================
+ISL Board - PRODUCTION v17 (COLLAR: v16 ported to PCB iteration3 - ONBOARD LIS3DHTR over SPI, GPS on TPS22918)
+========================================================
+[RTC] GPS-synced flag present  current: 2026-08-03 12:49:23
+[FLASH] Loaded: nextSeq=8 delivered=0 undelivered=0 buf=0 pend=7
+[CFG] id=051  period=2 min (1Hz tick)  SV_MIN=4  no_sky_abort=45 s  fix_max=120 s  settle=5 s  ack=8 s  backoff=K3/360min  tx_gap=30 s  buffer=1  pend_slots=84  WUR_wake=0  SIM_FIX=0  rtcSynced=1
+[CFG-BOARD] PCB iteration3  accel=ONBOARD LIS3DHTR/SPI(CS P0.28, shared WuR bus)  GPS_EN=active-HIGH TPS22918(P1.02)  [RTC/UART/batt = iteration2]
+[CFG-BACKLOG] pending=84 fixes (~2 h out-of-range @ 2 min) held in flash @0xA000, drain gap=15 s newest-first; overflow -> write-only archive
+[CFG-ACCEL] accel_collect_every=180 s  drone_pass_every=720 s (SIMULATE_WUR)  ring=64 records  clear_after_send=1  ring_now=0
+[CFG-GPS] warm=no-sky<45s/max<120s  COLD=<180s (no early abort)  cold_if: !synced | never-fixed | gap>=12h | noFixStreak>=1   lastFix=present
+[CFG-CELL] hot_if_ttff<15s  charge_when_low_to=180s_on  dead_after=4 non-hot  -> packet carries TTFF=<s>,CELL=<OK|LOW|DEAD>
+== BOOT: performing queued 120 s deep-sleep (BLE-clean) ==
+[SLEEP] 120 s
+[RTC] timer: preset=120 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~120003 ms
+== COLLECT (cycle 1, up 127 s, noFixStreak=0) ==
+[BAT] 3995 mV
+[GPS] warm-fix budget (no-sky<45s, max<120s)  [rtcSynced=1 everFix=1 noFixStreak=0]
+[GPS] VCC ON (P1.02 -> TPS22918 ON, hot start via module backup battery)
+[RTC] SET FROM GPS: 2026-08-03 12:51:30 UTC (unix~1785761490)
+[GPS] FIX in 6297 ms  used=14  IN-VIEW peak=21    lat=22530973 lon=113938276
+[GPS] CELL=OK  lastTTFF=6s  coldStreak=0  (gps-on 6s)
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+== ACCEL collect 10 s -> ring (accel timer, every 180 s) ==
+[ACCEL] 100 samples in 10000 ms
+[RING] stored seq=5 ts=1785761490 n=100 -> slot 0 (1/64)
+[BUF] staged seq=8 (fix), buf=1/1  pend=7
+[TX pass] cycle=1 buffer=1 pending=7
+[TX] seq=8 (fix): 051,8,22.530973,113.938276,3.99,1785761490,SV=21,TTFF=6,CELL=OK
++EVT:TXP2P DONE
++EVT:RXP2P RECEIVE TIMEOUT
+[RX] not-ACK ("")
+[TX pass] done: delivered=0 lastSeq=0 pending=8 undelivered=0
+== IDLE deep-sleep 120 s ==
+[SLEEP] 120 s
+[RTC] timer: preset=120 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~120002 ms
+== COLLECT (cycle 2, up 274 s, noFixStreak=0) ==
+[BAT] 3993 mV
+[GPS] warm-fix budget (no-sky<45s, max<120s)  [rtcSynced=1 everFix=1 noFixStreak=0]
+[GPS] VCC ON (P1.02 -> TPS22918 ON, hot start via module backup battery)
+[RTC] SET FROM GPS: 2026-08-03 12:53:58 UTC (unix~1785761638)
+[GPS] FIX in 6612 ms  used=14  IN-VIEW peak=22    lat=22531033 lon=113938058
+[GPS] CELL=OK  lastTTFF=7s  coldStreak=0  (gps-on 6s)
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+[BUF] staged seq=9 (fix), buf=1/1  pend=8
+[TX pass] cycle=2 buffer=1 pending=8
+[TX] seq=9 (fix): 051,9,22.531033,113.938058,3.99,1785761638,SV=22,TTFF=7,CELL=OK
++EVT:TXP2P DONE
++EVT:RXP2P RECEIVE TIMEOUT
+[RX] not-ACK ("")
+[TX pass] done: delivered=0 lastSeq=0 pending=9 undelivered=0
+== IDLE deep-sleep 120 s ==
+[SLEEP] 120 s
+[RTC] timer: preset=120 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~120002 ms
+== COLLECT (cycle 3, up 411 s, noFixStreak=0) ==
+[BAT] 3993 mV
+[GPS] warm-fix budget (no-sky<45s, max<120s)  [rtcSynced=1 everFix=1 noFixStreak=0]
+[GPS] VCC ON (P1.02 -> TPS22918 ON, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=22  (sky, no fix)  lat=0 lon=0
+[GPS] cell LOW (ttff=120s) -> charging to 180s total on...
+[GPS] CELL=LOW  lastTTFF=120s  coldStreak=1  (gps-on 180s)
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+== ACCEL collect 10 s -> ring (accel timer, every 180 s) ==
+[ACCEL] 100 samples in 10000 ms
+[RING] stored seq=6 ts=1785761948 n=100 -> slot 1 (2/64)
+[BUF] staged seq=10 (no-fix), buf=1/1  pend=9
+[TX pass] cycle=3 buffer=1 pending=9
+[TX] seq=10 (no-fix): 051,10,0.000000,0.000000,3.99,1785761959,SV=22,TTFF=120,CELL=LOW
++EVT:TXP2P DONE
++EVT:RXP2P RECEIVE TIMEOUT
+[RX] not-ACK ("")
+[TX pass] done: delivered=0 lastSeq=0 pending=9 undelivered=0
+== IDLE deep-sleep 120 s ==
+[SLEEP] 120 s
+[RTC] timer: preset=120 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~120002 ms
+== DRONE PASS: offloading 2 records ==
+[BLE] api.ble.uart advertising 'Custodia-Tracker', 2 records x2, settling 6000 ms (fire-and-forget)...
+[BLE] blasted 2 records as id=51 x2 reps (fire-and-forget) - reboot-to-sleep clears BLE
+[RING] cleared (delivered)
+== DRONE PASS done (blasted+cleared (next pass = new data)) -> reboot-to-sleep ==
+== REBOOT-to-sleep: queued 120 s, resetting to clear BLE ==
+[alive] 2500 ms
+========================================================
+ISL Board - PRODUCTION v17 (COLLAR: v16 ported to PCB iteration3 - ONBOARD LIS3DHTR over SPI, GPS on TPS22918)
+========================================================
+[RTC] GPS-synced flag present  current: 2026-08-03 13:01:52
+[FLASH] Loaded: nextSeq=11 delivered=0 undelivered=0 buf=0 pend=9
+[CFG] id=051  period=2 min (1Hz tick)  SV_MIN=4  no_sky_abort=45 s  fix_max=120 s  settle=5 s  ack=8 s  backoff=K3/360min  tx_gap=30 s  buffer=1  pend_slots=84  WUR_wake=0  SIM_FIX=0  rtcSynced=1
+[CFG-BOARD] PCB iteration3  accel=ONBOARD LIS3DHTR/SPI(CS P0.28, shared WuR bus)  GPS_EN=active-HIGH TPS22918(P1.02)  [RTC/UART/batt = iteration2]
+[CFG-BACKLOG] pending=84 fixes (~2 h out-of-range @ 2 min) held in flash @0xA000, drain gap=15 s newest-first; overflow -> write-only archive
+[CFG-ACCEL] accel_collect_every=180 s  drone_pass_every=720 s (SIMULATE_WUR)  ring=64 records  clear_after_send=1  ring_now=0
+[CFG-GPS] warm=no-sky<45s/max<120s  COLD=<180s (no early abort)  cold_if: !synced | never-fixed | gap>=12h | noFixStreak>=1   lastFix=present
+[CFG-CELL] hot_if_ttff<15s  charge_when_low_to=180s_on  dead_after=4 non-hot  -> packet carries TTFF=<s>,CELL=<OK|LOW|DEAD>
+== BOOT: performing queued 120 s deep-sleep (BLE-clean) ==
+[SLEEP] 120 s
+[RTC] timer: preset=120 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~120002 ms
+== COLLECT (cycle 1, up 127 s, noFixStreak=0) ==
+[BAT] 3983 mV
+[GPS] warm-fix budget (no-sky<45s, max<120s)  [rtcSynced=1 everFix=1 noFixStreak=0]
+[GPS] VCC ON (P1.02 -> TPS22918 ON, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=22  (sky, no fix)  lat=0 lon=0
+[GPS] cell LOW (ttff=120s) -> charging to 180s total on...
+[GPS] CELL=LOW  lastTTFF=120s  coldStreak=1  (gps-on 180s)
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+== ACCEL collect 10 s -> ring (accel timer, every 180 s) ==
+[ACCEL] 100 samples in 10000 ms
+[RING] stored seq=7 ts=1785762413 n=100 -> slot 0 (1/64)
+[BUF] staged seq=11 (no-fix), buf=1/1  pend=9
+[TX pass] cycle=1 buffer=1 pending=9
+[TX] seq=11 (no-fix): 051,11,0.000000,0.000000,3.98,1785762424,SV=22,TTFF=120,CELL=LOW
++EVT:TXP2P DONE
++EVT:RXP2P:-40:13:41434B2C35312C3131
+[RX] ACK OK  RSSI=-40 dBm  SNR=13 dB
+[GAP] 15 s at floor (ACK-window guard)
+[TX] seq=9 (fix): 051,9,22.531033,113.938058,3.99,1785761638,SV=22,TTFF=120,CELL=LOW
++EVT:TXP2P DONE
++EVT:RXP2P:-36:13:41434B2C35312C39
+[RX] ACK OK  RSSI=-36 dBm  SNR=13 dB
+[GAP] 15 s at floor (ACK-window guard)
+[TX] seq=8 (fix): 051,8,22.530973,113.938276,3.99,1785761490,SV=21,TTFF=120,CELL=LOW
++EVT:TXP2P DONE
++EVT:RXP2P:-42:13:41434B2C35312C38
+[RX] ACK OK  RSSI=-42 dBm  SNR=13 dB
+[GAP] 15 s at floor (ACK-window guard)
+[TX] seq=7 (fix): 051,7,22.531073,113.938254,3.97,1785761190,SV=22,TTFF=120,CELL=LOW
++EVT:TXP2P DONE
++EVT:RXP2P:-39:12:41434B2C35312C37
+[RX] ACK OK  RSSI=-39 dBm  SNR=12 dB
+[GAP] 15 s at floor (ACK-window guard)
+[TX] seq=6 (fix): 051,6,22.530655,113.939161,3.97,1785761053,SV=21,TTFF=120,CELL=LOW
++EVT:TXP2P DONE
++EVT:RXP2P:-39:12:41434B2C35312C36
+[RX] ACK OK  RSSI=-39 dBm  SNR=12 dB
+[GAP] 15 s at floor (ACK-window guard)
+[TX] seq=5 (fix): 051,5,22.530957,113.938262,3.97,1785760906,SV=21,TTFF=120,CELL=LOW
++EVT:TXP2P DONE
++EVT:RXP2P:-38:13:41434B2C35312C35
+[RX] ACK OK  RSSI=-38 dBm  SNR=13 dB
+[GAP] 15 s at floor (ACK-window guard)
+[TX] seq=4 (fix): 051,4,22.531031,113.938299,3.97,1785760769,SV=21,TTFF=120,CELL=LOW
++EVT:TXP2P DONE
++EVT:RXP2P:-40:13:41434B2C35312C34
+[RX] ACK OK  RSSI=-40 dBm  SNR=13 dB
+[GAP] 15 s at floor (ACK-window guard)
+[TX] seq=3 (fix): 051,3,22.531110,113.938367,3.96,1785760621,SV=22,TTFF=120,CELL=LOW
++EVT:TXP2P DONE
++EVT:RXP2P:-40:12:41434B2C35312C33
+[RX] ACK OK  RSSI=-40 dBm  SNR=12 dB
+[GAP] 15 s at floor (ACK-window guard)
+[TX] seq=2 (fix): 051,2,22.531066,113.938332,3.93,1785760485,SV=22,TTFF=120,CELL=LOW
++EVT:TXP2P DONE
++EVT:RXP2P:-43:12:41434B2C35312C32
+[RX] ACK OK  RSSI=-43 dBm  SNR=12 dB
+[GAP] 15 s at floor (ACK-window guard)
+[TX] seq=1 (fix): 051,1,22.531041,113.938395,3.93,1785760435,SV=22,TTFF=120,CELL=LOW
++EVT:TXP2P DONE
++EVT:RXP2P:-43:13:41434B2C35312C31
+[RX] ACK OK  RSSI=-43 dBm  SNR=13 dB
+[TX pass] done: delivered=10 lastSeq=1 pending=0 undelivered=0
+== IDLE deep-sleep 120 s ==
+[SLEEP] 120 s
+[RTC] timer: preset=120 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~120002 ms
+== COLLECT (cycle 2, up 580 s, noFixStreak=1) ==
+[BAT] 3981 mV
+[GPS] COLD-fix budget (no-sky<180s, max<180s)  reason=no-fix-streak  [rtcSynced=1 everFix=1 noFixStreak=1]
+[GPS] VCC ON (P1.02 -> TPS22918 ON, hot start via module backup battery)
+[GPS] no fix in 180000 ms  used=0  IN-VIEW peak=22  (sky, no fix)  lat=0 lon=0
+[GPS] CELL=LOW  lastTTFF=180s  coldStreak=2  (gps-on 180s)
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+== ACCEL collect 10 s -> ring (accel timer, every 180 s) ==
+[ACCEL] 100 samples in 10000 ms
+[RING] stored seq=8 ts=1785762866 n=100 -> slot 1 (2/64)
+[BUF] staged seq=12 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=2 buffer=1 pending=0
+[TX] seq=12 (no-fix): 051,12,0.000000,0.000000,3.98,1785762876,SV=22,TTFF=180,CELL=LOW
++EVT:TXP2P DONE
++EVT:RXP2P RECEIVE TIMEOUT
+[RX] not-ACK ("")
+[TX pass] done: delivered=10 lastSeq=1 pending=0 undelivered=0
+== IDLE deep-sleep 120 s ==
+[SLEEP] 120 s
+[RTC] timer: preset=120 s (1 Hz tick)
+Connected.
+[BLE] blasted 2 records as id=51 x2 reps (fire-and-forget) - reboot-to-sleep clears BLE
+[RING] cleared (delivered)
+== DRONE PASS done (blasted+cleared (next pass = new data)) -> reboot-to-sleep ==
+== REBOOT-to-sleep: queued 120 s, resetting to clear BLE ==
+[alive] 2500 ms
+[alive] 3000 ms
+========================================================
+ISL Board - PRODUCTION v17 (COLLAR: v16 ported to PCB iteration3 - ONBOARD LIS3DHTR over SPI, GPS on TPS22918)
+========================================================
+[RTC] GPS-synced flag present  current: 2026-08-03 13:17:09
+[FLASH] Loaded: nextSeq=13 delivered=10 undelivered=0 buf=0 pend=0
+[CFG] id=051  period=2 min (1Hz tick)  SV_MIN=4  no_sky_abort=45 s  fix_max=120 s  settle=5 s  ack=8 s  backoff=K3/360min  tx_gap=30 s  buffer=1  pend_slots=84  WUR_wake=0  SIM_FIX=0  rtcSynced=1
+[CFG-BOARD] PCB iteration3  accel=ONBOARD LIS3DHTR/SPI(CS P0.28, shared WuR bus)  GPS_EN=active-HIGH TPS22918(P1.02)  [RTC/UART/batt = iteration2]
+[CFG-BACKLOG] pending=84 fixes (~2 h out-of-range @ 2 min) held in flash @0xA000, drain gap=15 s newest-first; overflow -> write-only archive
+[CFG-ACCEL] accel_collect_every=180 s  drone_pass_every=720 s (SIMULATE_WUR)  ring=64 records  clear_after_send=1  ring_now=0
+[CFG-GPS] warm=no-sky<45s/max<120s  COLD=<180s (no early abort)  cold_if: !synced | never-fixed | gap>=12h | noFixStreak>=1   lastFix=present
+[CFG-CELL] hot_if_ttff<15s  charge_when_low_to=180s_on  dead_after=4 non-hot  -> packet carries TTFF=<s>,CELL=<OK|LOW|DEAD>
+== BOOT: performing queued 120 s deep-sleep (BLE-clean) ==
+[SLEEP] 120 s
+[RTC] timer: preset=120 s (1 Hz tick)
+[WAKE] RTC P0.21 after ~120003 ms
+== COLLECT (cycle 1, up 127 s, noFixStreak=0) ==
+[BAT] 3981 mV
+[GPS] warm-fix budget (no-sky<45s, max<120s)  [rtcSynced=1 everFix=1 noFixStreak=0]
+[GPS] VCC ON (P1.02 -> TPS22918 ON, hot start via module backup battery)
+[GPS] no fix in 120000 ms  used=0  IN-VIEW peak=22  (sky, no fix)  lat=0 lon=0
+[GPS] cell LOW (ttff=120s) -> charging to 180s total on...
+[GPS] CELL=LOW  lastTTFF=120s  coldStreak=1  (gps-on 180s)
+[GPS] VCC OFF, UART pins driven LOW (module isolated)
+== ACCEL collect 10 s -> ring (accel timer, every 180 s) ==
+[ACCEL] 100 samples in 10000 ms
+[RING] stored seq=9 ts=1785763331 n=100 -> slot 0 (1/64)
+[BUF] staged seq=13 (no-fix), buf=1/1  pend=0
+[TX pass] cycle=1 buffer=1 pending=0
+[TX] seq=13 (no-fix): 051,13,0.000000,0.000000,3.98,1785763342,SV=22,TTFF=120,CELL=LOW
++EVT:TXP2P DONE
++EVT:RXP2P RECEIVE TIMEOUT
+[RX] not-ACK ("")
+[TX pass] done: delivered=10 lastSeq=1 pending=0 undelivered=0
+== IDLE deep-sleep 120 s ==
+[SLEEP] 120 s
+[RTC] timer: preset=120 s (1 Hz tick)

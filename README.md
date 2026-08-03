@@ -14,12 +14,32 @@ production firmware for the animal-tracking collar (the "Custodia-Tracker" node)
 > [`hardware/README.md`](hardware/README.md) (**iteration3** — the onboard-accelerometer
 > board — is authoritative; iteration2/1 are historical).
 
-## Final status (2026-08)
-- **`production/v17` is the latest and final firmware version** — v16's full feature
-  set ported to **PCB iteration3** (onboard LIS3DHTR over SPI + GPS on an active-HIGH
-  TPS22918 load switch). See `production/v17/README.md`.
-- The GNSS tracking, LoRa delivery-guarantee/backlog, deep-sleep floor (34 µA), RTC
-  time discipline, battery calibration, and accelerometer capture are all validated.
+## Final status (2026-08-03) — **v17 VALIDATED (definitive)**
+- **`production/v17` is the definitive, validated firmware version** — v16's full
+  feature set ported to **PCB iteration3** (onboard LIS3DHTR over SPI + GPS on an
+  active-HIGH TPS22918 load switch). Full detail, power/lifespan model, and the two
+  optimization items: `production/v17/README.md`; run evidence:
+  `production/v17/logs/` (`VALIDATION.md` + collar/repeater/drone logs + the PPK
+  power summary).
+- **Validated on the iteration3 board (open-sky run, 2026-08-03):**
+  - **GNSS (TPS22918 active-HIGH):** 6+ consecutive **hot fixes, TTFF 6–7 s, 21–22
+    sats, `CELL=OK`** — powers/fixes/tears down cleanly.
+  - **Accelerometer over SPI** (onboard LIS3DHTR, CS P0.28): 100-sample records,
+    checksum-matched on the drone, `bad=0`.
+  - **LoRa + the v16 durable 1-week backlog, with *real* fixes:** repeater absent for
+    8 cycles → **9 real fixes buffered**, then drained **newest-first on reconnect,
+    all ACK'd, `delivered=10 pending=0 undelivered=0`, zero loss.**
+  - **RTC / deep-sleep / battery / flash:** clean 120 s wakes, GNSS-disciplined RTC,
+    backlog persisted across reboots, 3.93–3.99 V.
+- **Power & lifespan (measured, PPK 2026-08-03):** deep-sleep floor **~190 µA** on
+  iteration3; modelled **~3.3 years** on a 9600 mAh LiSOCl₂ cell at the deployment
+  cadence (GNSS/1 h). Two **optimization-only** items (neither a blocker, both
+  documented in `production/v17/README.md` → *Pending optimizations*):
+  1. the **~190 µA floor** is a fixable P1 input-buffer crowbar (P1.03/P1.01/P1.04
+     left as connected `INPUT`; the v7 fix parked only the P0 pins) → parking them
+     drops it to **~35–45 µA ⇒ ~7 years**;
+  2. `TTFF`/`CELL` on *backlogged* packets read transmit-time state (position data is
+     always correct) — an optional per-packet fix (flash schema 4→5).
 - **Final integration of the two on-demand subsystems — the AS3933 wake-up receiver
   (WUR) and the BLE offload — is owned by the ISL lab engineers.** The board hardware,
   the pin map, the bring-up tests, and reference firmware for both are in this repo
@@ -38,7 +58,7 @@ production firmware for the animal-tracking collar (the "Custodia-Tracker" node)
 | GPS | L76K on **`Serial0`/UART1 (P0.19/P0.20)**, EN = **P1.02**, active-HIGH TPS22918 (iteration3) |
 | Accelerometer | **onboard LIS3DHTR (U5)** on SPI shared with the WuR (accel CS **P0.28**) |
 | Wake-up radio | **AS3933 LF wake-up receiver** on SPI, wake → **P1.04** |
-| Deep-sleep floor | **34 µA @ 3.6 V** (v7 AIN7-crowbar fix) |
+| Deep-sleep floor | **34 µA** on iteration2 (v7 fix); **~190 µA** measured on iteration3 — a fixable P1 input-buffer crowbar → ~35–45 µA (v17 opt #1) |
 
 Two wake sources are the point of this board: the scheduled **RTC wake (P0.21)** and
 the on-demand **AS3933 WUR wake (P1.04)** — an ultra-low-power LF receiver that
@@ -128,9 +148,12 @@ Full detail per version in `production/vN/README.md`; roadmap table in `docs/ROA
   `TTFF=<s>,CELL=<OK|LOW|DEAD>`. **Field-validated** (a drained cell self-charged into hot starts).
 - **v16** — durable **1-week** LoRa backlog (`PENDING_SLOTS` 5→84) so a multi-day out-of-range
   excursion replays every fix on return. **Bench-validated** (42 fixes, zero loss).
-- **v17 (CURRENT / FINAL)** — v16 ported to **PCB iteration3**: onboard LIS3DHTR over SPI +
-  GPS on an active-HIGH TPS22918. Feature-identical to v16; hardware port only. Built,
-  awaiting the first bench run on the new board. See `production/v17/README.md`.
+- **v17 (DEFINITIVE / VALIDATED)** — v16 ported to **PCB iteration3**: onboard LIS3DHTR
+  over SPI + GPS on an active-HIGH TPS22918. Feature-identical to v16; hardware port only.
+  **Validated on the iteration3 board (2026-08-03):** hot GPS fixes (TTFF 6–7 s, 21–22 sats),
+  accel over SPI (`bad=0`), and the durable backlog drained 10/10 with zero loss. Measured
+  power/lifespan: floor ~190 µA → **~3.3 yr** as-is (~7 yr with opt #1). Evidence in
+  `production/v17/logs/`; full write-up in `production/v17/README.md`.
 
 ## Handoff to ISL lab engineers — final integration (WUR + BLE)
 The two **on-demand** subsystems are wired, brought up, and have reference firmware,

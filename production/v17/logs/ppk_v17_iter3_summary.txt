@@ -1,0 +1,23 @@
+ISL v17 / iteration3 - PPK power summary  (ppk20260803T143349)
+============================================================
+Capture: 205832 samples @10ms = 34.3 min
+
+DEEP-SLEEP FLOOR (achieved): ~190 uA
+  sustained sleep level: median=196 uA (119 s continuous run seen)
+  NOTE: ~6x the v7/iteration2 floor of 34 uA. Root cause = connected-input
+  crowbar on the iteration3 P1 pins (P1.03 accel INT1, P1.01 accel INT2,
+  P1.04 WuR wake) left as INPUT before sleep - accelPinsPark disconnects
+  only P0 SPI pins. FIXABLE to ~35-45 uA (see README Pending opt #1).
+
+This capture ran the bench cadence (GNSS every 2 min, lots of indoor no-fix
+GPS-on), so its MEAN is NOT a deployment number:
+  time @ sleep floor (<300uA): 46%
+  time GPS-on (25-45mA, ~36mA): ~46%   |  mid band (~3.6mA): ~8%
+  max = 105182 uA (LoRa TX peak)
+
+LIFESPAN MODEL (9600 mAh, GNSS/1h, accel/3h, BLE/2wk, HOT fixes ~8s@36mA):
+  as-is  (floor 190uA): ~6.8 mAh/day -> ~3.3 years (85% usable)
+  floor fixed (~40uA) : ~3.2 mAh/day -> ~7 years
+  SENSITIVITY (biggest lever): if hourly fixes go COLD (180s charge):
+    10% cold -> ~2.0 yr | 25% -> ~1.3 yr | 50% -> ~0.8 yr
+  => keep the GPS backup cell charged (hot fixes) - v15 charge-on-cold.

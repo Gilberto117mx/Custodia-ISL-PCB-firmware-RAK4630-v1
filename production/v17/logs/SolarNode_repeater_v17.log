@@ -1,0 +1,141 @@
+21:03:03.724 -> 
+21:03:03.724 -> ================================================================
+21:03:03.724 ->   SolarNode LoRa Repeater  -  firmware v1  (v15-aware: GPS-CELL health)
+21:03:03.724 ->   Board : SenseCAP Solar Node P1-Pro (XIAO nRF52840 Plus + SX1262)
+21:03:03.724 ->   Built : Jul 31 2026  18:14:27
+21:03:03.724 -> ================================================================
+21:03:03.724 -> [ROLE] RX node  ->  ACK node  ->  relay onward to gateway
+21:03:03.724 ->        (Meshtastic-style managed flood, <id,seq> dedup)
+21:03:03.724 -> [CFG]  repeaterID=91  ackDelay=50ms  relayGap=20ms  dedup=16  heartbeat=30s
+21:03:03.724 -> [PHY]  915 MHz  BW=250kHz  SF7  CR4/5  sync=0x12  preamble=8  TXpwr=22dBm  TCXO=1.8V  (matches ISL board)
+21:03:03.724 -> [PINS] LoRa CS=D4 DIO1=D1 RST=D2 BUSY=D3 | LED white=P0.15 blue=P0.19 | PWRbtn=P1.01
+21:03:03.724 -> [USB] monitor connected - repeater was never paused; resuming live logs
+21:03:03.724 -> [STAT] up 0d 00:00:07  |  rx=0 ack=0 relay=0 dup=0 bad=0  |  dedup 0/16
+21:03:03.724 -> [STAT] no node packets heard yet - listening
+21:03:03.724 -> [LoRa] listening for node packets...
+21:03:24.725 -> [STAT] up 0d 00:00:29  |  rx=0 ack=0 relay=0 dup=0 bad=0  |  dedup 0/16
+21:03:24.725 -> [STAT] no node packets heard yet - listening
+21:03:54.736 -> [STAT] up 0d 00:00:59  |  rx=0 ack=0 relay=0 dup=0 bad=0  |  dedup 0/16
+21:03:54.736 -> [STAT] no node packets heard yet - listening
+21:04:24.745 -> [STAT] up 0d 00:01:29  |  rx=0 ack=0 relay=0 dup=0 bad=0  |  dedup 0/16
+21:04:24.745 -> [STAT] no node packets heard yet - listening
+21:04:54.747 -> [STAT] up 0d 00:01:59  |  rx=0 ack=0 relay=0 dup=0 bad=0  |  dedup 0/16
+21:04:54.747 -> [STAT] no node packets heard yet - listening
+21:05:24.705 -> [STAT] up 0d 00:02:29  |  rx=0 ack=0 relay=0 dup=0 bad=0  |  dedup 0/16
+21:05:24.705 -> [STAT] no node packets heard yet - listening
+21:05:54.729 -> [STAT] up 0d 00:02:59  |  rx=0 ack=0 relay=0 dup=0 bad=0  |  dedup 0/16
+21:05:54.729 -> [STAT] no node packets heard yet - listening
+21:06:24.702 -> [STAT] up 0d 00:03:29  |  rx=0 ack=0 relay=0 dup=0 bad=0  |  dedup 0/16
+21:06:24.702 -> [STAT] no node packets heard yet - listening
+21:06:54.731 -> [STAT] up 0d 00:03:59  |  rx=0 ack=0 relay=0 dup=0 bad=0  |  dedup 0/16
+21:06:54.731 -> [STAT] no node packets heard yet - listening
+21:07:06.131 -> [RX] #1  RSSI=-59.0 dBm  SNR=12.0 dB  len=64  "051,11,0.000000,0.000000,3.98,1785762424,SV=22,TTFF=120,CELL=LOW"
+21:07:06.169 -> [RX] parsed id=51 seq=11
+21:07:06.169 -> [GPS-CELL] id=51  SV=22  TTFF=120s  CELL=LOW   (cell low - collar is charging it)
+21:07:06.209 -> [ACK] sent "ACK,51,11"  (1 total)
+21:07:06.479 -> [RELAY] forwarded id=51 seq=11 onward (1 total)
+21:07:21.653 -> [RX] #2  RSSI=-54.0 dBm  SNR=13.5 dB  len=66  "051,9,22.531033,113.938058,3.99,1785761638,SV=22,TTFF=120,CELL=LOW"
+21:07:21.653 -> [RX] parsed id=51 seq=9
+21:07:21.653 -> [GPS-CELL] id=51  SV=22  TTFF=120s  CELL=LOW   (cell low - collar is charging it)
+21:07:21.697 -> [ACK] sent "ACK,51,9"  (2 total)
+21:07:21.959 -> [RELAY] forwarded id=51 seq=9 onward (2 total)
+21:07:24.717 -> [STAT] up 0d 00:04:29  |  rx=2 ack=2 relay=2 dup=0 bad=0  |  dedup 2/16
+21:07:24.717 -> [STAT] last packet 3 s ago
+21:07:37.120 -> [RX] #3  RSSI=-58.0 dBm  SNR=12.5 dB  len=66  "051,8,22.530973,113.938276,3.99,1785761490,SV=21,TTFF=120,CELL=LOW"
+21:07:37.120 -> [RX] parsed id=51 seq=8
+21:07:37.120 -> [GPS-CELL] id=51  SV=21  TTFF=120s  CELL=LOW   (cell low - collar is charging it)
+21:07:37.163 -> [ACK] sent "ACK,51,8"  (3 total)
+21:07:37.429 -> [RELAY] forwarded id=51 seq=8 onward (3 total)
+21:07:52.565 -> [RX] #4  RSSI=-56.0 dBm  SNR=13.2 dB  len=66  "051,7,22.531073,113.938254,3.97,1785761190,SV=22,TTFF=120,CELL=LOW"
+21:07:52.609 -> [RX] parsed id=51 seq=7
+21:07:52.609 -> [GPS-CELL] id=51  SV=22  TTFF=120s  CELL=LOW   (cell low - collar is charging it)
+21:07:52.640 -> [ACK] sent "ACK,51,7"  (4 total)
+21:07:52.912 -> [RELAY] forwarded id=51 seq=7 onward (4 total)
+21:07:54.727 -> [STAT] up 0d 00:04:59  |  rx=4 ack=4 relay=4 dup=0 bad=0  |  dedup 4/16
+21:07:54.727 -> [STAT] last packet 2 s ago
+21:08:08.043 -> [RX] #5  RSSI=-56.0 dBm  SNR=12.8 dB  len=66  "051,6,22.530655,113.939161,3.97,1785761053,SV=21,TTFF=120,CELL=LOW"
+21:08:08.091 -> [RX] parsed id=51 seq=6
+21:08:08.091 -> [GPS-CELL] id=51  SV=21  TTFF=120s  CELL=LOW   (cell low - collar is charging it)
+21:08:08.136 -> [ACK] sent "ACK,51,6"  (5 total)
+21:08:08.364 -> [RELAY] forwarded id=51 seq=6 onward (5 total)
+21:08:23.520 -> [RX] #6  RSSI=-57.0 dBm  SNR=12.2 dB  len=66  "051,5,22.530957,113.938262,3.97,1785760906,SV=21,TTFF=120,CELL=LOW"
+21:08:23.520 -> [RX] parsed id=51 seq=5
+21:08:23.520 -> [GPS-CELL] id=51  SV=21  TTFF=120s  CELL=LOW   (cell low - collar is charging it)
+21:08:23.595 -> [ACK] sent "ACK,51,5"  (6 total)
+21:08:23.858 -> [RELAY] forwarded id=51 seq=5 onward (6 total)
+21:08:24.721 -> [STAT] up 0d 00:05:29  |  rx=6 ack=6 relay=6 dup=0 bad=0  |  dedup 6/16
+21:08:24.721 -> [STAT] last packet 1 s ago
+21:08:39.029 -> [RX] #7  RSSI=-59.0 dBm  SNR=12.2 dB  len=66  "051,4,22.531031,113.938299,3.97,1785760769,SV=21,TTFF=120,CELL=LOW"
+21:08:39.029 -> [RX] parsed id=51 seq=4
+21:08:39.029 -> [GPS-CELL] id=51  SV=21  TTFF=120s  CELL=LOW   (cell low - collar is charging it)
+21:08:39.072 -> [ACK] sent "ACK,51,4"  (7 total)
+21:08:39.342 -> [RELAY] forwarded id=51 seq=4 onward (7 total)
+21:08:54.516 -> [RX] #8  RSSI=-58.0 dBm  SNR=13.5 dB  len=66  "051,3,22.531110,113.938367,3.96,1785760621,SV=22,TTFF=120,CELL=LOW"
+21:08:54.516 -> [RX] parsed id=51 seq=3
+21:08:54.516 -> [GPS-CELL] id=51  SV=22  TTFF=120s  CELL=LOW   (cell low - collar is charging it)
+21:08:54.549 -> [ACK] sent "ACK,51,3"  (8 total)
+21:08:54.811 -> [RELAY] forwarded id=51 seq=3 onward (8 total)
+21:08:55.122 -> [STAT] up 0d 00:05:59  |  rx=8 ack=8 relay=8 dup=0 bad=0  |  dedup 8/16
+21:08:55.122 -> [STAT] last packet 0 s ago
+21:09:09.975 -> [RX] #9  RSSI=-63.0 dBm  SNR=12.5 dB  len=66  "051,2,22.531066,113.938332,3.93,1785760485,SV=22,TTFF=120,CELL=LOW"
+21:09:09.975 -> [RX] parsed id=51 seq=2
+21:09:09.975 -> [GPS-CELL] id=51  SV=22  TTFF=120s  CELL=LOW   (cell low - collar is charging it)
+21:09:10.048 -> [ACK] sent "ACK,51,2"  (9 total)
+21:09:10.272 -> [RELAY] forwarded id=51 seq=2 onward (9 total)
+21:09:25.457 -> [RX] #10  RSSI=-63.0 dBm  SNR=12.5 dB  len=66  "051,1,22.531041,113.938395,3.93,1785760435,SV=22,TTFF=120,CELL=LOW"
+21:09:25.457 -> [RX] parsed id=51 seq=1
+21:09:25.457 -> [GPS-CELL] id=51  SV=22  TTFF=120s  CELL=LOW   (cell low - collar is charging it)
+21:09:25.536 -> [ACK] sent "ACK,51,1"  (10 total)
+21:09:25.749 -> [RELAY] forwarded id=51 seq=1 onward (10 total)
+21:09:26.113 -> [STAT] up 0d 00:06:30  |  rx=10 ack=10 relay=10 dup=0 bad=0  |  dedup 10/16
+21:09:26.113 -> [STAT] last packet 0 s ago
+21:09:56.071 -> [STAT] up 0d 00:07:00  |  rx=10 ack=10 relay=10 dup=0 bad=0  |  dedup 10/16
+21:09:56.071 -> [STAT] last packet 30 s ago
+21:16:07.806 -> 
+21:16:07.806 -> ================================================================
+21:16:07.806 ->   SolarNode LoRa Repeater  -  firmware v1  (v15-aware: GPS-CELL health)
+21:16:07.806 ->   Board : SenseCAP Solar Node P1-Pro (XIAO nRF52840 Plus + SX1262)
+21:16:07.806 ->   Built : Jul 31 2026  18:14:27
+21:16:07.806 -> ================================================================
+21:16:07.806 -> [ROLE] RX node  ->  ACK node  ->  relay onward to gateway
+21:16:07.806 ->        (Meshtastic-style managed flood, <id,seq> dedup)
+21:16:07.806 -> [CFG]  repeaterID=91  ackDelay=50ms  relayGap=20ms  dedup=16  heartbeat=30s
+21:16:07.806 -> [PHY]  915 MHz  BW=250kHz  SF7  CR4/5  sync=0x12  preamble=8  TXpwr=22dBm  TCXO=1.8V  (matches ISL board)
+21:16:07.806 -> [PINS] LoRa CS=D4 DIO1=D1 RST=D2 BUSY=D3 | LED white=P0.15 blue=P0.19 | PWRbtn=P1.01
+21:16:07.806 -> [USB] monitor connected - repeater was never paused; resuming live logs
+21:16:07.806 -> [STAT] up 0d 00:13:12  |  rx=11 ack=11 relay=11 dup=0 bad=0  |  dedup 11/16
+21:16:07.806 -> [STAT] last packet 20 s ago
+21:16:07.806 -> [LoRa] listening for node packets...
+21:16:07.806 -> [STAT] up 0d 00:13:12  |  rx=11 ack=11 relay=11 dup=0 bad=0  |  dedup 11/16
+21:16:07.806 -> [STAT] last packet 20 s ago
+21:16:51.727 -> 
+21:16:51.727 -> ================================================================
+21:16:51.727 ->   SolarNode LoRa Repeater  -  firmware v1  (v15-aware: GPS-CELL health)
+21:16:51.727 ->   Board : SenseCAP Solar Node P1-Pro (XIAO nRF52840 Plus + SX1262)
+21:16:51.727 ->   Built : Jul 31 2026  18:14:27
+21:16:51.727 -> ================================================================
+21:16:51.727 -> [ROLE] RX node  ->  ACK node  ->  relay onward to gateway
+21:16:51.727 ->        (Meshtastic-style managed flood, <id,seq> dedup)
+21:16:51.727 -> [CFG]  repeaterID=91  ackDelay=50ms  relayGap=20ms  dedup=16  heartbeat=30s
+21:16:51.727 -> [PHY]  915 MHz  BW=250kHz  SF7  CR4/5  sync=0x12  preamble=8  TXpwr=22dBm  TCXO=1.8V  (matches ISL board)
+21:16:51.727 -> [PINS] LoRa CS=D4 DIO1=D1 RST=D2 BUSY=D3 | LED white=P0.15 blue=P0.19 | PWRbtn=P1.01
+21:16:51.727 -> [USB] monitor connected - repeater was never paused; resuming live logs
+21:16:51.727 -> [STAT] up 0d 00:13:56  |  rx=11 ack=11 relay=11 dup=0 bad=0  |  dedup 11/16
+21:16:51.727 -> [STAT] last packet 64 s ago
+21:16:51.727 -> [LoRa] listening for node packets...
+21:17:07.796 -> [STAT] up 0d 00:14:12  |  rx=11 ack=11 relay=11 dup=0 bad=0  |  dedup 11/16
+21:17:07.797 -> [STAT] last packet 80 s ago
+21:17:37.788 -> [STAT] up 0d 00:14:42  |  rx=11 ack=11 relay=11 dup=0 bad=0  |  dedup 11/16
+21:17:37.788 -> [STAT] last packet 110 s ago
+21:18:07.790 -> [STAT] up 0d 00:15:12  |  rx=11 ack=11 relay=11 dup=0 bad=0  |  dedup 11/16
+21:18:07.790 -> [STAT] last packet 140 s ago
+21:18:37.753 -> [STAT] up 0d 00:15:42  |  rx=11 ack=11 relay=11 dup=0 bad=0  |  dedup 11/16
+21:18:37.753 -> [STAT] last packet 170 s ago
+21:19:07.789 -> [STAT] up 0d 00:16:12  |  rx=11 ack=11 relay=11 dup=0 bad=0  |  dedup 11/16
+21:19:07.789 -> [STAT] last packet 200 s ago
+21:19:37.763 -> [STAT] up 0d 00:16:42  |  rx=11 ack=11 relay=11 dup=0 bad=0  |  dedup 11/16
+21:19:37.763 -> [STAT] last packet 230 s ago
+21:20:07.750 -> [STAT] up 0d 00:17:12  |  rx=11 ack=11 relay=11 dup=0 bad=0  |  dedup 11/16
+21:20:07.750 -> [STAT] last packet 260 s ago
+21:20:37.784 -> [STAT] up 0d 00:17:42  |  rx=11 ack=11 relay=11 dup=0 bad=0  |  dedup 11/16
+21:20:37.784 -> [STAT] last packet 290 s ago
