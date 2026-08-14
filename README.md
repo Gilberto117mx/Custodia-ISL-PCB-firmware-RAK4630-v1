@@ -4,7 +4,19 @@ A **RAK4630-based custom board** built around the Nordic nRF52840 + Semtech SX12
 (the RAK4630 module), an RV-3028-C7 RTC, an L76K multi-GNSS receiver, an onboard
 **LIS3DHTR accelerometer**, and an **AS3933 LF wake-up receiver**. This repository
 is the standalone home for the ISL board: hardware of record, bring-up tests, and
-production firmware for the animal-tracking collar (the "Custodia-Tracker" node).
+production firmware for the animal-tracking collar (the "Custodia-Tracker" node) —
+together with the companion **SolarNodeSystem** (repeater + gateway + cloud uploader)
+that carries collar packets to the Custodia cloud.
+
+> ## 🚚 This repo is the handover for the first medium-scale pilot
+> **Start with [`HANDOVER.md`](HANDOVER.md)** — the end-to-end delivery snapshot
+> (collar + repeater + gateway + cloud), pilot readiness, power/lifespan, and the two
+> items the **ISL lab engineers** must still integrate:
+> 1. the **AS3933 WUR has never been integrated in any version** — the drone pass is
+>    currently **faked with a timer** (`SIMULATE_WUR_HOURS`; `ENABLE_WUR_WAKE=0`) and must
+>    be integrated + validated on real hardware;
+> 2. the **BLE offload protocol** is to be updated by the ISL team — that work is
+>    **already done by Omar Khalfa and is pending integration.**
 
 > Bring-up is hardware-in-the-loop: flash a focused test, capture the serial/power
 > output, iterate. Each test's output feeds the next refinement.
@@ -14,14 +26,16 @@ production firmware for the animal-tracking collar (the "Custodia-Tracker" node)
 > [`hardware/README.md`](hardware/README.md) (**iteration3** — the onboard-accelerometer
 > board — is authoritative; iteration2/1 are historical).
 
-## Final status (2026-08-03) — **v17 VALIDATED (definitive)**
-- **`production/v17` is the definitive, validated firmware version** — v16's full
+## Final status (2026-08-11) — **v17 FIELD-VALIDATED (pilot build)**
+- **`production/v17` is the definitive, field-validated firmware version** — v16's full
   feature set ported to **PCB iteration3** (onboard LIS3DHTR over SPI + GPS on an
-  active-HIGH TPS22918 load switch). Full detail, power/lifespan model, and the two
-  optimization items: `production/v17/README.md`; run evidence:
-  `production/v17/logs/` (`VALIDATION.md` + collar/repeater/drone logs + the PPK
-  power summary).
-- **Validated on the iteration3 board (open-sky run, 2026-08-03):**
+  active-HIGH TPS22918 load switch). Full detail, power/lifespan model, and the
+  optimization items: `production/v17/README.md`; run evidence: `production/v17/logs/`.
+- **Field-validated end-to-end (real 2-day out-of-range trip, 2026-08-11):** the collar
+  buffered fixes for ~2 days, then on first gateway contact delivered an **83-packet
+  burst newest-first (seq 194→94), `emit=83 bad=0`**, ~15 s/packet — the durable backlog
+  proven on real hardware, real trip, real gateway (`production/v17/logs/REALWORLD_BACKLOG.md`).
+- **Earlier bench validation on the iteration3 board (open-sky run, 2026-08-03):**
   - **GNSS (TPS22918 active-HIGH):** 6+ consecutive **hot fixes, TTFF 6–7 s, 21–22
     sats, `CELL=OK`** — powers/fixes/tears down cleanly.
   - **Accelerometer over SPI** (onboard LIS3DHTR, CS P0.28): 100-sample records,
@@ -40,13 +54,13 @@ production firmware for the animal-tracking collar (the "Custodia-Tracker" node)
      drops it to **~35–45 µA ⇒ ~7 years**;
   2. `TTFF`/`CELL` on *backlogged* packets read transmit-time state (position data is
      always correct) — an optional per-packet fix (flash schema 4→5).
-- **Final integration of the two on-demand subsystems — the AS3933 wake-up receiver
-  (WUR) and the BLE offload — is owned by the ISL lab engineers.** The board hardware,
-  the pin map, the bring-up tests, and reference firmware for both are in this repo
-  (`tests/ISL_WUR_AS3933/`, the `reference/AS3933_wakeup/` transmitter, the `tests/`
-  BLE sketches, and the `ISL_v*_Drone_Receiver`/`ISL_BLE_CustomOpen` examples); the
-  remaining work is to close the loop on real hardware. See **"Handoff to ISL lab
-  engineers"** below.
+- ⚠️ **Two items are NOT integrated and are owned by the ISL lab engineers** (full
+  detail in [`HANDOVER.md`](HANDOVER.md) and the *Handoff* section below):
+  1. the **AS3933 WUR has never been integrated in any version** — the drone pass that
+     triggers the BLE offload is currently **faked with a timer** (`SIMULATE_WUR_HOURS`;
+     `ENABLE_WUR_WAKE=0`); a real LF wake must be integrated + validated on hardware;
+  2. the **BLE offload protocol** is to be updated by the ISL team — that work is
+     **already done by Omar Khalfa and is pending integration.**
 
 ## Board at a glance
 | Subsystem | ISL Board (RAK_feather, iteration3) |
@@ -68,6 +82,7 @@ listens for a 433 MHz carrier modulated with a 19 kHz OOK/Manchester 16-bit patt
 ## Layout
 ```
 .                             <- repository root
+├── HANDOVER.md               <- ⭐ pilot handover: end-to-end delivery + WUR/BLE items (READ FIRST)
 ├── README.md                 <- this file
 ├── docs/
 │   ├── ROADMAP.md            <- STATUS + what to test next (single source of truth)
@@ -81,8 +96,11 @@ listens for a 433 MHz carrier modulated with a 19 kHz OOK/Manchester 16-bit patt
 │   └── iteration3/           <- RAK_feather schematic v3 (CURRENT: onboard LIS3DHTR/SPI, GPS on TPS22918)
 ├── reference/
 │   └── AS3933_wakeup/        <- vendor AS3933 WUR repo, UNMODIFIED (ESP32 + MATLAB/SDR TX)
-├── production/               <- node firmware v1 → v17 (v17 = current/final; see ROADMAP §2)
-└── tests/                    <- subsystem bring-up sketches + BLE/accel/flash probes (see tests/README.md)
+├── production/               <- collar firmware v1 → v17 (v17 = pilot build; see ROADMAP §2)
+│                                incl. production/v17/POWER_PROFILE.md
+├── tests/                    <- subsystem bring-up sketches + BLE/accel/flash probes (see tests/README.md)
+└── SolarNodeSystem/          <- companion system: LoRa repeater + gateway + XIAO ESP32 cloud uploader
+    └── v1/                      (SenseCAP Solar Node P1-Pro + XIAO ESP32-S3) — see SolarNodeSystem/v1/README.md
 ```
 
 ## Suggested bring-up order (subsystem tests)
@@ -155,22 +173,26 @@ Full detail per version in `production/vN/README.md`; roadmap table in `docs/ROA
   power/lifespan: floor ~190 µA → **~3.3 yr** as-is (~7 yr with opt #1). Evidence in
   `production/v17/logs/`; full write-up in `production/v17/README.md`.
 
-## Handoff to ISL lab engineers — final integration (WUR + BLE)
-The two **on-demand** subsystems are wired, brought up, and have reference firmware,
-but their final integration onto the sealed collar is owned by the **ISL lab engineers**:
+## Handoff to ISL lab engineers — the two items to integrate (WUR + BLE)
+These two on-demand items are **not integrated** in the delivered firmware and are owned
+by the **ISL lab engineers**. Full context in [`HANDOVER.md`](HANDOVER.md).
 
-1. **AS3933 wake-up receiver (WUR).** SPI comms, pattern-mode config, and RC-oscillator
-   calibration all **PASS** (`tests/ISL_WUR_AS3933/`). The remaining work is to trigger a
-   **real LF wake** from a transmitter (`reference/AS3933_wakeup/WuTx*`: 433 MHz, 19 kHz
-   OOK/Manchester, pattern `0x9669`), confirm the **P1.04 rising-edge IRQ + pattern match**,
-   then arm it as the second deep-sleep wake source in production firmware
-   (`ENABLE_WUR_WAKE 1`). It is intentionally gated OFF until this is validated.
-2. **BLE offload.** The collar advertises as **`Custodia-Tracker`** and streams the
-   accelerometer records to a passing drone (`production/v17/ISL_v17_Drone_Receiver`, and the
-   `tests/ISL_BLE_CustomOpen/` + `tests/Accelerometer/` reference sketches). The transport is
-   bench-verified no-freeze/0-bad; the remaining work is the **field/range integration** and
-   any on-collar buffering/replay strategy (deliberately left to the ISL lab engineers' BLE
-   approach — see the v12 note).
+1. **AS3933 wake-up receiver (WUR) — never integrated in any version.** The drone pass
+   that triggers the BLE offload is currently **faked with a timer** (`SIMULATE_WUR_HOURS`,
+   default 0.25 h) and the wake pin is disarmed (`ENABLE_WUR_WAKE = 0`). SPI comms,
+   pattern-mode config, and RC-oscillator calibration are proven (`tests/ISL_WUR_AS3933/`),
+   and the collar is wired for the wake on **P1.04**. Remaining: trigger a **real LF wake**
+   from a transmitter (`reference/AS3933_wakeup/WuTx*`: 433 MHz, 19 kHz OOK/Manchester,
+   pattern `0x9669`), confirm the **P1.04 rising-edge IRQ + pattern match**, then set
+   `SIMULATE_WUR_HOURS = 0` and `ENABLE_WUR_WAKE = 1` so a real beacon drives the offload —
+   and validate it end-to-end.
+2. **BLE offload protocol — to be updated by the ISL team.** The collar advertises as
+   **`Custodia-Tracker`** and streams accelerometer records over the proven fire-and-forget
+   NUS path (`production/v17/ISL_v17_Drone_Receiver`, plus the `tests/ISL_BLE_CustomOpen/` +
+   `tests/Accelerometer/` reference sketches). The **updated BLE protocol is already
+   developed by Omar Khalfa and is pending integration** by the ISL team — treat the current
+   path as a working placeholder to be replaced with his protocol, then validated with the
+   WUR-triggered pass from item 1.
 
 Everything needed to continue both — pin map, tests, reference emitters/receivers, and the
 firmware hooks — is in this repository.

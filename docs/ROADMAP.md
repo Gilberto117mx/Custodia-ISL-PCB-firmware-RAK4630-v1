@@ -1,18 +1,22 @@
 # ISL Board — Status & Roadmap (single source of truth)
 
-_Last updated: 2026-08-03._ What is validated, what is open, and the exact next
+_Last updated: 2026-08-11._ What is validated, what is open, and the exact next
 tests. Deployment target: a **sealed animal collar**, GNSS fix ~every **2 h**, that
 must survive ~24 h of blind transport and long low-sky stretches, then run for
 months on a LiSOCl₂ primary cell. Once sealed it cannot be reprogrammed.
 
-> ## 🏁 Final status — **v17 VALIDATED (definitive)**
-> **`production/v17` is the definitive, validated firmware version** (v16's feature set
-> ported to **PCB iteration3**). **Validated on the iteration3 board (2026-08-03):** hot
-> GPS fixes (TTFF 6–7 s, 21–22 sats, `CELL=OK`), accelerometer over SPI (`bad=0`), and the
-> LoRa **delivery-guarantee + 1-week backlog with *real* fixes** (9 buffered → drained
-> newest-first, `delivered=10 pending=0 undelivered=0`, zero loss); GNSS-disciplined RTC,
-> deep sleep, battery, and flash all good. Evidence: `../production/v17/logs/`
-> (`VALIDATION.md` + collar/repeater/drone logs + PPK summary).
+> **Pilot handover snapshot in the repo root: [`../HANDOVER.md`](../HANDOVER.md)** —
+> end-to-end delivery (collar + SolarNodeSystem repeater/gateway + cloud) for the first
+> medium-scale pilot.
+
+> ## 🏁 Final status — **v17 FIELD-VALIDATED (pilot build)**
+> **`production/v17` is the definitive, field-validated firmware version** (v16's feature
+> set ported to **PCB iteration3**). **Field-validated end-to-end (real 2-day out-of-range
+> trip, 2026-08-11):** the collar buffered fixes for ~2 days, then on first gateway contact
+> delivered an **83-packet burst newest-first (seq 194→94), `emit=83 bad=0`**, ~15 s/packet
+> — the durable backlog proven on real hardware (`../production/v17/logs/REALWORLD_BACKLOG.md`).
+> Earlier bench (2026-08-03): hot GPS fixes (TTFF 6–7 s, 21–22 sats, `CELL=OK`), accel over
+> SPI (`bad=0`), backlog with real fixes (`delivered=10`, zero loss); RTC/sleep/battery/flash OK.
 >
 > **Measured power (PPK 2026-08-03):** deep-sleep floor **~190 µA** on iteration3 →
 > modelled **~3.3 yr** on a 9600 mAh LiSOCl₂ cell at the deployment cadence. Two
@@ -20,10 +24,10 @@ months on a LiSOCl₂ primary cell. Once sealed it cannot be reprogrammed.
 > input-buffer crowbar (→ ~35–45 µA ⇒ ~7 yr), and `TTFF`/`CELL` on backlogged packets
 > read transmit-time state (positions are always correct).
 >
-> **The final integration of the two on-demand subsystems — the AS3933 wake-up
-> receiver (WUR) and the BLE offload — is handed to the ISL lab engineers.** Both are
-> wired, brought up, and have reference firmware in this repo; what remains is
-> closing the loop on real hardware (see §7).
+> ⚠️ **Two items are NOT integrated (ISL lab engineers — see §7):** the **AS3933 WUR has
+> never been integrated in any version** (the drone pass is faked with a timer,
+> `SIMULATE_WUR_HOURS`; `ENABLE_WUR_WAKE=0`), and the **BLE offload protocol** is pending an
+> update **already done by Omar Khalfa**, awaiting integration by the ISL team.
 
 ---
 
@@ -155,28 +159,31 @@ connected digital input buffer there conducts ~**118 µA** of shoot-through
 
 ---
 
-## 7. Handoff to ISL lab engineers — final integration (WUR + BLE)
-The tracking data path is finished and validated through **v17**. The two **on-demand**
-subsystems are wired, brought up, and have reference firmware in this repo; their final
-integration onto the sealed collar is **owned by the ISL lab engineers**.
+## 7. Handoff to ISL lab engineers — the two items to integrate (WUR + BLE)
+The tracking data path is finished and field-validated through **v17**. The two
+**on-demand** items below are **NOT integrated** in the delivered firmware and are owned by
+the **ISL lab engineers**. Full context in the root [`../HANDOVER.md`](../HANDOVER.md).
 
-### 7a. AS3933 wake-up receiver (WUR) — on-demand wake
-- **Done:** SPI comms, pattern-mode config, and RC-oscillator calibration all PASS
-  (`../tests/ISL_WUR_AS3933/`). Wired to **P1.04** (wake IRQ), SPI shared with the accel.
+### 7a. AS3933 wake-up receiver (WUR) — **never integrated in any version**
+- **Today:** the drone pass that triggers the BLE offload is **faked with a timer**
+  (`SIMULATE_WUR_HOURS`, default 0.25 h); the real wake pin is disarmed
+  (`ENABLE_WUR_WAKE = 0`). The AS3933 is proven only at the SPI/config/RC-cal level
+  (`../tests/ISL_WUR_AS3933/`); it is wired to **P1.04** (wake IRQ), SPI shared with the accel.
 - **Remaining:** trigger a **real LF wake** from a transmitter
   (`../reference/AS3933_wakeup/WuTx*` — 433 MHz, 19 kHz OOK/Manchester, pattern `0x9669`),
-  confirm the **P1.04 rising-edge IRQ + R13 pattern match**, then arm it as the second
-  deep-sleep wake source in production (`ENABLE_WUR_WAKE 1`). Gated OFF until validated so
-  an unvalidated wake source can't wreck the duty cycle.
+  confirm the **P1.04 rising-edge IRQ + R13 pattern match**, then set `SIMULATE_WUR_HOURS = 0`
+  and `ENABLE_WUR_WAKE = 1` so a real beacon drives the offload — and validate it end-to-end.
 
-### 7b. BLE offload — accelerometer → drone
-- **Done:** the collar advertises as **`Custodia-Tracker`** and streams the accel flash
-  ring over BLE; the transport is **bench-verified** (no-freeze, 0 bad/0 corrupt records,
-  LoRa unaffected). Reference emitter/receiver: `../production/v17/ISL_v17_Drone_Receiver`,
+### 7b. BLE offload protocol — **to be updated by the ISL team**
+- **Today:** the collar advertises as **`Custodia-Tracker`** and streams the accel flash
+  ring over the proven fire-and-forget NUS path (bench-verified: no-freeze, 0 bad/0 corrupt).
+  Reference emitter/receiver: `../production/v17/ISL_v17_Drone_Receiver`,
   `../tests/ISL_BLE_CustomOpen/`, `../tests/Accelerometer/`.
-- **Remaining:** the **field/range integration** (real drone pass distances/timing) and any
-  on-collar buffering/replay strategy — deliberately left to the ISL lab engineers' preferred
-  BLE approach (see the v12 note on dropping on-collar replay).
+- **Remaining:** integrate the **updated BLE protocol already developed by Omar Khalfa**
+  (pending), replacing the current offload path, then validate the drone-side end to end with
+  the WUR-triggered pass from 7a. (During iteration3 field runs the current path occasionally
+  dropped a record and a collar reset disconnected other BLE peers — the updated protocol is
+  expected to address this.)
 
 Everything needed to continue both is in this repo: pin map (`ISL_Pinout.md`), the bring-up
 tests, the reference emitters/receivers, and the firmware hooks in `../production/v17`.

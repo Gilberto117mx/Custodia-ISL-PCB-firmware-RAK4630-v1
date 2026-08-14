@@ -1,0 +1,20 @@
+20:24:33.195 -> === ISL v17 Drone Receiver (reference) - api.ble.uart NUS, name-match, NEW data + per-record ts ===
+20:24:33.269 -> [BLE] Scanning for 'Custodia-Tracker' by name...
+20:38:11.809 -> 
+20:38:11.809 -> [BLE] Found Custodia-Tracker (by name)! Connecting...
+20:38:12.724 -> [BLE] Connected! Discovering NUS... ok.
+20:38:12.866 -> [BLE] subscribed - receiving blast:
+20:38:12.866 -> 
+20:38:17.486 -> 
+20:38:17.486 -> == Collar id=051 announcing 1 records ==
+20:38:17.526 -> [REC] seq=176 n=100 ck=13024 ...
+20:38:19.727 ->       seq=176 ts=1786364878 OK (100 samples, checksum match)
+20:38:19.727 -> == END id=051: 1 records | session new=1 dup=0 bad=0 ==
+20:38:19.727 -> 
+20:38:19.766 -> 
+20:38:19.766 -> == Collar id=051 announcing 1 records ==
+20:38:19.809 -> [REC] seq=176 (dup, skipping)
+20:38:22.042 -> == END id=051: 1 records | session new=1 dup=1 bad=0 ==
+20:38:22.042 -> 
+20:38:24.865 -> 
+20:38:24.865 -> [BLE] Disconnected - resuming scan...

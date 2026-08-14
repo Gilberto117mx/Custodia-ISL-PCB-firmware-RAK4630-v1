@@ -6,19 +6,30 @@ backup-cell health + charge-on-cold, cold/first-fix budget, two accel/BLE timers
 proven no-freeze BLE offload, delivery guarantee, reboot-to-sleep). **Only the hardware
 interface changed**, in the two places the iteration3 schematic introduced.
 
-> ✅ **Status: VALIDATED on iteration3 (2026-08-03).** Open-sky run: **6+ hot GPS fixes,
-> TTFF 6–7 s, 21–22 sats, `CELL=OK`**; onboard **accel over SPI** collecting clean
-> records (`bad=0`); **LoRa + the v16 durable backlog proven with *real* fixes** — 9
-> fixes buffered while the repeater was absent, then drained newest-first on reconnect,
-> `delivered=10 pending=0 undelivered=0`, zero loss; RTC/deep-sleep/battery/flash all
-> good. (An earlier "no-fix" scare was just no sky at that spot — the same module gave
-> 22 sats once outdoors.) No feature or flash-layout change vs v16 (schema still 4).
+> ✅ **Status: FIELD-VALIDATED end-to-end (2026-08-11).** Real 2-day out-of-range trip:
+> the collar buffered fixes for ~2 days, then on first gateway contact it delivered an
+> **83-packet burst newest-first (seq 194→94), `emit=83 bad=0`**, ~15 s/packet at the
+> spec `BACKLOG_GAP_SEC`, ~22 min wait to first packet (= one collar period as modelled).
+> This is the last piece of the v16 durable backlog that was still theoretical — now
+> proven on real hardware, real trip, real gateway. See
+> [`logs/REALWORLD_BACKLOG.md`](logs/REALWORLD_BACKLOG.md).
+>
+> Earlier bench validation (2026-08-03) — open-sky run: **6+ hot GPS fixes, TTFF 6–7 s,
+> 21–22 sats, `CELL=OK`**; onboard **accel over SPI** collecting clean records (`bad=0`);
+> LoRa + the v16 durable backlog proven with *real* fixes (9 buffered → drained
+> newest-first, `delivered=10 pending=0 undelivered=0`, zero loss); RTC/deep-sleep/
+> battery/flash all good. No feature or flash-layout change vs v16 (schema still 4).
 >
 > Two **optimization-only** items surfaced (neither is a blocker — see *Pending
 > optimizations* below): the **deep-sleep floor** measured **~190 µA** (a fixable P1
 > input-buffer crowbar) and the **TTFF/CELL fields on backlogged packets** read
-> transmit-time state. WUR + BLE-reset integration and a final battery-only PPK remain
-> the other engineer's / next step.
+> transmit-time state.
+>
+> ⚠️ **Not yet integrated (ISL lab engineers — see the root `HANDOVER.md`):** the
+> **AS3933 WUR has never been integrated in any version** — the drone pass that triggers
+> the BLE offload is currently **faked with a timer** (`SIMULATE_WUR_HOURS`, default
+> 0.25 h; `ENABLE_WUR_WAKE=0`). The **BLE protocol** is also pending an update by the ISL
+> team (work already done by **Omar Khalfa**, pending integration).
 
 ## What changed vs v16 (hardware ports only)
 
@@ -128,10 +139,19 @@ the firmware works and ships without them.
    period, raise `GPS_CHARGE_SEC`, or add a small periodic top-up wake. Biggest lifespan
    lever (see caveat above).
 
-## Deferred to the other engineer / next step (not ours)
-- **WUR (AS3933) real LF wake** + arming P1.04 as the wake source (`ENABLE_WUR_WAKE`).
-- **BLE integration robustness:** the offload occasionally dropped a record and a reset
-  disconnected other BLE peers — the second engineer owns the BLE-central/WUR side.
+## Deferred to the ISL lab engineers / next step (not integrated here)
+- **WUR (AS3933) integration — NOT done in any version.** The wake-up receiver has
+  never been integrated: the drone pass that triggers the BLE offload is currently
+  **faked with a timer** (`SIMULATE_WUR_HOURS`, default 0.25 h) and the real wake pin is
+  disarmed (`ENABLE_WUR_WAKE=0`). The AS3933 SPI/config/RC-cal is proven in
+  `../../tests/ISL_WUR_AS3933/`, but a **live LF wake → P1.04 IRQ → real drone-pass
+  offload must be integrated and validated by the ISL lab engineers.** See the root
+  `HANDOVER.md`.
+- **BLE protocol — to be updated by the ISL team.** The current offload is the proven
+  fire-and-forget NUS path; the **updated BLE protocol work is already done by
+  Omar Khalfa and is pending integration** by the ISL team. (During iteration3 field
+  runs the drone side occasionally dropped a record and a collar reset disconnected
+  other BLE peers — the updated protocol is expected to address this.)
 - **Final battery-only PPK** (USB detached) to book the true floor + per-op charge, and a
   real 1 h-cadence endurance run to confirm the hot-fix assumption.
 

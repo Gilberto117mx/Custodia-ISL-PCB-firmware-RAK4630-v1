@@ -1,0 +1,82 @@
+Endpoint
+POST https://custodia.world/api/locations
+
+Headers
+Key	Value
+Content-Type	application/json
+Authorization	Bearer YOUR_CLOUD_BEARER_TOKEN
+Request Body
+{
+  "repeater_id": "RPT-001",
+  "timestamp": 1699123456,
+  "packets": [
+    {
+      "device_id": 1001,
+      "timestamp": 1699123456,
+      "latitude": 25.302677,
+      "longitude": -98.277664,
+      "voltage": 3.85
+    },
+    {
+      "device_id": 1001,
+      "timestamp": 1699123516,
+      "latitude": 25.303124,
+      "longitude": -98.278991,
+      "voltage": 3.84
+    },
+    {
+      "device_id": 1002,
+      "timestamp": 1699123576,
+      "latitude": 25.304891,
+      "longitude": -98.279334,
+      "voltage": 3.72
+    }
+  ]
+}
+
+Field Descriptions
+
+Field	Type	Description
+repeater_id	string( I will parse from integer to string if needed) 	Unique identifier of the repeater sending the data
+timestamp	integer (UNIX)	Time of transmission from the repeater (UTC)
+packets	array	Array of tracker data packets
+packets[].device_id	integer	Unique ID of the tracker device
+packets[].timestamp	integer (UNIX)	Timestamp of this GPS fix (UTC)
+packets[].latitude	float	Latitude coordinate (WGS84)
+packets[].longitude	float	Longitude coordinate (WGS84)
+packets[].voltage	float	Tracker battery voltage (in volts)
+
+Example Request (cURL)
+
+curl -X POST https://custodia.world/api/locations \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer <token>" \
+  -d '{
+    "repeater_id": "RPT-001",
+    "timestamp": 1699123456,
+    "packets": [
+      {
+        "device_id": 1001,
+        "timestamp": 1699123456,
+        "latitude": 25.302677,
+        "longitude": -98.277664,
+        "voltage": 3.85
+      }
+    ]
+  }'
+
+Success Response
+
+{
+  "success": true,
+  "inserted": 3,
+  "updated_trackers": 3,
+  "message": "3 location packets saved from repeater RPT-001"
+}
+
+Error Responses
+
+HTTP Code	Example Response	Meaning
+400	{ "error": "Missing required fields" }	Invalid or incomplete payload
+401	{ "error": "Unauthorized" }	Missing or invalid token
+500	{ "error": "Database insert failed" }	Internal server error

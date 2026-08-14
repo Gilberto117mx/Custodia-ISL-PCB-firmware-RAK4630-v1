@@ -1,0 +1,42 @@
+01:05:14.110 -> [RX] parsed id=51 seq=37
+01:05:14.110 -> [GPS-CELL] id=51  SV=12  TTFF=1s  CELL=OK
+01:05:14.199 -> [ACK] sent "ACK,51,37"  (backoff 95 ms, 8 total)
+01:05:14.412 -> [EMIT] id=51 seq=37 -> Grove UART (8 total)
+01:05:14.964 -> [STAT] up 0d 00:10:29  |  rx=8 ack=8 emit=8 bad=0
+01:05:14.964 -> [STAT] last frame 1 s ago
+01:05:29.612 -> [RX] #9  RSSI=-73.0 dBm  SNR=11.8 dB  len=64  "051,36,22.528600,113.940480,3.99,1784062098,SV=12,TTFF=1,CELL=OK"
+01:05:29.612 -> [RX] parsed id=51 seq=36
+01:05:29.612 -> [GPS-CELL] id=51  SV=12  TTFF=1s  CELL=OK
+01:05:29.695 -> [ACK] sent "ACK,51,36"  (backoff 69 ms, 9 total)
+01:05:29.864 -> [EMIT] id=51 seq=36 -> Grove UART (9 total)
+01:05:45.128 -> [RX] #10  RSSI=-65.0 dBm  SNR=11.8 dB  len=64  "051,35,22.528600,113.940480,3.99,1784061958,SV=12,TTFF=1,CELL=OK"
+01:05:45.128 -> [RX] parsed id=51 seq=35
+01:05:45.129 -> [GPS-CELL] id=51  SV=12  TTFF=1s  CELL=OK
+01:05:45.206 -> [ACK] sent "ACK,51,35"  (backoff 84 ms, 10 total)
+01:05:45.375 -> [EMIT] id=51 seq=35 -> Grove UART (10 total)
+01:05:45.716 -> [STAT] up 0d 00:10:59  |  rx=10 ack=10 emit=10 bad=0
+01:05:45.716 -> [STAT] last frame 0 s ago
+01:06:00.605 -> [RX] #11  RSSI=-78.0 dBm  SNR=12.0 dB  len=64  "051,34,22.528600,113.940480,3.98,1784061669,SV=12,TTFF=1,CELL=OK"
+01:06:00.605 -> [RX] parsed id=51 seq=34
+01:06:00.605 -> [GPS-CELL] id=51  SV=12  TTFF=1s  CELL=OK
+01:06:00.694 -> [ACK] sent "ACK,51,34"  (backoff 70 ms, 11 total)
+01:06:00.864 -> [EMIT] id=51 seq=34 -> Grove UART (11 total)
+01:06:15.714 -> [STAT] up 0d 00:11:29  |  rx=11 ack=11 emit=11 bad=0
+01:06:15.714 -> [STAT] last frame 15 s ago
+01:06:16.064 -> [RX] #12  RSSI=-77.0 dBm  SNR=12.5 dB  len=64  "051,33,22.528600,113.940480,3.98,1784061540,SV=12,TTFF=1,CELL=OK"
+01:06:16.064 -> [RX] parsed id=51 seq=33
+01:06:16.064 -> [GPS-CELL] id=51  SV=12  TTFF=1s  CELL=OK
+01:06:16.157 -> [ACK] sent "ACK,51,33"  (backoff 66 ms, 12 total)
+01:06:16.342 -> [EMIT] id=51 seq=33 -> Grove UART (12 total)
+01:06:31.555 -> [RX] #13  RSSI=-71.0 dBm  SNR=12.2 dB  len=64  "051,32,22.528600,113.940480,3.98,1784061400,SV=12,TTFF=1,CELL=OK"
+01:06:31.555 -> [RX] parsed id=51 seq=32
+01:06:31.555 -> [GPS-CELL] id=51  SV=12  TTFF=1s  CELL=OK
+01:06:31.634 -> [ACK] sent "ACK,51,32"  (backoff 86 ms, 13 total)
+01:06:31.805 -> [EMIT] id=51 seq=32 -> Grove UART (13 total)
+01:06:45.728 -> [STAT] up 0d 00:11:59  |  rx=13 ack=13 emit=13 bad=0
+01:06:45.728 -> [STAT] last frame 14 s ago
+01:06:47.011 -> [RX] #14  RSSI=-70.0 dBm  SNR=11.5 dB  len=64  "051,31,22.528600,113.940480,3.98,1784061271,SV=12,TTFF=1,CELL=OK"
+01:06:47.011 -> [RX] parsed id=51 seq=31
+01:06:47.011 -> [GPS-CELL] id=51  SV=12  TTFF=1s  CELL=OK
+01:06:47.148 -> [ACK] sent "ACK,51,31"  (backoff 85 ms, 14 total)
+01:06:47.280 -> [EMIT] id=51 seq=31 -> Grove UART (14 total)

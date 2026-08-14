@@ -1,0 +1,791 @@
+[STAT] up 0d 00:01:29  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:01:59  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:02:29  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:02:59  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:03:29  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:03:59  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:04:29  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:04:59  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:05:29  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:05:59  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:06:29  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:06:59  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:07:29  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:07:59  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:08:29  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:08:59  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:09:29  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:09:59  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:10:29  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:10:59  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:11:29  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:11:59  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:12:29  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:12:59  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:13:29  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:13:59  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:14:29  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:14:59  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:15:29  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:15:59  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:16:29  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:16:59  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:17:29  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:17:59  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:18:29  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:18:59  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:19:29  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:19:59  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:20:29  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:20:59  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[STAT] up 0d 00:21:29  |  rx=0 ack=0 emit=0 bad=0
+[STAT] no frames heard yet - listening
+[RX] #1  RSSI=-57.0 dBm  SNR=12.5 dB  len=65  "051,194,0.000000,0.000000,4.04,1786362202,SV=15,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=194
+[GPS-CELL] id=51  SV=15  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,194"  (backoff 60 ms, 1 total)
+[EMIT] id=51 seq=194 -> Grove UART (1 total)
+[STAT] up 0d 00:21:59  |  rx=1 ack=1 emit=1 bad=0
+[STAT] last frame 1 s ago
+[RX] #2  RSSI=-60.0 dBm  SNR=11.5 dB  len=68  "051,189,22.544894,113.922348,4.05,1786354924,SV=22,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=189
+[GPS-CELL] id=51  SV=22  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,189"  (backoff 55 ms, 2 total)
+[EMIT] id=51 seq=189 -> Grove UART (2 total)
+[RX] #3  RSSI=-59.0 dBm  SNR=11.8 dB  len=68  "051,188,22.559623,113.911335,4.06,1786353472,SV=23,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=188
+[GPS-CELL] id=51  SV=23  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,188"  (backoff 60 ms, 3 total)
+[EMIT] id=51 seq=188 -> Grove UART (3 total)
+[STAT] up 0d 00:22:29  |  rx=3 ack=3 emit=3 bad=0
+[STAT] last frame 0 s ago
+[RX] #4  RSSI=-59.0 dBm  SNR=11.5 dB  len=68  "051,187,22.559161,113.911879,4.06,1786352186,SV=22,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=187
+[GPS-CELL] id=51  SV=22  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,187"  (backoff 106 ms, 4 total)
+[EMIT] id=51 seq=187 -> Grove UART (4 total)
+[STAT] up 0d 00:22:59  |  rx=4 ack=4 emit=4 bad=0
+[STAT] last frame 15 s ago
+[RX] #5  RSSI=-58.0 dBm  SNR=12.0 dB  len=68  "051,186,22.559265,113.912157,4.06,1786350931,SV=24,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=186
+[GPS-CELL] id=51  SV=24  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,186"  (backoff 76 ms, 5 total)
+[EMIT] id=51 seq=186 -> Grove UART (5 total)
+[RX] #6  RSSI=-58.0 dBm  SNR=11.5 dB  len=68  "051,185,22.559314,113.912154,4.05,1786349681,SV=22,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=185
+[GPS-CELL] id=51  SV=22  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,185"  (backoff 98 ms, 6 total)
+[EMIT] id=51 seq=185 -> Grove UART (6 total)
+[STAT] up 0d 00:23:29  |  rx=6 ack=6 emit=6 bad=0
+[STAT] last frame 14 s ago
+[RX] #7  RSSI=-58.0 dBm  SNR=11.5 dB  len=68  "051,184,22.559265,113.912074,4.05,1786348279,SV=21,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=184
+[GPS-CELL] id=51  SV=21  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,184"  (backoff 52 ms, 7 total)
+[EMIT] id=51 seq=184 -> Grove UART (7 total)
+[RX] #8  RSSI=-56.0 dBm  SNR=11.8 dB  len=68  "051,183,22.559127,113.911695,4.05,1786347009,SV=12,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=183
+[GPS-CELL] id=51  SV=12  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,183"  (backoff 95 ms, 8 total)
+[EMIT] id=51 seq=183 -> Grove UART (8 total)
+[STAT] up 0d 00:23:59  |  rx=8 ack=8 emit=8 bad=0
+[STAT] last frame 13 s ago
+[RX] #9  RSSI=-56.0 dBm  SNR=12.2 dB  len=68  "051,182,22.559264,113.912170,4.04,1786345755,SV=17,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=182
+[GPS-CELL] id=51  SV=17  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,182"  (backoff 69 ms, 9 total)
+[EMIT] id=51 seq=182 -> Grove UART (9 total)
+[RX] #10  RSSI=-56.0 dBm  SNR=11.8 dB  len=68  "051,181,22.559154,113.912049,4.04,1786344350,SV=11,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=181
+[GPS-CELL] id=51  SV=11  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,181"  (backoff 84 ms, 10 total)
+[EMIT] id=51 seq=181 -> Grove UART (10 total)
+[STAT] up 0d 00:24:29  |  rx=10 ack=10 emit=10 bad=0
+[STAT] last frame 12 s ago
+[RX] #11  RSSI=-65.0 dBm  SNR=12.2 dB  len=68  "051,180,22.560122,113.912296,4.04,1786342923,SV=10,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=180
+[GPS-CELL] id=51  SV=10  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,180"  (backoff 70 ms, 11 total)
+[EMIT] id=51 seq=180 -> Grove UART (11 total)
+[RX] #12  RSSI=-65.0 dBm  SNR=12.2 dB  len=68  "051,178,22.559007,113.911975,4.03,1786340090,SV=13,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=178
+[GPS-CELL] id=51  SV=13  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,178"  (backoff 66 ms, 12 total)
+[EMIT] id=51 seq=178 -> Grove UART (12 total)
+[STAT] up 0d 00:24:59  |  rx=12 ack=12 emit=12 bad=0
+[STAT] last frame 11 s ago
+[RX] #13  RSSI=-65.0 dBm  SNR=11.8 dB  len=68  "051,176,22.558678,113.911812,4.04,1786337237,SV=15,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=176
+[GPS-CELL] id=51  SV=15  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,176"  (backoff 86 ms, 13 total)
+[EMIT] id=51 seq=176 -> Grove UART (13 total)
+[RX] #14  RSSI=-64.0 dBm  SNR=12.8 dB  len=68  "051,175,22.558840,113.911825,4.05,1786335818,SV=13,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=175
+[GPS-CELL] id=51  SV=13  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,175"  (backoff 85 ms, 14 total)
+[EMIT] id=51 seq=175 -> Grove UART (14 total)
+[STAT] up 0d 00:25:29  |  rx=14 ack=14 emit=14 bad=0
+[STAT] last frame 10 s ago
+[RX] #15  RSSI=-64.0 dBm  SNR=12.0 dB  len=68  "051,174,22.559277,113.912073,4.06,1786334389,SV=20,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=174
+[GPS-CELL] id=51  SV=20  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,174"  (backoff 106 ms, 15 total)
+[EMIT] id=51 seq=174 -> Grove UART (15 total)
+[RX] #16  RSSI=-64.0 dBm  SNR=11.8 dB  len=68  "051,173,22.559232,113.912185,4.04,1786333122,SV=22,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=173
+[GPS-CELL] id=51  SV=22  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,173"  (backoff 98 ms, 16 total)
+[EMIT] id=51 seq=173 -> Grove UART (16 total)
+[STAT] up 0d 00:25:59  |  rx=16 ack=16 emit=16 bad=0
+[STAT] last frame 9 s ago
+[RX] #17  RSSI=-59.0 dBm  SNR=11.2 dB  len=68  "051,172,22.559214,113.912176,4.05,1786331715,SV=21,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=172
+[GPS-CELL] id=51  SV=21  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,172"  (backoff 76 ms, 17 total)
+[EMIT] id=51 seq=172 -> Grove UART (17 total)
+[RX] #18  RSSI=-58.0 dBm  SNR=11.8 dB  len=68  "051,171,22.559266,113.912106,4.05,1786330450,SV=23,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=171
+[GPS-CELL] id=51  SV=23  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,171"  (backoff 85 ms, 18 total)
+[EMIT] id=51 seq=171 -> Grove UART (18 total)
+[STAT] up 0d 00:26:29  |  rx=18 ack=18 emit=18 bad=0
+[STAT] last frame 8 s ago
+[RX] #19  RSSI=-59.0 dBm  SNR=11.2 dB  len=68  "051,170,22.559194,113.912098,4.06,1786329061,SV=22,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=170
+[GPS-CELL] id=51  SV=22  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,170"  (backoff 108 ms, 19 total)
+[EMIT] id=51 seq=170 -> Grove UART (19 total)
+[RX] #20  RSSI=-59.0 dBm  SNR=12.2 dB  len=68  "051,169,22.559192,113.912029,4.05,1786327777,SV=23,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=169
+[GPS-CELL] id=51  SV=23  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,169"  (backoff 89 ms, 20 total)
+[EMIT] id=51 seq=169 -> Grove UART (20 total)
+[STAT] up 0d 00:26:59  |  rx=20 ack=20 emit=20 bad=0
+[STAT] last frame 7 s ago
+[RX] #21  RSSI=-64.0 dBm  SNR=12.5 dB  len=68  "051,168,22.559218,113.912178,4.04,1786326520,SV=23,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=168
+[GPS-CELL] id=51  SV=23  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,168"  (backoff 108 ms, 21 total)
+[EMIT] id=51 seq=168 -> Grove UART (21 total)
+[RX] #22  RSSI=-60.0 dBm  SNR=12.2 dB  len=68  "051,167,22.559270,113.912189,4.04,1786325271,SV=22,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=167
+[GPS-CELL] id=51  SV=22  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,167"  (backoff 103 ms, 22 total)
+[EMIT] id=51 seq=167 -> Grove UART (22 total)
+[STAT] up 0d 00:27:29  |  rx=22 ack=22 emit=22 bad=0
+[STAT] last frame 6 s ago
+[RX] #23  RSSI=-60.0 dBm  SNR=12.0 dB  len=68  "051,166,22.559327,113.912290,4.03,1786323868,SV=23,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=166
+[GPS-CELL] id=51  SV=23  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,166"  (backoff 75 ms, 23 total)
+[EMIT] id=51 seq=166 -> Grove UART (23 total)
+[RX] #24  RSSI=-60.0 dBm  SNR=11.8 dB  len=68  "051,165,22.559338,113.912432,4.03,1786322448,SV=23,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=165
+[GPS-CELL] id=51  SV=23  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,165"  (backoff 110 ms, 24 total)
+[EMIT] id=51 seq=165 -> Grove UART (24 total)
+[STAT] up 0d 00:27:59  |  rx=24 ack=24 emit=24 bad=0
+[STAT] last frame 5 s ago
+[RX] #25  RSSI=-59.0 dBm  SNR=12.5 dB  len=68  "051,163,22.559185,113.912210,4.04,1786319653,SV=14,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=163
+[GPS-CELL] id=51  SV=14  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,163"  (backoff 70 ms, 25 total)
+[EMIT] id=51 seq=163 -> Grove UART (25 total)
+[RX] #26  RSSI=-63.0 dBm  SNR=11.8 dB  len=68  "051,162,22.559398,113.912116,4.03,1786318179,SV=13,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=162
+[GPS-CELL] id=51  SV=13  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,162"  (backoff 71 ms, 26 total)
+[EMIT] id=51 seq=162 -> Grove UART (26 total)
+[STAT] up 0d 00:28:29  |  rx=26 ack=26 emit=26 bad=0
+[STAT] last frame 4 s ago
+[RX] #27  RSSI=-63.0 dBm  SNR=11.5 dB  len=68  "051,160,22.559251,113.912187,4.04,1786315480,SV=22,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=160
+[GPS-CELL] id=51  SV=22  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,160"  (backoff 86 ms, 27 total)
+[EMIT] id=51 seq=160 -> Grove UART (27 total)
+[RX] #28  RSSI=-62.0 dBm  SNR=12.2 dB  len=68  "051,159,22.559377,113.911861,4.03,1786314082,SV=14,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=159
+[GPS-CELL] id=51  SV=14  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,159"  (backoff 69 ms, 28 total)
+[EMIT] id=51 seq=159 -> Grove UART (28 total)
+[STAT] up 0d 00:28:59  |  rx=28 ack=28 emit=28 bad=0
+[STAT] last frame 3 s ago
+[RX] #29  RSSI=-60.0 dBm  SNR=11.8 dB  len=68  "051,158,22.559426,113.911902,4.03,1786312640,SV=14,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=158
+[GPS-CELL] id=51  SV=14  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,158"  (backoff 52 ms, 29 total)
+[EMIT] id=51 seq=158 -> Grove UART (29 total)
+[RX] #30  RSSI=-62.0 dBm  SNR=11.5 dB  len=68  "051,157,22.559230,113.912169,4.05,1786311224,SV=14,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=157
+[GPS-CELL] id=51  SV=14  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,157"  (backoff 90 ms, 30 total)
+[EMIT] id=51 seq=157 -> Grove UART (30 total)
+[STAT] up 0d 00:29:29  |  rx=30 ack=30 emit=30 bad=0
+[STAT] last frame 2 s ago
+[RX] #31  RSSI=-62.0 dBm  SNR=11.5 dB  len=68  "051,156,22.559266,113.912167,4.03,1786309958,SV=19,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=156
+[GPS-CELL] id=51  SV=19  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,156"  (backoff 102 ms, 31 total)
+[EMIT] id=51 seq=156 -> Grove UART (31 total)
+[RX] #32  RSSI=-60.0 dBm  SNR=12.2 dB  len=68  "051,155,22.559293,113.912160,4.04,1786308543,SV=13,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=155
+[GPS-CELL] id=51  SV=13  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,155"  (backoff 102 ms, 32 total)
+[EMIT] id=51 seq=155 -> Grove UART (32 total)
+[STAT] up 0d 00:29:59  |  rx=32 ack=32 emit=32 bad=0
+[STAT] last frame 1 s ago
+[RX] #33  RSSI=-60.0 dBm  SNR=12.2 dB  len=68  "051,154,22.559213,113.912241,4.02,1786307133,SV=11,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=154
+[GPS-CELL] id=51  SV=11  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,154"  (backoff 69 ms, 33 total)
+[EMIT] id=51 seq=154 -> Grove UART (33 total)
+[STAT] up 0d 00:30:29  |  rx=33 ack=33 emit=33 bad=0
+[STAT] last frame 15 s ago
+[RX] #34  RSSI=-60.0 dBm  SNR=12.0 dB  len=68  "051,152,22.559241,113.911935,4.03,1786304309,SV=12,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=152
+[GPS-CELL] id=51  SV=12  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,152"  (backoff 93 ms, 34 total)
+[EMIT] id=51 seq=152 -> Grove UART (34 total)
+[RX] #35  RSSI=-63.0 dBm  SNR=11.8 dB  len=68  "051,151,22.559221,113.912117,4.04,1786302854,SV=12,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=151
+[GPS-CELL] id=51  SV=12  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,151"  (backoff 64 ms, 35 total)
+[EMIT] id=51 seq=151 -> Grove UART (35 total)
+[STAT] up 0d 00:30:59  |  rx=35 ack=35 emit=35 bad=0
+[STAT] last frame 14 s ago
+[RX] #36  RSSI=-63.0 dBm  SNR=11.8 dB  len=68  "051,150,22.559156,113.912034,4.03,1786301595,SV=23,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=150
+[GPS-CELL] id=51  SV=23  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,150"  (backoff 101 ms, 36 total)
+[EMIT] id=51 seq=150 -> Grove UART (36 total)
+[RX] #37  RSSI=-63.0 dBm  SNR=12.0 dB  len=68  "051,149,22.559279,113.912154,4.03,1786300179,SV=13,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=149
+[GPS-CELL] id=51  SV=13  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,149"  (backoff 73 ms, 37 total)
+[EMIT] id=51 seq=149 -> Grove UART (37 total)
+[STAT] up 0d 00:31:29  |  rx=37 ack=37 emit=37 bad=0
+[STAT] last frame 13 s ago
+[RX] #38  RSSI=-63.0 dBm  SNR=11.2 dB  len=68  "051,143,22.563392,113.902902,4.04,1786291811,SV=17,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=143
+[GPS-CELL] id=51  SV=17  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,143"  (backoff 98 ms, 38 total)
+[EMIT] id=51 seq=143 -> Grove UART (38 total)
+[RX] #39  RSSI=-62.0 dBm  SNR=11.5 dB  len=68  "051,140,22.563327,113.902677,4.03,1786287719,SV=18,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=140
+[GPS-CELL] id=51  SV=18  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,140"  (backoff 88 ms, 39 total)
+[EMIT] id=51 seq=140 -> Grove UART (39 total)
+[STAT] up 0d 00:31:59  |  rx=39 ack=39 emit=39 bad=0
+[STAT] last frame 12 s ago
+[RX] #40  RSSI=-61.0 dBm  SNR=13.0 dB  len=68  "051,138,22.556890,113.922051,4.03,1786284917,SV=20,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=138
+[GPS-CELL] id=51  SV=20  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,138"  (backoff 56 ms, 40 total)
+[EMIT] id=51 seq=138 -> Grove UART (40 total)
+[RX] #41  RSSI=-60.0 dBm  SNR=11.5 dB  len=68  "051,137,22.556952,113.921970,4.03,1786283476,SV=22,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=137
+[GPS-CELL] id=51  SV=22  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,137"  (backoff 103 ms, 41 total)
+[EMIT] id=51 seq=137 -> Grove UART (41 total)
+[STAT] up 0d 00:32:29  |  rx=41 ack=41 emit=41 bad=0
+[STAT] last frame 11 s ago
+[RX] #42  RSSI=-62.0 dBm  SNR=12.2 dB  len=68  "051,136,22.556733,113.921923,4.02,1786282050,SV=22,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=136
+[GPS-CELL] id=51  SV=22  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,136"  (backoff 71 ms, 42 total)
+[EMIT] id=51 seq=136 -> Grove UART (42 total)
+[RX] #43  RSSI=-62.0 dBm  SNR=12.2 dB  len=68  "051,135,22.556736,113.921991,4.04,1786280622,SV=22,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=135
+[GPS-CELL] id=51  SV=22  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,135"  (backoff 58 ms, 43 total)
+[EMIT] id=51 seq=135 -> Grove UART (43 total)
+[STAT] up 0d 00:32:59  |  rx=43 ack=43 emit=43 bad=0
+[STAT] last frame 10 s ago
+[RX] #44  RSSI=-60.0 dBm  SNR=11.8 dB  len=68  "051,134,22.556265,113.922349,4.04,1786279356,SV=23,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=134
+[GPS-CELL] id=51  SV=23  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,134"  (backoff 82 ms, 44 total)
+[EMIT] id=51 seq=134 -> Grove UART (44 total)
+[RX] #45  RSSI=-65.0 dBm  SNR=12.0 dB  len=68  "051,133,22.556236,113.922318,4.03,1786278103,SV=24,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=133
+[GPS-CELL] id=51  SV=24  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,133"  (backoff 79 ms, 45 total)
+[EMIT] id=51 seq=133 -> Grove UART (45 total)
+[STAT] up 0d 00:33:29  |  rx=45 ack=45 emit=45 bad=0
+[STAT] last frame 9 s ago
+[RX] #46  RSSI=-64.0 dBm  SNR=13.0 dB  len=68  "051,132,22.556231,113.922345,4.02,1786276690,SV=22,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=132
+[GPS-CELL] id=51  SV=22  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,132"  (backoff 72 ms, 46 total)
+[EMIT] id=51 seq=132 -> Grove UART (46 total)
+[RX] #47  RSSI=-64.0 dBm  SNR=12.2 dB  len=68  "051,131,22.556098,113.922312,4.03,1786275268,SV=12,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=131
+[GPS-CELL] id=51  SV=12  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,131"  (backoff 64 ms, 47 total)
+[EMIT] id=51 seq=131 -> Grove UART (47 total)
+[STAT] up 0d 00:33:59  |  rx=47 ack=47 emit=47 bad=0
+[STAT] last frame 8 s ago
+[RX] #48  RSSI=-64.0 dBm  SNR=13.0 dB  len=68  "051,130,22.560606,113.910099,4.04,1786273861,SV=11,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=130
+[GPS-CELL] id=51  SV=11  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,130"  (backoff 86 ms, 48 total)
+[EMIT] id=51 seq=130 -> Grove UART (48 total)
+[RX] #49  RSSI=-64.0 dBm  SNR=12.0 dB  len=68  "051,129,22.559717,113.906726,4.04,1786272425,SV=11,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=129
+[GPS-CELL] id=51  SV=11  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,129"  (backoff 100 ms, 49 total)
+[EMIT] id=51 seq=129 -> Grove UART (49 total)
+[STAT] up 0d 00:34:29  |  rx=49 ack=49 emit=49 bad=0
+[STAT] last frame 7 s ago
+[RX] #50  RSSI=-64.0 dBm  SNR=12.5 dB  len=68  "051,128,22.559061,113.914084,4.03,1786271162,SV=11,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=128
+[GPS-CELL] id=51  SV=11  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,128"  (backoff 78 ms, 50 total)
+[EMIT] id=51 seq=128 -> Grove UART (50 total)
+[RX] #51  RSSI=-64.0 dBm  SNR=12.0 dB  len=68  "051,126,22.556244,113.922327,4.04,1786268484,SV=21,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=126
+[GPS-CELL] id=51  SV=21  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,126"  (backoff 75 ms, 51 total)
+[EMIT] id=51 seq=126 -> Grove UART (51 total)
+[STAT] up 0d 00:34:59  |  rx=51 ack=51 emit=51 bad=0
+[STAT] last frame 6 s ago
+[RX] #52  RSSI=-64.0 dBm  SNR=12.5 dB  len=68  "051,125,22.556219,113.922393,4.04,1786267233,SV=19,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=125
+[GPS-CELL] id=51  SV=19  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,125"  (backoff 64 ms, 52 total)
+[EMIT] id=51 seq=125 -> Grove UART (52 total)
+[RX] #53  RSSI=-64.0 dBm  SNR=12.0 dB  len=68  "051,124,22.556200,113.922404,4.04,1786265981,SV=20,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=124
+[GPS-CELL] id=51  SV=20  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,124"  (backoff 101 ms, 53 total)
+[EMIT] id=51 seq=124 -> Grove UART (53 total)
+[STAT] up 0d 00:35:29  |  rx=53 ack=53 emit=53 bad=0
+[STAT] last frame 5 s ago
+[RX] #54  RSSI=-65.0 dBm  SNR=12.2 dB  len=68  "051,123,22.559093,113.913705,4.04,1786264581,SV=19,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=123
+[GPS-CELL] id=51  SV=19  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,123"  (backoff 101 ms, 54 total)
+[EMIT] id=51 seq=123 -> Grove UART (54 total)
+[RX] #55  RSSI=-65.0 dBm  SNR=12.2 dB  len=68  "051,122,22.559104,113.913712,4.05,1786263307,SV=22,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=122
+[GPS-CELL] id=51  SV=22  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,122"  (backoff 62 ms, 55 total)
+[EMIT] id=51 seq=122 -> Grove UART (55 total)
+[STAT] up 0d 00:35:59  |  rx=55 ack=55 emit=55 bad=0
+[STAT] last frame 4 s ago
+[RX] #56  RSSI=-59.0 dBm  SNR=12.0 dB  len=68  "051,121,22.559056,113.913793,4.04,1786262056,SV=22,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=121
+[GPS-CELL] id=51  SV=22  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,121"  (backoff 67 ms, 56 total)
+[EMIT] id=51 seq=121 -> Grove UART (56 total)
+[RX] #57  RSSI=-62.0 dBm  SNR=12.0 dB  len=68  "051,120,22.559136,113.913395,4.03,1786260804,SV=23,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=120
+[GPS-CELL] id=51  SV=23  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,120"  (backoff 85 ms, 57 total)
+[EMIT] id=51 seq=120 -> Grove UART (57 total)
+[STAT] up 0d 00:36:29  |  rx=57 ack=57 emit=57 bad=0
+[STAT] last frame 3 s ago
+[RX] #58  RSSI=-59.0 dBm  SNR=11.8 dB  len=68  "051,119,22.559681,113.913678,4.04,1786259408,SV=26,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=119
+[GPS-CELL] id=51  SV=26  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,119"  (backoff 81 ms, 58 total)
+[EMIT] id=51 seq=119 -> Grove UART (58 total)
+[RX] #59  RSSI=-59.0 dBm  SNR=12.2 dB  len=68  "051,118,22.559019,113.913750,4.04,1786258128,SV=14,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=118
+[GPS-CELL] id=51  SV=14  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,118"  (backoff 53 ms, 59 total)
+[EMIT] id=51 seq=118 -> Grove UART (59 total)
+[STAT] up 0d 00:36:59  |  rx=59 ack=59 emit=59 bad=0
+[STAT] last frame 2 s ago
+[RX] #60  RSSI=-60.0 dBm  SNR=12.8 dB  len=68  "051,117,22.559100,113.913751,4.03,1786256876,SV=14,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=117
+[GPS-CELL] id=51  SV=14  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,117"  (backoff 83 ms, 60 total)
+[EMIT] id=51 seq=117 -> Grove UART (60 total)
+[RX] #61  RSSI=-60.0 dBm  SNR=11.5 dB  len=68  "051,116,22.558932,113.913641,4.04,1786255622,SV=14,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=116
+[GPS-CELL] id=51  SV=14  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,116"  (backoff 56 ms, 61 total)
+[EMIT] id=51 seq=116 -> Grove UART (61 total)
+[STAT] up 0d 00:37:29  |  rx=61 ack=61 emit=61 bad=0
+[STAT] last frame 1 s ago
+[RX] #62  RSSI=-60.0 dBm  SNR=12.2 dB  len=68  "051,115,22.559419,113.914384,4.03,1786254371,SV=15,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=115
+[GPS-CELL] id=51  SV=15  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,115"  (backoff 79 ms, 62 total)
+[EMIT] id=51 seq=115 -> Grove UART (62 total)
+[RX] #63  RSSI=-62.0 dBm  SNR=11.8 dB  len=68  "051,114,22.559161,113.913834,4.03,1786252999,SV=16,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=114
+[GPS-CELL] id=51  SV=16  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,114"  (backoff 67 ms, 63 total)
+[EMIT] id=51 seq=114 -> Grove UART (63 total)
+[STAT] up 0d 00:37:59  |  rx=63 ack=63 emit=63 bad=0
+[STAT] last frame 0 s ago
+[RX] #64  RSSI=-60.0 dBm  SNR=12.2 dB  len=68  "051,113,22.559086,113.913438,4.04,1786251696,SV=15,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=113
+[GPS-CELL] id=51  SV=15  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,113"  (backoff 105 ms, 64 total)
+[EMIT] id=51 seq=113 -> Grove UART (64 total)
+[STAT] up 0d 00:38:29  |  rx=64 ack=64 emit=64 bad=0
+[STAT] last frame 15 s ago
+[RX] #65  RSSI=-62.0 dBm  SNR=12.2 dB  len=68  "051,112,22.559119,113.913582,4.04,1786250282,SV=11,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=112
+[GPS-CELL] id=51  SV=11  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,112"  (backoff 77 ms, 65 total)
+[EMIT] id=51 seq=112 -> Grove UART (65 total)
+[RX] #66  RSSI=-62.0 dBm  SNR=12.5 dB  len=68  "051,111,22.559108,113.913774,4.02,1786249017,SV=13,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=111
+[GPS-CELL] id=51  SV=13  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,111"  (backoff 61 ms, 66 total)
+[EMIT] id=51 seq=111 -> Grove UART (66 total)
+[STAT] up 0d 00:38:59  |  rx=66 ack=66 emit=66 bad=0
+[STAT] last frame 14 s ago
+[RX] #67  RSSI=-60.0 dBm  SNR=13.0 dB  len=67  "051,110,22.559082,113.913734,4.04,1786247647,SV=9,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=110
+[GPS-CELL] id=51  SV=9  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,110"  (backoff 62 ms, 67 total)
+[EMIT] id=51 seq=110 -> Grove UART (67 total)
+[RX] #68  RSSI=-60.0 dBm  SNR=13.2 dB  len=67  "051,109,22.559124,113.913833,4.03,1786246345,SV=9,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=109
+[GPS-CELL] id=51  SV=9  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,109"  (backoff 50 ms, 68 total)
+[EMIT] id=51 seq=109 -> Grove UART (68 total)
+[STAT] up 0d 00:39:29  |  rx=68 ack=68 emit=68 bad=0
+[STAT] last frame 13 s ago
+[RX] #69  RSSI=-60.0 dBm  SNR=12.0 dB  len=68  "051,108,22.559080,113.913681,4.02,1786245094,SV=16,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=108
+[GPS-CELL] id=51  SV=16  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,108"  (backoff 91 ms, 69 total)
+[EMIT] id=51 seq=108 -> Grove UART (69 total)
+[RX] #70  RSSI=-60.0 dBm  SNR=12.2 dB  len=68  "051,107,22.559132,113.913673,4.03,1786243778,SV=10,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=107
+[GPS-CELL] id=51  SV=10  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,107"  (backoff 102 ms, 70 total)
+[EMIT] id=51 seq=107 -> Grove UART (70 total)
+[STAT] up 0d 00:39:59  |  rx=70 ack=70 emit=70 bad=0
+[STAT] last frame 12 s ago
+[RX] #71  RSSI=-59.0 dBm  SNR=12.5 dB  len=68  "051,106,22.559016,113.913902,4.03,1786242422,SV=20,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=106
+[GPS-CELL] id=51  SV=20  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,106"  (backoff 57 ms, 71 total)
+[EMIT] id=51 seq=106 -> Grove UART (71 total)
+[RX] #72  RSSI=-63.0 dBm  SNR=12.0 dB  len=68  "051,105,22.559069,113.913342,4.02,1786241172,SV=12,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=105
+[GPS-CELL] id=51  SV=12  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,105"  (backoff 72 ms, 72 total)
+[EMIT] id=51 seq=105 -> Grove UART (72 total)
+[STAT] up 0d 00:40:29  |  rx=72 ack=72 emit=72 bad=0
+[STAT] last frame 11 s ago
+[RX] #73  RSSI=-62.0 dBm  SNR=13.2 dB  len=68  "051,104,22.558972,113.913840,4.03,1786239791,SV=10,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=104
+[GPS-CELL] id=51  SV=10  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,104"  (backoff 54 ms, 73 total)
+[EMIT] id=51 seq=104 -> Grove UART (73 total)
+[RX] #74  RSSI=-64.0 dBm  SNR=12.2 dB  len=68  "051,103,22.559051,113.913445,4.02,1786238500,SV=23,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=103
+[GPS-CELL] id=51  SV=23  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,103"  (backoff 58 ms, 74 total)
+[EMIT] id=51 seq=103 -> Grove UART (74 total)
+[STAT] up 0d 00:40:59  |  rx=74 ack=74 emit=74 bad=0
+[STAT] last frame 10 s ago
+[RX] #75  RSSI=-62.0 dBm  SNR=12.2 dB  len=68  "051,102,22.559107,113.913917,4.03,1786237250,SV=23,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=102
+[GPS-CELL] id=51  SV=23  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,102"  (backoff 85 ms, 75 total)
+[EMIT] id=51 seq=102 -> Grove UART (75 total)
+[RX] #76  RSSI=-62.0 dBm  SNR=12.5 dB  len=68  "051,101,22.559255,113.913566,4.02,1786235994,SV=23,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=101
+[GPS-CELL] id=51  SV=23  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,101"  (backoff 58 ms, 76 total)
+[EMIT] id=51 seq=101 -> Grove UART (76 total)
+[STAT] up 0d 00:41:29  |  rx=76 ack=76 emit=76 bad=0
+[STAT] last frame 9 s ago
+[RX] #77  RSSI=-62.0 dBm  SNR=12.5 dB  len=68  "051,100,22.559424,113.914240,4.02,1786234601,SV=23,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=100
+[GPS-CELL] id=51  SV=23  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,100"  (backoff 101 ms, 77 total)
+[EMIT] id=51 seq=100 -> Grove UART (77 total)
+[RX] #78  RSSI=-62.0 dBm  SNR=12.5 dB  len=67  "051,99,22.559538,113.913292,4.02,1786233322,SV=25,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=99
+[GPS-CELL] id=51  SV=25  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,99"  (backoff 91 ms, 78 total)
+[EMIT] id=51 seq=99 -> Grove UART (78 total)
+[STAT] up 0d 00:41:59  |  rx=78 ack=78 emit=78 bad=0
+[STAT] last frame 8 s ago
+[RX] #79  RSSI=-60.0 dBm  SNR=12.8 dB  len=67  "051,98,22.559039,113.913767,4.02,1786232071,SV=25,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=98
+[GPS-CELL] id=51  SV=25  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,98"  (backoff 90 ms, 79 total)
+[EMIT] id=51 seq=98 -> Grove UART (79 total)
+[RX] #80  RSSI=-62.0 dBm  SNR=13.0 dB  len=67  "051,97,22.560073,113.913813,4.02,1786230673,SV=26,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=97
+[GPS-CELL] id=51  SV=26  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,97"  (backoff 67 ms, 80 total)
+[EMIT] id=51 seq=97 -> Grove UART (80 total)
+[STAT] up 0d 00:42:29  |  rx=80 ack=80 emit=80 bad=0
+[STAT] last frame 7 s ago
+[RX] #81  RSSI=-63.0 dBm  SNR=12.5 dB  len=67  "051,96,22.558888,113.913319,4.02,1786229398,SV=24,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=96
+[GPS-CELL] id=51  SV=24  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,96"  (backoff 106 ms, 81 total)
+[EMIT] id=51 seq=96 -> Grove UART (81 total)
+[RX] #82  RSSI=-62.0 dBm  SNR=12.2 dB  len=67  "051,95,22.559151,113.913575,4.00,1786228145,SV=12,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=95
+[GPS-CELL] id=51  SV=12  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,95"  (backoff 74 ms, 82 total)
+[EMIT] id=51 seq=95 -> Grove UART (82 total)
+[STAT] up 0d 00:42:59  |  rx=82 ack=82 emit=82 bad=0
+[STAT] last frame 6 s ago
+[RX] #83  RSSI=-62.0 dBm  SNR=11.8 dB  len=67  "051,94,22.559083,113.913606,4.02,1786226784,SV=11,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=94
+[GPS-CELL] id=51  SV=11  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,94"  (backoff 92 ms, 83 total)
+[EMIT] id=51 seq=94 -> Grove UART (83 total)
+[STAT] up 0d 00:43:29  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 20 s ago
+[STAT] up 0d 00:43:59  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 50 s ago
+[STAT] up 0d 00:44:29  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 80 s ago
+[STAT] up 0d 00:44:59  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 110 s ago
+[STAT] up 0d 00:45:29  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 140 s ago
+[STAT] up 0d 00:45:59  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 170 s ago
+[STAT] up 0d 00:46:29  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 200 s ago
+[STAT] up 0d 00:46:59  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 230 s ago
+[STAT] up 0d 00:47:29  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 260 s ago
+[STAT] up 0d 00:47:59  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 290 s ago
+[STAT] up 0d 00:48:29  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 320 s ago
+[STAT] up 0d 00:48:59  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 350 s ago
+[STAT] up 0d 00:49:29  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 380 s ago
+[STAT] up 0d 00:49:59  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 410 s ago
+[STAT] up 0d 00:50:29  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 440 s ago
+[STAT] up 0d 00:50:59  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 470 s ago
+[STAT] up 0d 00:51:29  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 500 s ago
+[STAT] up 0d 00:51:59  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 530 s ago
+[STAT] up 0d 00:52:29  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 560 s ago
+[STAT] up 0d 00:52:59  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 590 s ago
+[STAT] up 0d 00:53:29  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 620 s ago
+[STAT] up 0d 00:53:59  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 650 s ago
+[STAT] up 0d 00:54:29  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 680 s ago
+[STAT] up 0d 00:54:59  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 710 s ago
+[STAT] up 0d 00:55:29  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 740 s ago
+[STAT] up 0d 00:55:59  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 770 s ago
+[STAT] up 0d 00:56:29  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 800 s ago
+[STAT] up 0d 00:56:59  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 830 s ago
+[STAT] up 0d 00:57:29  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 860 s ago
+[STAT] up 0d 00:57:59  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 890 s ago
+[STAT] up 0d 00:58:29  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 920 s ago
+[STAT] up 0d 00:58:59  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 950 s ago
+[STAT] up 0d 00:59:29  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 980 s ago
+[STAT] up 0d 00:59:59  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 1010 s ago
+[STAT] up 0d 01:00:29  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 1040 s ago
+[STAT] up 0d 01:00:59  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 1070 s ago
+[STAT] up 0d 01:01:29  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 1100 s ago
+[STAT] up 0d 01:01:59  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 1130 s ago
+[STAT] up 0d 01:02:29  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 1160 s ago
+[STAT] up 0d 01:02:59  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 1190 s ago
+[STAT] up 0d 01:03:29  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 1220 s ago
+[STAT] up 0d 01:03:59  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 1250 s ago
+[STAT] up 0d 01:04:29  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 1280 s ago
+[STAT] up 0d 01:04:59  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 1310 s ago
+[STAT] up 0d 01:05:29  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 1340 s ago
+[STAT] up 0d 01:05:59  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 1370 s ago
+[STAT] up 0d 01:06:29  |  rx=83 ack=83 emit=83 bad=0
+[STAT] last frame 1400 s ago
+[RX] #84  RSSI=-64.0 dBm  SNR=12.5 dB  len=65  "051,195,0.000000,0.000000,4.04,1786364889,SV=13,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=195
+[GPS-CELL] id=51  SV=13  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,195"  (backoff 86 ms, 84 total)
+[EMIT] id=51 seq=195 -> Grove UART (84 total)
+[STAT] up 0d 01:06:59  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 15 s ago
+[STAT] up 0d 01:07:29  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 45 s ago
+[STAT] up 0d 01:07:59  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 75 s ago
+[STAT] up 0d 01:08:29  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 105 s ago
+[STAT] up 0d 01:08:59  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 135 s ago
+[STAT] up 0d 01:09:29  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 165 s ago
+[STAT] up 0d 01:09:59  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 195 s ago
+[STAT] up 0d 01:10:29  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 225 s ago
+[STAT] up 0d 01:10:59  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 255 s ago
+[STAT] up 0d 01:11:29  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 285 s ago
+[STAT] up 0d 01:11:59  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 315 s ago
+[STAT] up 0d 01:12:29  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 345 s ago
+[STAT] up 0d 01:12:59  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 375 s ago
+[STAT] up 0d 01:13:29  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 405 s ago
+[STAT] up 0d 01:13:59  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 435 s ago
+[STAT] up 0d 01:14:29  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 465 s ago
+[STAT] up 0d 01:14:59  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 495 s ago
+[STAT] up 0d 01:15:29  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 525 s ago
+[STAT] up 0d 01:15:59  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 555 s ago
+[STAT] up 0d 01:16:29  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 585 s ago
+[STAT] up 0d 01:16:59  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 615 s ago
+[STAT] up 0d 01:17:29  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 645 s ago
+[STAT] up 0d 01:17:59  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 675 s ago
+[STAT] up 0d 01:18:29  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 705 s ago
+[STAT] up 0d 01:18:59  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 735 s ago
+[STAT] up 0d 01:19:29  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 765 s ago
+[STAT] up 0d 01:19:59  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 795 s ago
+[STAT] up 0d 01:20:29  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 825 s ago
+[STAT] up 0d 01:20:59  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 855 s ago
+[STAT] up 0d 01:21:29  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 885 s ago
+[STAT] up 0d 01:21:59  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 915 s ago
+[STAT] up 0d 01:22:29  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 945 s ago
+[STAT] up 0d 01:22:59  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 975 s ago
+[STAT] up 0d 01:23:29  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 1005 s ago
+[STAT] up 0d 01:23:59  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 1035 s ago
+[STAT] up 0d 01:24:29  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 1065 s ago
+[STAT] up 0d 01:24:59  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 1095 s ago
+[STAT] up 0d 01:25:29  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 1125 s ago
+[STAT] up 0d 01:25:59  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 1155 s ago
+[STAT] up 0d 01:26:29  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 1185 s ago
+[STAT] up 0d 01:26:59  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 1215 s ago
+[STAT] up 0d 01:27:29  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 1245 s ago
+[STAT] up 0d 01:27:59  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 1275 s ago
+[STAT] up 0d 01:28:29  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 1305 s ago
+[STAT] up 0d 01:28:59  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 1335 s ago
+[STAT] up 0d 01:29:29  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 1365 s ago
+[STAT] up 0d 01:29:59  |  rx=84 ack=84 emit=84 bad=0
+[STAT] last frame 1395 s ago
+[RX] #85  RSSI=-63.0 dBm  SNR=12.2 dB  len=65  "051,196,0.000000,0.000000,4.02,1786366302,SV=13,TTFF=120,CELL=LOW"
+[RX] parsed id=51 seq=196
+[GPS-CELL] id=51  SV=13  TTFF=120s  CELL=LOW   (cell low)
+[ACK] sent "ACK,51,196"  (backoff 53 ms, 85 total)
+[EMIT] id=51 seq=196 -> Grove UART (85 total)
+[STAT] up 0d 01:30:29  |  rx=85 ack=85 emit=85 bad=0
+[STAT] last frame 12 s ago
+[STAT] up 0d 01:30:59  |  rx=85 ack=85 emit=85 bad=0
+[STAT] last frame 42 s ago
+[STAT] up 0d 01:31:29  |  rx=85 ack=85 emit=85 bad=0
+[STAT] last frame 72 s ago
+[STAT] up 0d 01:31:59  |  rx=85 ack=85 emit=85 bad=0
+[STAT] last frame 102 s ago
+[STAT] up 0d 01:32:29  |  rx=85 ack=85 emit=85 bad=0
+[STAT] last frame 132 s ago
